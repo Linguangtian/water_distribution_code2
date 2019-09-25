@@ -515,7 +515,7 @@ class OrderForm extends ApiModel
 
        $water_voucher_list=UserVoucher::find()->alias('uv')->leftJoin(['g'=>Goods::tableName()],'g.id=uv.goods_id')
            ->where(['uv.store_id'=>$this->store_id,'uv.user_id'=>$this->user_id])
-           ->andWhere(['in', 'uv.goods_id', $goods_string])
+           ->andWhere(['in', 'uv.goods_id', $goods_string])->andWhere(['>','uv.num','0'])
            ->select(['uv.num','uv.goods_id','uv.id','g.cover_pic','g.name','g.price'])->asArray()->all();
 
         foreach ($water_voucher_list as $key=>$li){
