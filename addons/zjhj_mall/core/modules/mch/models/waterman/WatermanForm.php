@@ -54,7 +54,7 @@ class WatermanForm  extends MchModel
         $pagination = new Pagination(['totalCount' => $count, 'page' => $this->page - 1]);
 
         $confirm_total=WaterOrder::find()->where(['status'=>2])->andWhere('waterman_user_id=wm.user_id')->select(['count(1)']);
-       $unconfirm_total=WaterOrder::find()->where('waterman_user_id=wm.user_id')->andWhere(['status'=>1])->select(['count(1)']);
+       $unconfirm_total=WaterOrder::find()->where('waterman_user_id=wm.user_id')->andWhere(['status'=>0])->select(['count(1)']);
         $list =$query->select(['wm.*', 'u.avatar_url','u.nickname','confirm_total'=>$confirm_total,'unconfirm_total'=>$unconfirm_total])
             ->limit($pagination->limit)
             ->offset($pagination->offset)

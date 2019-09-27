@@ -68,8 +68,9 @@ class WatermanController extends Controller
         $model=Waterman::findone(['id'=>$id,'store_id'=> $this->store->id]);
         $total='';
         if(!empty($model)){
-            $unconfirm_total=WaterOrder::find()->where(['status'=>1,'waterman_user_id'=>$model['user_id']])->select(['count(1)']);
+            $unconfirm_total=WaterOrder::find()->where(['status'=>0,'waterman_user_id'=>$model['user_id']])->select(['count(1)']);
             $total=WaterOrder::find()->where(['status'=>2,'waterman_user_id'=>$model['user_id']])->select(['count(1) as confirm_total','unconfirm_total'=>$unconfirm_total])->asArray()->one();
+
         }
 
       //提交表单添加
@@ -121,7 +122,7 @@ class WatermanController extends Controller
         if(\Yii::$app->request->isAjax){
             $keyword=\Yii::$app->request->get('keyword');
 
-            $unconfirm_total=WaterOrder::find()->where('waterman_user_id=wm.user_id')->andWhere(['status'=>1])->select(['count(1)']);
+            $unconfirm_total=WaterOrder::find()->where('waterman_user_id=wm.user_id')->andWhere(['status'=>0])->select(['count(1)']);
           $model=$model=Waterman::find()->alias('wm')->leftJoin(['u'=>User::tableName()],'u.id=wm.user_id')
                 ->where(['or',['like','u.nickname', $keyword],['like','wm.code',$keyword]])
                 ->orWhere(['or',['like','wm.mobile',$keyword],['like','wm.real_name',$keyword]])

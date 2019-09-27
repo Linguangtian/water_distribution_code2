@@ -73,6 +73,12 @@ class PickLinkForm
                 'params' => []
             ],
             [
+                'name' => "一键叫水",
+                'link' => "/pages/cat/cat",
+                'open_type' => "navigate",
+                'params' => []
+            ],
+            [
                 'name' => "分类",
                 'link' => "/pages/cat/cat",
                 'open_type' => "navigate",
@@ -84,12 +90,7 @@ class PickLinkForm
                     ]
                 ]
             ],
-            [
-                'name' => "一键叫水",
-                'link' => "/pages/quick-purchase/index/index",
-                'open_type' => "navigate",
-                'params' => []
-            ],
+
             [
                 'name' => "买水票",
                 'link' => "/pages/watervoucher-goods/index",
@@ -263,6 +264,9 @@ class PickLinkForm
                     ],
                 ]
             ],
+
+
+
             [
                 'sign' => 'miaosha',
                 'name' => "整点秒杀（需先安装插件）",

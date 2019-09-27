@@ -83,11 +83,10 @@ class IndexForm extends ApiModel
             if ($this->_platform === 'my' && in_array($value['url'], $arr)) {
                 unset($nav_icon_list[$k]);
             }
-
-
             if ($value['name'] == '一键叫水') {
                $last_order= WaterOrder::find()->where(['receive_user_id'=>$user_id = \Yii::$app->user->identity->id])->orderBy('id')->one();
                 if(!empty($last_order->orderDetail->order_id)&&$last_order->orderDetail->is_delete==0){
+
                      $nav_icon_list[$k]['url']= "/pages/goods/goods?id=".$last_order->orderDetail->goods_id;
                 }
             }
