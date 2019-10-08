@@ -96,7 +96,7 @@ class UserVoucherForm  extends ApiModel
         $res = $query->select(['vul.change_num','vul.type','vul.change_type','vul.current_total','vul.goods_id', 'g.name','g.cover_pic','vul.create_time'])->limit($pagination->limit)->offset($pagination->offset)->orderBy('create_time Desc')->asArray()->all();
 
         $list=array();
-        $arr=['其他','购买','兑换','平台赠送'];
+        $arr=['其他','购买','兑换','平台赠送','订单取消'];
         foreach ($res as $key=>$item){
             $list[$key]=$item;
             $list[$key]['create_time']= date('Y-m-d H:i:s', $item['create_time']);

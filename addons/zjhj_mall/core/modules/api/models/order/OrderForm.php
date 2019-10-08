@@ -58,6 +58,7 @@ class OrderForm extends ApiModel
     protected $level;
     protected $integral;
     protected $goods_arr;
+    public  $single_level_price=array();
 
     public function rules()
     {
@@ -105,6 +106,7 @@ class OrderForm extends ApiModel
 
 
         foreach ($this->mch_list as $i => &$mch) {
+
             if ($mch['mch_id'] == 0) {
                 $mch['name'] = '平台自营';
                 if ($submit == false) {
@@ -118,6 +120,7 @@ class OrderForm extends ApiModel
                 } else {
                     $mch['form'] = $this->getForm($mch['form']);
                 }
+
                 $mch['send_type'] = $this->store->send_type;
                 if ($this->store->send_type != 1) {
                     $shopArr = $this->getShopList();
@@ -130,8 +133,7 @@ class OrderForm extends ApiModel
 
 
 
-                //获取自营店用户选择商品的用户水票数量
-                if(!empty($mch['goods_list']))  $mch['water_voucher']=$this->getWacherVoucherList($mch['goods_list']);
+
 
             } else {
                 $_mch = Mch::findOne([
@@ -151,6 +153,10 @@ class OrderForm extends ApiModel
             }else{
                 $this->getGoodsList($mch['goods_list']);
             }
+          //  var_dump($mch['goods_list'][0]);exit;
+
+            //获取自营店用户选择商品的用户水票数量
+            if(!empty($mch['goods_list']))  $mch['water_voucher']=$this->getWacherVoucherList($mch['goods_list']);
 
             if (empty($mch['goods_list'])) {
                 throw new \Exception('商品不存在', 1);
@@ -162,7 +168,9 @@ class OrderForm extends ApiModel
                 'forehead_integral' => 0
             ];
             $mch['plugin_type'] = 0;
+
             foreach ($mch['goods_list'] as $_goods) {
+
                 $total_price += doubleval($_goods['price']);
                 $level_price += doubleval($_goods['level_price']) > 0 ? doubleval($_goods['level_price']) : doubleval($_goods['price']);
                 $integral['forehead'] += doubleval($_goods['resIntegral']['forehead']);
@@ -355,7 +363,7 @@ class OrderForm extends ApiModel
 //                    $item['level_price'] = sprintf('%.2f', ($item['price'] * floatval($this->level['discount']) / 10));
 //                }
 
-
+                $this->single_level_price[$goods->id]=$res['level_price'];
                 $item['level_price'] = sprintf('%.2f', ($res['level_price'] * $item['num']));
 //                if ($res['level_price'] > 0 && $res['level_price'] < 0.01) {
 //                    $item['level_price'] = sprintf('%.2f', 0.01);
@@ -506,6 +514,7 @@ class OrderForm extends ApiModel
     protected function getWacherVoucherList($goods){
 
         foreach ($goods as $i=>$item){
+
             if($item['cart_id']){
                 $cart = Cart::findOne([
                     'store_id' => $this->store_id,
@@ -530,10 +539,14 @@ class OrderForm extends ApiModel
        $water_voucher_list=UserVoucher::find()->alias('uv')->leftJoin(['g'=>Goods::tableName()],'g.id=uv.goods_id')
            ->where(['uv.store_id'=>$this->store_id,'uv.user_id'=>$this->user_id])
            ->andWhere(['in', 'uv.goods_id', $goods_string])->andWhere(['>','uv.num','0'])
-           ->select(['uv.num','uv.goods_id','uv.id','g.cover_pic','g.name','g.price'])->asArray()->all();
+           ->select(['uv.num','uv.goods_id','uv.id','g.cover_pic','g.name','g.price','g.is_level'])->asArray()->all();
 
         foreach ($water_voucher_list as $key=>$li){
             $water_voucher_list[$key]['use_num']=$li['num']>=$new_goods[$li['goods_id']]['num']?$new_goods[$li['goods_id']]['num']:$li['num'];
+            if($li['is_level']==1&&!empty($this->single_level_price[$li['goods_id']])){
+                $li['price']=$this->single_level_price[$li['goods_id']];
+            }
+            $water_voucher_list[$key]['price']= $li['price'];
             $water_voucher_list[$key]['deduct_cost']= $water_voucher_list[$key]['use_num']*$li['price'];
         }
 

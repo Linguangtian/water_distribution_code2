@@ -125,6 +125,8 @@ class OrderDetailForm extends ApiModel
             'msg' => 'success',
             'data' => [
                 'order_id' => $order->id,
+                'is_water_voucher' => $order->is_water_voucher,
+                'water_deduction' => $order->water_deduction,
                 'is_pay' => $order->is_pay,
                 'is_send' => $order->is_send,
                 'is_confirm' => $order->is_confirm,

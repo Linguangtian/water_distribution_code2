@@ -76,6 +76,7 @@ class OrderSubmitForm extends OrderForm
 
 
         foreach ($mchListData as &$mch) {
+
             $checkMchData = $this->checkMchData($mch);
             if ($this->use_integral == 2) {
                 $mch['integral'] = ['forehead' => 0, 'forehead_integral' => 0];
@@ -99,7 +100,8 @@ class OrderSubmitForm extends OrderForm
                                     $this->water_deduction_money=0;
                                     return '无法使用水票';
                                 }else{
-                                    $this->water_deduction_money+=$picker_water_voucher['use_num']*$li['single_price'];
+                                    $single_price=$li['is_level']?$li['level_price']:$li['single_price'];
+                                    $this->water_deduction_money+=$picker_water_voucher['use_num']*$single_price;
                                     $this->is_water_voucher=1;
                                 }
 
@@ -538,17 +540,16 @@ class OrderSubmitForm extends OrderForm
         //减少用户的水票
 
         if($this->is_water_voucher==1){
-
-
             foreach ($mch['picker_water_voucher'] as $li){
                 $goods_id=$li['goods_id'];
                 $change_num=$li['use_num'];
                 $deduction_money=$li['deduct_cost'];
-
                 $user_voucher=UserVoucher::findone(['store_id'=>$this->store_id,'user_id'=>$this->user_id,'goods_id'=>$goods_id]);
                 $user_voucher->num-=$change_num;
                 $user_voucher->used_number+=$change_num;
                 $user_voucher->save();
+
+
                 $voucher_log= new VoucherUsedLog();
                 $voucher_log->user_id=$this->user_id;
                 $voucher_log->store_id=$this->store_id;
@@ -638,7 +639,13 @@ class OrderSubmitForm extends OrderForm
                 UserCoupon::updateAll(['is_use' => 1], ['id' => $mch['picker_coupon']['user_coupon_id']]);
             }
 
+            /*  减去水票抵用券部分 */
+             if($this->is_water_voucher==1){
+                if(!empty($mch['picker_water_voucher'][$goods['goods_id']]['deduct_cost']))
+                    $payPrice-=$mch['picker_water_voucher'][$goods['goods_id']]['deduct_cost'];
+             }
 
+            /*  end减去水票抵用券部分 */
 
             if($this->use_integral == 1){
                 if ($goods['resIntegral'] && $goods['resIntegral']['forehead'] > 0) {
@@ -647,11 +654,16 @@ class OrderSubmitForm extends OrderForm
             }
             $payPrice = $payPrice >= 0 ? sprintf('%.2f', $payPrice) : 0;
             $goodsPrice += $payPrice;
+
+
             $orderPrice = floatval($order->pay_price) - floatval($order->express_price);
+
+
             if($goodsPrice > $orderPrice){
                 $payPrice = $payPrice - ($goodsPrice - $orderPrice);
                 $goodsPrice = $orderPrice;
             }
+
             $order_detail->total_price = $payPrice;
             $order_detail->addtime = time();
             $order_detail->is_delete = 0;
