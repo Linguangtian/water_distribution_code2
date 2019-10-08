@@ -94,7 +94,7 @@ class GoodsForm extends MchModel
             [['share_commission_first', 'share_commission_second', 'share_commission_third', 'freight', 'rebate', 'virtual_sales', 'individual_share', 'goods_no', 'confine_count', 'plugin', 'cost_price', 'quick_purchase'], 'default', 'value' => 0],
             [['share_commission_first', 'share_commission_second', 'share_commission_third', 'rebate', 'weight', 'cost_price'], 'number', 'min' => 0, 'max' => 999999],
             [['goods_num', 'virtual_sales', 'sort', 'freight', 'confine_count'], 'integer', 'min' => 0, 'max' => 999999],
-            [['use_attr', 'plugins'], 'safe'],
+            [['use_attr', 'plugins','voucher_package'], 'safe'],
             [['attr', 'attr_member_price_List'], 'app\models\common\admin\validator\AttrValidator'],
             [['is_negotiable'], 'default', 'value' => 0],
             [['single_share_commission_first', 'single_share_commission_second', 'single_share_commission_third'], 'default', 'value' => 0],
@@ -173,6 +173,8 @@ class GoodsForm extends MchModel
      */
     public function save()
     {
+
+
         if ($this->validate()) {
             if (!is_array($this->goods_pic_list) || empty($this->goods_pic_list) || count($this->goods_pic_list) == 0 || !$this->goods_pic_list[0]) {
                 return [
@@ -274,31 +276,6 @@ class GoodsForm extends MchModel
             }
 
 
-            //添加抵用卷
-            if($this->setting_voucher&&$this->voucher_package){
-                foreach ($this->voucher_package as $key=>$voucher){
-                   foreach ($voucher as $var=>$voucher_item){
-                       $voucher_list[$var][$key]=$voucher_item;
-
-                   }
-                }
-
-                //删除不存在的
-               $str_code=implode(',',$this->voucher_package['code']);
-                Yii::$app->db->createCommand()->delete('hjmall_voucher_package',['and', ['not in', 'code', [$str_code]],['in','goods_id',$goods->id]])->execute();
-                foreach ($voucher_list as $key=>$li){
-                    $li['goods_id']=$goods->id;
-                    $li['store_id']=$this->store_id;
-                    $li['type']=CommonGoods;
-                    $li['choice']=$li['choice']?1:0;
-                    if(VoucherPackage::findOne(['code'=>$li['code']])){
-                        $result = Yii::$app->db->createCommand()->update('hjmall_voucher_package',$li, ['code'=>$li['code']])->execute();
-                    }else{
-                        $result = Yii::$app->db->createCommand()->insert('hjmall_voucher_package', $li)->execute();
-                    }
-
-                }
-            }
 
 
             $this->full_cut = \Yii::$app->serializer->encode($this->full_cut);
@@ -361,6 +338,41 @@ class GoodsForm extends MchModel
                     $cat->is_delete = 0;
                     $cat->save();
                 }
+
+
+
+                //添加抵用卷
+                if($this->setting_voucher&&$this->voucher_package){
+                    foreach ($this->voucher_package as $key=>$voucher){
+                        foreach ($voucher as $var=>$voucher_item){
+                            $voucher_list[$var][$key]=$voucher_item;
+                        }
+                    }
+
+                    //删除不存在的
+                    $str_code=implode(',',$this->voucher_package['code']);
+                    $is_delete=VoucherPackage::find()->where(['goods_id'=>$goods->id])->andWhere(['in','code', [$str_code]])->asArray()->all();
+                    if($is_delete)  Yii::$app->db->createCommand()->delete('hjmall_voucher_package',['and', ['not in', 'code', [$str_code]],['in','goods_id',$goods->id]])->execute();
+
+                    foreach ($voucher_list as $key=>$li){
+                        $li['goods_id']=$goods->id;
+                        $li['store_id']=$this->store_id;
+                        $li['type']=CommonGoods;
+                        $li['choice']=$li['choice']?1:0;
+                        if(VoucherPackage::findOne(['code'=>$li['code']])){
+                            $result = Yii::$app->db->createCommand()->update('hjmall_voucher_package',$li, ['code'=>$li['code']])->execute();
+                        }else{
+
+                            $result = Yii::$app->db->createCommand()->insert('hjmall_voucher_package', $li)->execute();
+                        }
+
+                    }
+                }
+
+
+
+
+
 
                 //商品图片保存
                 GoodsPic::updateAll(['is_delete' => 1], ['goods_id' => $goods->id]);

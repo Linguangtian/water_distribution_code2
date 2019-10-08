@@ -368,8 +368,19 @@ $urlStr = get_plugin_url();
 
                             <?php if ($order['is_water_voucher'] == 1) : ?>
                                 <tr>
-                                    <td>优惠券优惠</td>
-                                    <td><?= $order['water_deduction'] ?>元</td>
+                                    <td>水票抵用</td>
+                                    <td><?= $order['water_deduction'] ?>元
+
+
+                                        [  &nbsp;&nbsp;
+                                        <?php  foreach ($order['water_voucher'] as $li) : ?>
+                                           <?=    substr($li['name'],0,30) ?>-水票 * <?= $li['change_num'] ?> &nbsp;&nbsp;
+                                        <?php endforeach; ?>
+
+                                        ]
+
+
+                                    </td>
                                 </tr>
                             <?php endif; ?>
 

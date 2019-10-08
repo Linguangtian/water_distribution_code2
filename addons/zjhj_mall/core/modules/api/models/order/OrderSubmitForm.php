@@ -73,6 +73,8 @@ class OrderSubmitForm extends OrderForm
         $t = \Yii::$app->db->beginTransaction();
         $this->is_water_voucher=0;
 
+
+
         foreach ($mchListData as &$mch) {
             $checkMchData = $this->checkMchData($mch);
             if ($this->use_integral == 2) {
@@ -85,18 +87,27 @@ class OrderSubmitForm extends OrderForm
 
             $this->is_water_voucher=0;
             //是否使用水票 和 检查水票是否充足
+
             if ($mch['mch_id']==0&&!empty($mch['picker_water_voucher'])) {
-                if($mch['picker_water_voucher']['goods_id']==$mch['goods_list']['0']['goods_id']&&!isset($mch['goods_list'][1])){
-                    $res=$this->checkWaterVoucher($mch['picker_water_voucher']['goods_id'],$mch['picker_water_voucher']['use_num']);
-                    if($res['code']==1){
-                        return '无法使用水票';
-                    }
-                    $this->is_water_voucher=1;
-                }else{
-                    return '无法使用水票';
-                }
+                       foreach ($mch['goods_list'] as $li){
+                           $picker_key=$li['goods_id'];
+                           $picker_water_voucher=$mch['picker_water_voucher'][$picker_key];
+                            if(!empty($picker_water_voucher)&&!empty($picker_water_voucher['use_num']))  {
+                                $res=$this->checkWaterVoucher($picker_water_voucher['goods_id'],$picker_water_voucher['use_num']);
+                                if($res['code']==1){
+                                    $this->is_water_voucher=0;
+                                    $this->water_deduction_money=0;
+                                    return '无法使用水票';
+                                }else{
+                                    $this->water_deduction_money+=$picker_water_voucher['use_num']*$li['single_price'];
+                                    $this->is_water_voucher=1;
+                                }
+
+                            }
+                       }
 
             }
+
             $payPrice = $this->getPayPrice($mch);
             $order = new Order();
             $order->store_id = $this->store_id;
@@ -109,8 +120,6 @@ class OrderSubmitForm extends OrderForm
                 // 查找优惠券优惠的商品
                 $this->pickerGoods($mch);
             }
-
-
 
 
             if (isset($mch['plugin_type'])) {
@@ -166,8 +175,10 @@ class OrderSubmitForm extends OrderForm
 
 
             if ($order->save()) {
+
                 // 处理订单生成之后其他相关数据
                 $orderRes = $this->insertData($mch, $order);
+
                 if ($orderRes['code'] == 1) {
                     $t->rollBack();
                     return $orderRes;
@@ -178,6 +189,8 @@ class OrderSubmitForm extends OrderForm
                 $order_id_list[] = $order->id;
 
             } else {
+
+
                 $t->rollBack();
                 return $this->getErrorResponse($order);
             }
@@ -219,7 +232,6 @@ class OrderSubmitForm extends OrderForm
         //使用水票
 
         if ($this->is_water_voucher==1) {
-            $this->water_deduction_money=$mch['goods_list'][0]['single_price']*$mch['picker_water_voucher']['use_num'];
             $payPrice-= $this->water_deduction_money;
             $payPrice=$payPrice<0?0:$payPrice;
         }
@@ -522,31 +534,37 @@ class OrderSubmitForm extends OrderForm
 
     private function insertData($mch, $order)
     {
+
         //减少用户的水票
+
         if($this->is_water_voucher==1){
-            $goods_id=$mch['picker_water_voucher']['goods_id'];
-            $change_num=$mch['picker_water_voucher']['use_num'];
 
-            $user_voucher=UserVoucher::findone(['store_id'=>$this->store_id,'user_id'=>$this->user_id,'goods_id'=>$goods_id]);
-            $user_voucher->num-=$change_num;
-            $user_voucher->used_number+=$change_num;
-            $user_voucher->save();
-            $voucher_log= new VoucherUsedLog();
-            $voucher_log->user_id=$this->user_id;
-            $voucher_log->store_id=$this->store_id;
-            $voucher_log->goods_id=$goods_id;
-            $voucher_log->change_num= $change_num;
-            $voucher_log->change_type=voucherRed;
-            $voucher_log->type=voucherExchange;
-            $voucher_log->detail=exchangeDetail;
-            $voucher_log->create_time=time();
-            $voucher_log->order_id=$order->id;
-            $voucher_log->current_total=$user_voucher->num;
 
-            $voucher_log->insert();
+            foreach ($mch['picker_water_voucher'] as $li){
+                $goods_id=$li['goods_id'];
+                $change_num=$li['use_num'];
+                $deduction_money=$li['deduct_cost'];
 
+                $user_voucher=UserVoucher::findone(['store_id'=>$this->store_id,'user_id'=>$this->user_id,'goods_id'=>$goods_id]);
+                $user_voucher->num-=$change_num;
+                $user_voucher->used_number+=$change_num;
+                $user_voucher->save();
+                $voucher_log= new VoucherUsedLog();
+                $voucher_log->user_id=$this->user_id;
+                $voucher_log->store_id=$this->store_id;
+                $voucher_log->goods_id=$goods_id;
+                $voucher_log->change_num= $change_num;
+                $voucher_log->change_type=voucherRed;
+                $voucher_log->type=voucherExchange;
+                $voucher_log->detail=exchangeDetail.'—抵扣'.$deduction_money.'元';
+                $voucher_log->create_time=time();
+                $voucher_log->order_id=$order->id;
+                $voucher_log->deduction_money=$deduction_money;
+                $voucher_log->current_total=$user_voucher->num;
+                $voucher_log->insert();
 
             }
+       }
 
 
 

@@ -505,12 +505,26 @@ class OrderForm extends ApiModel
 
     protected function getWacherVoucherList($goods){
 
-        foreach ($goods as $item){
-            $goods_string[]= $item['goods_id'];
-            $new_goods[$item['goods_id']]['num']=$item['num'];
+        foreach ($goods as $i=>$item){
+            if($item['cart_id']){
+                $cart = Cart::findOne([
+                    'store_id' => $this->store_id,
+                    'id' => $item['cart_id'],
+                    'is_delete' => 0
+                ]);
+                if (!$cart) {
+                    unset($goods[$i]);
+                    continue;
+                }
+                $goods_string[]=$cart->goods_id;
+
+                $new_goods[$cart->goods_id]['num'] = $cart->num;
+            }elseif($item['goods_id']){
+                $goods_string[]= $item['goods_id'];
+                $new_goods[$item['goods_id']]['num']=$item['num'];
+            }
         }
 
-        $goods_string=implode(',',$goods_string);
         if(empty($goods_string))return [];
 
        $water_voucher_list=UserVoucher::find()->alias('uv')->leftJoin(['g'=>Goods::tableName()],'g.id=uv.goods_id')

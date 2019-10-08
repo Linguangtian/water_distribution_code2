@@ -8,11 +8,13 @@
 
 namespace app\modules\mch\models;
 
+use app\models\Goods;
 use app\models\Mch;
 use app\models\Order;
 use app\models\OrderDetail;
 use app\models\OrderForm;
 use app\models\OrderRefund;
+use app\models\VoucherUsedLog;
 use app\models\WaterOrder;
 use app\models\Waterman;
 use app\models\User;
@@ -51,12 +53,19 @@ class OrderDetailForm extends MchModel
             $mch = Mch::findOne(['store_id' => $this->store_id, 'id' => $order['mch_id']]);
         }
 
+        if($order['is_water_voucher']==1){
+            $order['water_voucher']=VoucherUsedLog::find()->alias('vul')->leftJoin(['g'=>Goods::tableName()],'g.id=vul.goods_id')->
+            where(['vul.order_id'=>$order['id'],'vul.store_id' => $this->store_id])->select(['g.name','vul.*'])->asArray()->all() ;
+        }
+
+
         return [
             'order' => $order,
             'goods_list' => $goods_list,
             'user' => $user,
             'order_form' => $order_form,
             'mch' => $mch
+
         ];
     }
 

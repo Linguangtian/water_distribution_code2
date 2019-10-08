@@ -2,6 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php" line="58" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php" line="541" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36b0761f-758f-42f6-8253-87fcb1596224" name="Default" comment="" />
@@ -15,52 +16,83 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="core" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PickLinkForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mch/models/PickLinkForm.php">
+      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+            <state relative-caret-position="600">
+              <caret line="151" column="45" lean-forward="true" selection-start-line="151" selection-start-column="45" selection-end-line="151" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/api/models/IndexForm.php">
+      <file leaf-file-name="OrderSubmitPreviewForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitPreviewForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+            <state relative-caret-position="286">
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="waterman-edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman/waterman-edit.php">
+      <file leaf-file-name="OrderForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="85" column="83" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="83" />
+            <state relative-caret-position="353">
+              <caret line="550" column="9" lean-forward="true" selection-start-line="550" selection-start-column="9" selection-end-line="550" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WatermanController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/mch/controllers/WatermanController.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="124" column="108" selection-start-line="124" selection-start-column="108" selection-end-line="124" selection-end-column="108" />
+            <state relative-caret-position="25">
+              <caret line="154" column="26" lean-forward="true" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WatermanController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/api/controllers/WatermanController.php">
+      <file leaf-file-name="OrderSubmitPreviewForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/models/OrderSubmitPreviewForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="120">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderSubmitForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="334" column="48" lean-forward="true" selection-start-line="334" selection-start-column="48" selection-end-line="334" selection-end-column="48" />
               <folding>
-                <element signature="e#139#167#0#PHP" expanded="true" />
+                <element signature="e#6#168#0#PHP" expanded="true" />
+                <element signature="e#212#240#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserVoucherForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/models/UserVoucherForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDetailForm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/api/models/OrderDetailForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="132" column="32" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -69,36 +101,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>WaterVoucherForm</find>
-      <find />
-      <find>ApiResponse</find>
-      <find>select</find>
-      <find>goods_id</find>
-      <find>sum</find>
-      <find>默认选中</find>
-      <find>BaseApiResponse</find>
-      <find>lowprice</find>
-      <find>nGoods</find>
-      <find>virtual_sales</find>
-      <find>newsubmitpreview</find>
-      <find>数据格式错误</find>
-      <find>OrderSubmitForm</find>
-      <find>getGoodsList</find>
-      <find>goods_list</find>
-      <find>getMchListData</find>
-      <find>picker_coupon</find>
-      <find>picker_water_voucher</find>
-      <find>买送</find>
-      <find>261</find>
+      <find>setting_voucher</find>
+      <find>voucher_package</find>
+      <find>'in'</find>
+      <find>快速购买</find>
+      <find>商品不存在</find>
+      <find>cart_id</find>
+      <find>$mch['goods_list']</find>
+      <find>is_water_voucher</find>
+      <find>总金额</find>
+      <find>优惠券优惠</find>
+      <find>exit</find>
+      <find>detail</find>
+      <find>href</find>
+      <find>urlManager</find>
+      <find>createUrl</find>
+      <find>forea</find>
+      <find>createUrls</find>
+      <find>货到付款4</find>
+      <find>OrderDetail</find>
+      <find>total_price</find>
+      <find>订单取消</find>
+      <find>water_deduction</find>
       <find>water_voucher</find>
-      <find>一键叫水</find>
-      <find>小程序（同一公众号下关联的小程序）</find>
-      <find>link</find>
-      <find>同一公</find>
-      <find>未配送订单</find>
-      <find>unconfirm_total</find>
-      <find>link()</find>
-      <find>waterman-list</find>
+      <find>var_dump</find>
+      <find>getWacherVoucherList</find>
+      <find>level_price</find>
+      <find>var</find>
+      <find>$single_level_price</find>
+      <find>single_level_price</find>
+      <find>water_deduction_money</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -118,7 +150,6 @@
         <option value="$PROJECT_DIR$/modules/mch/models/waterman/WatermanForm.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/waterman/index.php" />
         <option value="E:/huzhan/93/source/cp_comment.php" />
-        <option value="$PROJECT_DIR$/modules/mch/views/order/index.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/waterman-order/index.php" />
         <option value="$PROJECT_DIR$/models/Waterman.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/waterman/waterman-edit.php" />
@@ -134,14 +165,25 @@
         <option value="$PROJECT_DIR$/modules/api/controllers/WatervoucherController.php" />
         <option value="$PROJECT_DIR$/modules/api/models/WaterVoucherForm.php" />
         <option value="$PROJECT_DIR$/models/VoucherPackage.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php" />
         <option value="$PROJECT_DIR$/modules/api/models/OrderConfirmForm.php" />
-        <option value="$PROJECT_DIR$/modules/api/controllers/OrderController.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/UserVoucherForm.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/order/OrderForm.php" />
         <option value="$PROJECT_DIR$/modules/mch/models/PickLinkForm.php" />
         <option value="$PROJECT_DIR$/modules/api/models/IndexForm.php" />
         <option value="$PROJECT_DIR$/modules/mch/controllers/WatermanController.php" />
+        <option value="$PROJECT_DIR$/modules/mch/controllers/GoodsController.php" />
+        <option value="$PROJECT_DIR$/modules/mch/models/GoodsForm.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/group/order/detail.php" />
+        <option value="$PROJECT_DIR$/modules/mch/controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/modules/mch/models/OrderDetailForm.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/order/index.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/order/detail.php" />
+        <option value="$PROJECT_DIR$/../../../../water_distribution_web/siteinfo.js" />
+        <option value="$PROJECT_DIR$/modules/mch/views/store/setting.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/UserVoucherForm.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/OrderSubmitPreviewForm.php" />
+        <option value="$PROJECT_DIR$/modules/api/controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/order/OrderForm.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/OrderDetailForm.php" />
       </list>
     </option>
   </component>
@@ -264,10 +306,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="44" />
-    <option name="y" value="119" />
-    <option name="width" value="1829" />
-    <option name="height" value="989" />
+    <option name="x" value="-292" />
+    <option name="y" value="141" />
+    <option name="width" value="1791" />
+    <option name="height" value="924" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -284,20 +326,32 @@
             <path>
               <item name="core" type="b2602c69:ProjectViewProjectNode" />
               <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="core" type="b2602c69:ProjectViewProjectNode" />
               <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="core" type="b2602c69:ProjectViewProjectNode" />
               <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -308,7 +362,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/蜘蛛池2019zhanqun版" />
+    <property name="last_opened_file_path" value="E:/git/lgt_cms" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -352,54 +406,58 @@
       <workItem from="1568958073781" duration="26345000" />
       <workItem from="1569201780623" duration="23382000" />
       <workItem from="1569378270390" duration="5220000" />
-      <workItem from="1569547780506" duration="4492000" />
+      <workItem from="1569547780506" duration="6845000" />
+      <workItem from="1569718608348" duration="8889000" />
+      <workItem from="1569807399330" duration="10493000" />
+      <workItem from="1570499950290" duration="14242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117563000" />
+    <option name="totallyTimeSpent" value="153540000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="119" width="1829" height="989" extended-state="0" />
+    <frame x="-292" y="141" width="1791" height="924" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985657" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50373137" side_tool="true" weight="0.2557023" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32985657" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499391" visible="true" weight="0.18711136" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49797022" visible="true" weight="0.23916811" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893618" weight="0.11162791" />
       <window_info id="Structure" order="1" sideWeight="0.50060904" side_tool="true" weight="0.14734043" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49626866" weight="0.34533897" />
+      <window_info id="Favorites" order="2" sideWeight="0.5020298" side_tool="true" weight="0.18112798" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="12" visible="true" weight="0.32987013" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499391" visible="true" weight="0.18089315" />
       <window_info id="Structure" order="1" sideWeight="0.50060904" side_tool="true" weight="0.14734043" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985657" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893618" weight="0.11162791" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32985657" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50373137" side_tool="true" weight="0.2557023" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49626866" weight="0.34533897" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -413,194 +471,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php</url>
+          <line>543</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12050">
-          <caret line="515" column="115" lean-forward="true" selection-start-line="515" selection-start-column="115" selection-end-line="515" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderListForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="135" column="59" lean-forward="true" selection-start-line="135" selection-start-column="59" selection-end-line="135" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/TopicController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/huzhan/93/source/cp_comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="1" column="6360" lean-forward="true" selection-start-line="1" selection-start-column="6360" selection-end-line="1" selection-end-column="6360" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/order/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="642" column="143" selection-start-line="642" selection-start-column="143" selection-end-line="642" selection-end-column="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman-order/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="87" column="90" selection-start-line="87" selection-start-column="90" selection-end-line="87" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Waterman.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="61" column="2" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/BucketForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/WatermanForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="56" column="128" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="56" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/ArticleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1337" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/miaosha/GoodsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1437" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="294" lean-forward="true" selection-start-line="290" selection-start-column="2" selection-end-line="294" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman-order/bucket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="71" column="58" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/WaterOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="99" column="132" selection-start-line="99" selection-start-column="123" selection-end-line="99" selection-end-column="132" />
-          <folding>
-            <element signature="e#30#38#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/UserWaterBucket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/HomeNav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5545">
-          <caret line="673" column="74" selection-start-line="673" selection-start-column="74" selection-end-line="673" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/waterman/WatermanForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="98" column="26" lean-forward="true" selection-end-line="146" />
-          <folding>
-            <element signature="e#144#164#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/watervoucher/WaterVoucherListForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6325">
-          <caret line="292" column="50" selection-start-line="292" selection-start-column="50" selection-end-line="292" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/integralmall/OrderSubmitPreviewForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/UservoucherController.php" />
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/integralmall/IntegralmallController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="210" column="42" lean-forward="true" selection-start-line="210" selection-start-column="42" selection-end-line="210" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman-order/bucket-edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="43" column="67" lean-forward="true" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/api/controllers/integralmall/IntegralmallController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4814">
@@ -626,6 +507,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="425" column="68" selection-start-line="425" selection-start-column="59" selection-end-line="425" selection-end-column="68" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -633,13 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="138" column="42" lean-forward="true" selection-start-line="138" selection-start-column="42" selection-end-line="138" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="154" column="26" lean-forward="true" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -671,66 +548,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/BaseObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderSubmitPreviewForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="251" column="13" selection-start-line="251" selection-start-column="13" selection-end-line="251" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/api/models/OrderConfirmForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="859">
           <caret line="81" column="83" selection-start-line="81" selection-start-column="83" selection-end-line="81" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12050">
-          <caret line="515" column="115" selection-start-line="515" selection-start-column="115" selection-end-line="515" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitPreviewForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
-          <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/UserVoucherForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/WatervoucherController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -748,27 +569,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/PickLinkForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/api/controllers/WatermanController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="e#139#167#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mch/controllers/WatermanController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="124" column="108" selection-start-line="124" selection-start-column="108" selection-end-line="124" selection-end-column="108" />
+        <state relative-caret-position="234">
+          <caret line="121" column="40" selection-start-line="121" selection-start-column="40" selection-end-line="121" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/WatermanForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/GoodsForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="380" column="54" lean-forward="true" selection-start-line="380" selection-start-column="54" selection-end-line="380" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/GoodsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="154" column="28" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/PickLinkForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8875">
+          <caret line="359" column="29" selection-start-line="359" selection-start-column="29" selection-end-line="359" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/group/order/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="349" column="36" lean-forward="true" selection-start-line="349" selection-start-column="36" selection-end-line="349" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/OrderDetailForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1175">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="e#130#151#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6225">
+          <caret line="274" column="40" selection-start-line="274" selection-start-column="26" selection-end-line="274" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="42" column="104" selection-start-line="42" selection-start-column="104" selection-end-line="42" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/View.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/order/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4175">
+          <caret line="167" column="12" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/UrlManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11000">
+          <caret line="448" selection-start-line="437" selection-start-column="24" selection-end-line="437" selection-end-column="34" />
+          <folding>
+            <element signature="e#172#180#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../water_distribution_web/siteinfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/store/setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="302" column="60" lean-forward="true" selection-start-line="302" selection-start-column="60" selection-end-line="302" selection-end-column="60" />
+          <folding>
+            <element signature="e#4263#4270#0#HTML" expanded="true" />
+            <element signature="e#20387#20394#0#HTML" expanded="true" />
+            <element signature="e#23775#23782#0#HTML" expanded="true" />
+            <element signature="e#25940#25947#0#HTML" expanded="true" />
+            <element signature="e#30398#30405#0#HTML" expanded="true" />
+            <element signature="e#33532#33539#0#HTML" expanded="true" />
+            <element signature="e#39072#39079#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/controllers/WatervoucherController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/order/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="373" selection-start-line="373" selection-end-line="373" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/yii">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3525">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="81" column="61" lean-forward="true" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/cache.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/db.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/db-stand-alone.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hejiang/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/BaseObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1174">
+          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/OrderForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-908" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/UserVoucherForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderSubmitPreviewForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="154" column="26" lean-forward="true" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="550" column="9" lean-forward="true" selection-start-line="550" selection-start-column="9" selection-end-line="550" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitPreviewForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="334" column="48" lean-forward="true" selection-start-line="334" selection-start-column="48" selection-end-line="334" selection-end-column="48" />
+          <folding>
+            <element signature="e#6#168#0#PHP" expanded="true" />
+            <element signature="e#212#240#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="151" column="45" lean-forward="true" selection-start-line="151" selection-start-column="45" selection-end-line="151" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderDetailForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="132" column="32" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="32" />
         </state>
       </provider>
     </entry>

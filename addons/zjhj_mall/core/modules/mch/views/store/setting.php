@@ -287,21 +287,21 @@ $this->params['active_nav_group'] = 1;
                                 value="1"
                                 name="payment[wechat]" type="checkbox" class="custom-control-input">
                             <span class="label-icon"></span>
-                            <span class="label-text">线上支付</span>
+                            <span class="label-text">1、线上支付</span>
                         </label>
                         <label class="checkbox-label">
                             <input <?= $option['payment']['huodao'] == 1 ? 'checked' : null ?>
                                 value="1"
                                 name="payment[huodao]" type="checkbox" class="custom-control-input">
                             <span class="label-icon"></span>
-                            <span class="label-text">货到付款4</span>
+                            <span class="label-text">2、货到付款</span>
                         </label>
                         <label class="checkbox-label">
                             <input <?= $option['payment']['balance'] == 1 ? 'checked' : null ?>
                                 value="1"
                                 name="payment[balance]" type="checkbox" class="custom-control-input">
                             <span class="label-icon"></span>
-                            <span class="label-text">余额支付</span>
+                            <span class="label-text">3、余额支付</span>
                         </label>
                         <div class="fs-sm text-danger">默认支持线上支付；若三个都不勾选，则视为勾选线上支付</div>
                         <div class="fs-sm">可在“<a target="_blank"
