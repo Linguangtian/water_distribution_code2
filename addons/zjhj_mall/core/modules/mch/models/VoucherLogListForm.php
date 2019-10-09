@@ -44,12 +44,14 @@ class VoucherLogListForm  extends MchModel
     public $date_end;
     public $voucher_order_id;
     public $change_type;
+    public $is_offline;
+
 
     public function rules()
     {
         return [
             [['keyword', 'level', 'user_id', 'mobile', 'flag', 'date_start', 'date_end'], 'trim'],
-            [['page', 'is_clerk','voucher_order_id','goods_id','user_id','change_type'], 'integer'],
+            [['page', 'is_clerk','voucher_order_id','is_offline','goods_id','user_id','change_type'], 'integer'],
             [['page'], 'default', 'value' => 1],
             [['platform','fields'], 'safe']
         ];
@@ -83,6 +85,21 @@ class VoucherLogListForm  extends MchModel
         if($this->change_type){
             $query->andwhere(['=','vl.change_type',$this->change_type]);
         }
+
+
+        if ($this->flag == "EXPORT") {
+
+            $query1 = clone $query;
+            $list_ex = $query1->orderBy('vl.id DESC')->select(['vl.*', 'g.name','u.nickname'])->asArray()->all();
+            $f = new ExportList();
+            $f->fields = $this->fields;
+            $f->dataWaterAction($list_ex);
+        }
+
+
+
+
+
        $count = $query->count();
        $pagination = new Pagination(['totalCount' => $count, 'page' => $this->page - 1]);
 

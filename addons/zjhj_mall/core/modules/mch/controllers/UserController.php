@@ -661,4 +661,36 @@ class UserController extends Controller
         $data_list = $form->getClerk();
         return \Yii::$app->serializer->encode($data_list);
     }
+
+
+    //会员身份交换exchange-identity
+    public function actionExchangeIdentity(){
+        $res='';
+        if (\Yii::$app->request->isPost) {
+            $form = new UserListForm();
+            $form->attributes = \Yii::$app->request->post();
+            $form->store_id = $this->store->id;
+           $res=$form->exchangeIdentity();
+        }
+
+        return $this->render('exchange-identity', ['res' => $res['msg']]);
+    }
+
+
+    public function actionExchangeIdentityLog(){
+        $form=new UserListForm();
+        $form->attributes=\Yii::$app->request->get();
+        $form->store_id = $this->store->id;
+        $data = $form->exchangeIdentityLog();
+
+
+
+        return $this->render('exchange-identity-log', [
+            'row_count' => $data['row_count'],
+            'pagination' => $data['pagination'],
+            'list' => $data['list'],
+        ]);
+
+    }
+
 }

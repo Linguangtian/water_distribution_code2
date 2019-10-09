@@ -675,8 +675,19 @@ class Menu
                           ]
                     ]
 
+                ],
+                [
+                    'name' => '会员交接',
+                    'is_menu' => true,
+                    'route' => 'mch/user/exchange-identity',
+                    'sub' => [
+                        [
+                            'name' => '交换记录',
+                            'is_menu' => false,
+                            'route' => 'mch/user/exchange-identity-log',
+                        ]
+                    ]
                 ]
-
 
                 ],
             ],

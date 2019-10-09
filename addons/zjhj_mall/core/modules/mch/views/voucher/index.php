@@ -64,8 +64,20 @@ $this->params['active_nav_group'] = 4;
                     </div>
                 </div>
                 <div class="row ml-1">
-                    <div>
-                        <div class="input-group">
+                    <div style="display: flex;">
+
+
+                        <div class="input-group  "style="flex-grow:1;height:30px; margin-right: 10px;" >
+                            订单类型:
+                            <select name="change_type" class="form-control" >
+                                <option value="0">全部</option>
+                                <option value="2" <?= $_GET['change_type'] == 2? "selected" : "" ?>>使用</option>
+                                <option value="1" <?= $_GET['change_type'] == 1 ? "selected" : "" ?>>购买</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group" style="flex-grow:1; height:30px;">
                             <input class="form-control"
                                    placeholder="昵称/水票名称"
                                    name="keyword"
@@ -73,11 +85,16 @@ $this->params['active_nav_group'] = 4;
                                    value="<?= isset($_GET['keyword']) ? trim($_GET['keyword']) : null ?>">
                         </div>
                     </div>
+
                     <div class="form-group">
                         <button class="btn btn-primary ml-3 mr-4">筛选</button>
+
+                        <a class="btn btn-secondary export-btn" href="javascript:">批量导出</a>
                     </div>
 
                 </div>
+
+
             </form>
         </div>
         <div class="text-danger"></div>

@@ -9,26 +9,10 @@
 
 namespace app\modules\mch\controllers;
 
-use app\models\Attr;
-use app\models\AttrGroup;
-use app\models\Cat;
-use app\models\Goods;
-use app\models\GoodsPic;
-use app\models\MsGoods;
-use app\models\PtGoods;
-use app\models\YyGoods;
-use app\modules\mch\events\goods\BaseAddGoodsEvent;
-use app\modules\mch\models\CopyForm;
-use app\modules\mch\models\goods\Taobaocsv;
-use app\modules\mch\models\GoodsForm;
-use app\modules\mch\models\VoucherPackageForm;
-use app\modules\mch\models\GoodsQrcodeForm;
-use app\modules\mch\models\GoodsSearchForm;
-use app\modules\mch\models\LevelListForm;
-use app\modules\mch\models\SetGoodsSortForm;
+
 use app\modules\mch\models\VoucherLogListForm;
 use app\modules\mch\models\UserVoucherForm;
-
+use app\modules\mch\models\ExportList;
 
 use Hejiang\Event\EventArgument;
 use yii\web\HttpException;
@@ -42,20 +26,44 @@ class VoucherController extends Controller
 {
 
         //获取抵用券操作历史记录
-        public function actionIndex()
+        public function actionIndex($is_offline = null)
         {
+
+
+            // 获取可导出数据
+            $f = new ExportList();
+            $exportList = $f->getWaterAction();
+
+
             $form=new VoucherLogListForm();
             $form->attributes=\Yii::$app->request->get();
             $form->attributes=\Yii::$app->request->post();
             $form->store_id = $this->store->id;
+            $form->is_offline = \Yii::$app->request->get('is_offline');
             $data = $form->search();
             return $this->render('index', [
                 'row_count' => $data['row_count'],
                 'pagination' => $data['pagination'],
                 'list' => $data['list'],
+                'exportList' => \Yii::$app->serializer->encode($exportList),
             ]);
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -369,6 +369,146 @@ class ExportList
         return $list;
     }
 
+
+
+
+
+
+
+
+    public function getWaterAction()
+    {
+        $list = [
+            [
+                'key' => 'id',
+                'value' => '编号',
+                'hidden' => false,
+                'selected' => 0,
+                'type' => [0, 1],
+            ],
+            [
+                'key' => 'nickname',
+                'value' => '用户',
+                'hidden' => false,
+                'selected' => 0,
+                'type' => [0, 1],
+            ],
+
+            [
+                'key' => 'name',
+                'value' => '水票名称',
+                'hidden' => false,
+                'selected' => 0,
+                'type' => [0, 1],
+            ],
+
+            [
+                'key' => 'change_num',
+                'value' => '数量',
+                'hidden' => false,
+                'selected' => 0,
+                'order_type' => [0, 1, 2, 4, 5],
+                'type' => [0, 1],
+            ],
+
+            [
+                'key' => 'type',
+                'value' => '类型',
+                'hidden' => false,
+                'selected' => 0,
+                'order_type' => [0, 1, 2, 4, 5],
+                'type' => [0, 1],
+            ],
+
+            [
+                'key' => 'num',
+                'value' => '当前剩余',
+                'hidden' => false,
+                'selected' => 0,
+                'order_type' => [0, 1, 2, 4, 5],
+                'type' => [0, 1],
+            ],
+            [
+                'key' => 'time',
+                'value' => '操作时间',
+                'hidden' => false,
+                'selected' => 0,
+                'order_type' => [0, 1, 2, 4],
+                'type' => [0, 1],
+            ],
+
+
+            [
+                'key' => 'des',
+                'value' => '备注',
+                'hidden' => false,
+                'selected' => 0,
+                'order_type' => [0, 1, 2, 4, 5],
+                'type' => [0, 1],
+            ],
+
+           
+            [
+                'key' => 'order_no',
+                'value' => '订单号',
+                'hidden' => false,
+                'selected' => 0,
+                'type' => [0],
+            ],
+
+
+        ];
+        foreach ($list as $i => $item) {
+            if (isset($item['order_type']) && !in_array($this->order_type, $item['order_type'])) {
+                unset($list[$i]);
+                continue;
+            }
+            if (isset($item['type']) && !in_array($this->type, $item['type'])) {
+                unset($list[$i]);
+                continue;
+            }
+        }
+
+        return $list;
+    }
+
+
+
+    public function dataWaterAction($data)
+    {
+
+
+        $newFields = $this->dataFields();
+
+        $newList = [];
+        foreach ($data as $item) {
+            $arr = [];
+            $arr['id'] = $item['id'];
+            $arr['nickname'] = $item['nickname'];
+            $arr['name'] = $item['name'].'-水票';
+            $arr['change_num'] = $item['change_num'];
+            $arr['type'] = $item['change_type']==1?'增加':'减少';
+            $arr['num'] = $item['current_total'];
+            $arr['time'] = date('Y-m-d H:i:s',$item['create_time']);
+            $arr['des'] =  $item['detail'];
+            $arr['order_no'] =  $item['order_id'];
+            $newList[] = $arr;
+        }
+
+        Export::dataNew($newList, $newFields);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
     /**
      * @param $data array 需要处理的数据
      */

@@ -13,6 +13,7 @@ use app\models\IntegralOrder;
 use app\models\Level;
 use app\models\MsOrder;
 use app\models\Order;
+use app\models\UserExchangeIdentityLog;
 use app\models\PtOrder;
 use app\models\Share;
 use app\models\UserCoupon;
@@ -37,14 +38,18 @@ class UserListForm extends MchModel
     public $platform;
     public $fields;
     public $flag;
+    public $user_id2;
+    public $notes;
+
 
     public function rules()
     {
         return [
-            [['keyword', 'level', 'user_id', 'mobile', 'flag'], 'trim'],
+            [['keyword', 'level', 'user_id', 'user_id2','mobile', 'flag'], 'trim'],
             [['page', 'is_clerk'], 'integer'],
             [['page'], 'default', 'value' => 1],
-            [['platform','fields'], 'safe']
+            [['platform','fields'], 'safe'],
+            [['notes'], 'string', 'max' => 255],
         ];
     }
 
@@ -272,4 +277,83 @@ class UserListForm extends MchModel
 
         return $list;
     }
+
+
+    //用户身份交换
+    public function exchangeIdentity(){
+        $user1=User::findOne(['id'=>$this->user_id]);
+        $user2=User::findOne(['id'=>$this->user_id2]);
+        if(empty($user1)||empty($user2)){
+            return [
+                'code' => 0,
+                'msg' => '会员不存在',
+            ];
+        }
+
+        $user1_info=User::find()->where(['id'=>$this->user_id])->asArray()->one();
+        $user1_info=json_encode($user1_info);
+        $user2_info=User::find()->where(['id'=>$this->user_id2])->asArray()->one();
+        $user2_info=json_encode($user2_info);
+
+        $t = \Yii::$app->db->beginTransaction();
+
+        $user3= clone $user1;
+        $nickname1=$user3->nickname;
+        $nickname2=$user2->nickname;
+        $user1->nickname=$user2->nickname;
+        $user1->avatar_url=$user2->avatar_url;
+        $user1->wechat_open_id=$user2->wechat_open_id;
+        $user1->access_token=$user2->access_token;
+        $user1->save();
+
+        $user2->nickname=$user3->nickname;
+        $user2->avatar_url=$user3->avatar_url;
+        $user2->wechat_open_id=$user3->wechat_open_id;
+        $user2->access_token=$user3->access_token;
+        if($user2->save()){
+            $t->commit();
+            $log=new UserExchangeIdentityLog();
+            $log->create_date=time();
+            $log->user_id1=$this->user_id;
+            $log->user_id2=$this->user_id2;
+            $log->nickname1=$nickname1;
+            $log->nickname2= $nickname2;
+            $log->user1_info=$user1_info;
+            $log->user2_info=$user2_info;
+            $log->notes=$this->notes;
+            $log->save();
+            return [
+                'code' => 0,
+                'msg' => '互换成功',
+            ];
+        }
+        return [
+            'code' => 1,
+            'msg' => '失败',
+        ];
+
+    }
+
+    public function exchangeIdentityLog(){
+
+        $query=UserExchangeIdentityLog::find();
+        $count = $query->count();
+        $pagination = new Pagination(['totalCount' => $count, 'page' => $this->page - 1]);
+
+        $list =$query->select(['*'])
+            ->limit($pagination->limit)
+            ->offset($pagination->offset)
+            ->orderBy('id DESC')
+            ->asArray()->all();
+
+        return [
+            'row_count' => $count,
+            'page_count' => $pagination->pageCount,
+            'pagination' => $pagination,
+            'list' => $list,
+        ];
+
+    }
+
+
 }
