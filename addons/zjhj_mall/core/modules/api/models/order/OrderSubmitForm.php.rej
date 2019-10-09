@@ -1,0 +1,9 @@
+diff a/addons/zjhj_mall/core/modules/api/models/order/OrderSubmitForm.php b/addons/zjhj_mall/core/modules/api/models/order/OrderSubmitForm.php	(rejected hunks)
+@@ -646,6 +646,7 @@
+ 
+             /*  end减去水票抵用券部分 */
+ 
++                 if($this->use_integral == 1){
+                 if ($goods['resIntegral'] && $goods['resIntegral']['forehead'] > 0) {
+                     $payPrice -= $goods['resIntegral']['forehead'];
+                 }
