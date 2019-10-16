@@ -24,6 +24,10 @@ $url_manager = Yii::$app->urlManager;
         <span><?= $this->title ?></span>   <span style="float: right"><a href="<?=$urlManager->createUrl(['mch/user/exchange-identity-log'])?>">查看记录</a></span>
     </div>
     <div class="panel-body">
+
+        <div><h6>注意:  为了系统的稳定，尽可能少的使用该功能</h6></div>
+
+
         <form class="auto-form" method="post"
               return="<?= Yii::$app->request->referrer ? Yii::$app->request->referrer : '' ?>"
               onsubmit="return checkSubmit();"

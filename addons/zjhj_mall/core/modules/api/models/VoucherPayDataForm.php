@@ -82,13 +82,14 @@ class VoucherPayDataForm extends ApiModel
             ];
         }
 
-    /*  $this->use_no=$this->getOrderUnionNo();
+        $this->use_no=$this->getOrderUnionNo();
+
         $res = $this->unifiedOrder();
         if (isset($res['code']) && $res['code'] == 1) {
             return $res;
-        }*/
+        }
 
-        //付款成功后
+      /*  //付款成功后
         $my_voucher=UserVoucher::findOne(['store_id'=>$this->store_id,'goods_id'=>$this->goods_id,'user_id'=>$this->user->id]);
         if($my_voucher){
             $my_voucher->num+=$this->voucher_info['package_number'];
@@ -101,17 +102,17 @@ class VoucherPayDataForm extends ApiModel
             $my_voucher->total_number=$this->voucher_info['package_number'];
             $my_voucher->num=$this->voucher_info['package_number'];
         }
-        $my_voucher->save();//  $result=$my_voucher->save();
+        $my_voucher->save();*/
 
         //增加抵用券订单
         $voucher_order= new VoucherOrder();
-        $voucher_order->order_no=$this->getOrderUnionNo();
+        $voucher_order->order_no= $this->use_no;
         $voucher_order->user_id=$this->user->id;
         $voucher_order->store_id=$this->store_id;
         $voucher_order->goods_id=$this->goods_id;
         $voucher_order->voucher_id=$this->voucher_id;
         $voucher_order->voucher_num=$this->voucher_info['package_number'];
-        $voucher_order->pay_status='2';
+        $voucher_order->pay_status='1';
         $voucher_order->voucher_title=$this->voucher_info['name'].'-'.$this->voucher_info['title'];
         $voucher_order->create_time=time();
         $voucher_order->pay_type='wechat';
@@ -121,7 +122,7 @@ class VoucherPayDataForm extends ApiModel
 
 
         //增加抵用券记录
-        if($voucher_order->attributes['id']){
+        /*     if($voucher_order->attributes['id']){
             $voucher_user_log= new VoucherUsedLog();
             $voucher_user_log->user_id=$this->user->id;
             $voucher_user_log->goods_id=$this->goods_id;
@@ -137,7 +138,7 @@ class VoucherPayDataForm extends ApiModel
         }
 
 
-
+*/
 
 
         //
@@ -145,45 +146,20 @@ class VoucherPayDataForm extends ApiModel
             'appId' => $this->wechat->appId,
             'timeStamp' => '' . time(),
             'nonceStr' => md5(uniqid()),
-            'package' => 'prepay_id=' . 110,
+            'package' => 'prepay_id=' . $res['prepay_id'],
             'signType' => 'MD5',
         ];
-        $pay_data['paySign'] = $this->wechat->pay->makeSign($pay_data);
+       $pay_data['paySign'] = $this->wechat->pay->makeSign($pay_data);
         return [
             'code' => 0,
             'msg' => 'success',
             'data' => (object)$pay_data,
             'res' => 1,
-            'body' => $this->voucher_info->name.'-水票',
+            'body' => $this->voucher_info['name'].'-水票',
         ];
 
 
 
-                //记录prepay_id发送模板消息用到
-                FormId::addFormId([
-                    'store_id' => $this->store_id,
-                    'user_id' => $this->user->id,
-                    'wechat_open_id' => $this->user->wechat_open_id,
-                    'form_id' => $res['prepay_id'],
-                    'type' => 'prepay_id',
-                    'order_no' => $this->order->order_no,
-                ]);
-
-                $pay_data = [
-                    'appId' => $this->wechat->appId,
-                    'timeStamp' => '' . time(),
-                    'nonceStr' => md5(uniqid()),
-                    'package' => 'prepay_id=' . $res['prepay_id'],
-                    'signType' => 'MD5',
-                ];
-                $pay_data['paySign'] = $this->wechat->pay->makeSign($pay_data);
-                return [
-                    'code' => 0,
-                    'msg' => 'success',
-                    'data' => (object)$pay_data,
-                    'res' => $res,
-                    'body' => $this->voucher_info->name.'-水票',
-                ];
     }
 
 
@@ -198,10 +174,12 @@ class VoucherPayDataForm extends ApiModel
     //微信支付下单
     private function unifiedOrder($goods_names='my_test')
     {
+
+
         $res = $this->wechat->pay->unifiedOrder([
-            'body' =>$this->voucher_info->name.'-水票',
+            'body' =>$this->voucher_info['name'].'-水票',
             'out_trade_no' => $this->use_no,
-            'total_fee' => $this->voucher_info->price * 100,
+            'total_fee' => $this->voucher_info['package_price'] * 100,
             'notify_url' => pay_notify_url('/pay-notify.php'),
             'trade_type' => 'JSAPI',
             'openid' => $this->user->wechat_open_id,
@@ -272,7 +250,7 @@ class VoucherPayDataForm extends ApiModel
     {
         $order_no = null;
         while (true) {
-            $order_no = 'U' . date('YmdHis') . mt_rand(10000, 99999);
+            $order_no = 'V' . date('YmdHis') . mt_rand(10000, 99999);
             $exist_order_no = OrderUnion::find()->where(['order_no' => $order_no])->exists();
             if (!$exist_order_no) {
                 break;

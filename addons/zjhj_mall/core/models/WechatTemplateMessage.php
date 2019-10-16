@@ -33,7 +33,7 @@ class WechatTemplateMessage extends \yii\db\ActiveRecord
         return [
             [['store_id'], 'required'],
             [['store_id'], 'integer'],
-            [['pay_tpl', 'send_tpl', 'refund_tpl', 'not_pay_tpl', 'revoke_tpl'], 'string', 'max' => 255],
+            [['pay_tpl', 'send_tpl', 'refund_tpl', 'not_pay_tpl', 'revoke_tpl','water_feeder_tpl'], 'string', 'max' => 255],
         ];
     }
 

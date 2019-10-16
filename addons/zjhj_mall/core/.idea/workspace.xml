@@ -2,8 +2,8 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php" line="58" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php" line="541" mnemonic="2" />
-    <bookmark url="file://$PROJECT_DIR$/modules/mch/models/UserListForm.php" line="299" />
+    <bookmark url="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php" line="548" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/modules/mch/models/UserListForm.php" line="300" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36b0761f-758f-42f6-8253-87fcb1596224" name="Default" comment="" />
@@ -17,319 +17,75 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="WatermanController.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/modules/mch/controllers/WatermanController.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="450">
-                    <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="WatermanForm.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/WatermanForm.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="688">
-                    <caret line="67" column="10" lean-forward="true" selection-start-line="62" selection-start-column="8" selection-end-line="67" selection-end-column="10" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="BaseActiveRecord.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="470">
-                    <caret line="639" column="20" selection-start-line="639" selection-start-column="20" selection-end-line="639" selection-end-column="20" />
-                    <folding>
-                      <element signature="e#24612#24705#0#PHP" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="WatermanAddForm.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/WatermanAddForm.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-460">
-                    <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="VoucherController.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/modules/mch/controllers/VoucherController.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-75">
-                    <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-                    <folding>
-                      <element signature="e#138#184#0#PHP" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="ExportList.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/modules/mch/models/ExportList.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="625">
-                    <caret line="378" column="20" selection-start-line="378" selection-start-column="20" selection-end-line="378" selection-end-column="20" />
-                    <folding>
-                      <element signature="e#636#10797#0#PHP" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="VoucherLogListForm.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/modules/mch/models/VoucherLogListForm.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="2610">
-                    <caret line="145" column="11" lean-forward="true" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="core" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="exchange-identity.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/mch/views/user/exchange-identity.php">
+      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="81" column="78" selection-start-line="81" selection-start-column="74" selection-end-line="81" selection-end-column="78" />
+            <state relative-caret-position="1050">
+              <caret line="71" column="44" lean-forward="true" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
               <folding>
-                <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#133#161#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mch/controllers/UserController.php">
+      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mch/views/user/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="687" column="51" selection-start-line="687" selection-start-column="51" selection-end-line="687" selection-end-column="51" />
-              <folding>
-                <element signature="e#133#160#0#PHP" expanded="true" />
-                <element signature="e#1190#1322#0#PHP" />
-                <element signature="e#1380#1637#0#PHP" />
-                <element signature="e#1651#1814#0#PHP" />
-                <element signature="e#1819#3082#0#PHP" />
-                <element signature="e#2011#2132#0#PHP" />
-                <element signature="e#2044#2121#0#PHP" />
-                <element signature="e#2141#2495#0#PHP" />
-                <element signature="e#2299#2446#0#PHP" />
-                <element signature="e#2341#2431#0#PHP" />
-                <element signature="e#2504#2826#0#PHP" />
-                <element signature="e#2534#2695#0#PHP" />
-                <element signature="e#2591#2680#0#PHP" />
-                <element signature="e#2747#2816#0#PHP" />
-                <element signature="e#2835#3076#0#PHP" />
-                <element signature="e#2875#2950#0#PHP" />
-                <element signature="e#2962#3076#0#PHP" />
-                <element signature="e#2988#3065#0#PHP" />
-                <element signature="e#3088#3134#0#PHP" />
-                <element signature="e#3139#4548#0#PHP" />
-                <element signature="e#3551#3631#0#PHP" />
-                <element signature="e#3787#4102#0#PHP" />
-                <element signature="e#3865#4033#0#PHP" />
-                <element signature="e#3915#4019#0#PHP" />
-                <element signature="e#4231#4541#0#PHP" />
-                <element signature="e#4254#4540#0#PHP" />
-                <element signature="e#4837#5393#0#PHP" />
-                <element signature="e#4985#5107#0#PHP" />
-                <element signature="e#5018#5096#0#PHP" />
-                <element signature="e#5146#5387#0#PHP" />
-                <element signature="e#5186#5261#0#PHP" />
-                <element signature="e#5273#5387#0#PHP" />
-                <element signature="e#5299#5376#0#PHP" />
-                <element signature="e#5399#6057#0#PHP" />
-                <element signature="e#5826#6050#0#PHP" />
-                <element signature="e#5850#6049#0#PHP" />
-                <element signature="e#6063#6643#0#PHP" />
-                <element signature="e#6212#6342#0#PHP" />
-                <element signature="e#6252#6331#0#PHP" />
-                <element signature="e#6389#6637#0#PHP" />
-                <element signature="e#6436#6511#0#PHP" />
-                <element signature="e#6523#6637#0#PHP" />
-                <element signature="e#6549#6626#0#PHP" />
-                <element signature="e#6649#6672#0#PHP" />
-                <element signature="e#6677#7060#0#PHP" />
-                <element signature="e#6897#7053#0#PHP" />
-                <element signature="e#6920#7052#0#PHP" />
-                <element signature="e#7066#7091#0#PHP" />
-                <element signature="e#7096#8278#0#PHP" />
-                <element signature="e#7252#7310#0#PHP" />
-                <element signature="e#7380#7872#0#PHP" />
-                <element signature="e#7681#7862#0#PHP" />
-                <element signature="e#7765#7862#0#PHP" />
-                <element signature="e#7881#8152#0#PHP" />
-                <element signature="e#7932#8129#0#PHP" />
-                <element signature="e#8035#8129#0#PHP" />
-                <element signature="e#8169#8271#0#PHP" />
-                <element signature="e#8197#8270#0#PHP" />
-                <element signature="e#8284#8312#0#PHP" />
-                <element signature="e#8317#9203#0#PHP" />
-                <element signature="e#8479#8604#0#PHP" />
-                <element signature="e#8513#8593#0#PHP" />
-                <element signature="e#8645#8946#0#PHP" />
-                <element signature="e#8786#8936#0#PHP" />
-                <element signature="e#8822#8921#0#PHP" />
-                <element signature="e#8955#9197#0#PHP" />
-                <element signature="e#8996#9071#0#PHP" />
-                <element signature="e#9083#9197#0#PHP" />
-                <element signature="e#9109#9186#0#PHP" />
-                <element signature="e#9209#9234#0#PHP" />
-                <element signature="e#9239#10065#0#PHP" />
-                <element signature="e#9376#9501#0#PHP" />
-                <element signature="e#9410#9490#0#PHP" />
-                <element signature="e#9617#9747#0#PHP" />
-                <element signature="e#9649#9736#0#PHP" />
-                <element signature="e#9787#10059#0#PHP" />
-                <element signature="e#9858#9933#0#PHP" />
-                <element signature="e#9945#10059#0#PHP" />
-                <element signature="e#9971#10048#0#PHP" />
-                <element signature="e#10071#10094#0#PHP" />
-                <element signature="e#10099#10949#0#PHP" />
-                <element signature="e#10230#10345#0#PHP" />
-                <element signature="e#10354#10610#0#PHP" />
-                <element signature="e#10719#10831#0#PHP" />
-                <element signature="e#10848#10942#0#PHP" />
-                <element signature="e#10870#10941#0#PHP" />
-                <element signature="e#10955#11010#0#PHP" />
-                <element signature="e#11015#13897#0#PHP" />
-                <element signature="e#11687#11862#0#PHP" />
-                <element signature="e#11776#11862#0#PHP" />
-                <element signature="e#11898#12025#0#PHP" />
-                <element signature="e#11931#12014#0#PHP" />
-                <element signature="e#12034#12168#0#PHP" />
-                <element signature="e#12077#12157#0#PHP" />
-                <element signature="e#12177#12415#0#PHP" />
-                <element signature="e#12257#12341#0#PHP" />
-                <element signature="e#12342#12415#0#PHP" />
-                <element signature="e#12424#12814#0#PHP" />
-                <element signature="e#12464#12630#0#PHP" />
-                <element signature="e#12522#12615#0#PHP" />
-                <element signature="e#12683#12814#0#PHP" />
-                <element signature="e#12823#12956#0#PHP" />
-                <element signature="e#12864#12945#0#PHP" />
-                <element signature="e#12965#13296#0#PHP" />
-                <element signature="e#13129#13296#0#PHP" />
-                <element signature="e#13641#13891#0#PHP" />
-                <element signature="e#13688#13765#0#PHP" />
-                <element signature="e#13777#13891#0#PHP" />
-                <element signature="e#13803#13880#0#PHP" />
-                <element signature="e#13903#13979#0#PHP" />
-                <element signature="e#13984#14365#0#PHP" />
-                <element signature="e#14232#14358#0#PHP" />
-                <element signature="e#14262#14357#0#PHP" />
-                <element signature="e#14371#14418#0#PHP" />
-                <element signature="e#14423#14947#0#PHP" />
-                <element signature="e#14732#14940#0#PHP" />
-                <element signature="e#14772#14939#0#PHP" />
-                <element signature="e#14953#14976#0#PHP" />
-                <element signature="e#14981#15948#0#PHP" />
-                <element signature="e#15659#15941#0#PHP" />
-                <element signature="e#15681#15940#0#PHP" />
-                <element signature="e#15954#15979#0#PHP" />
-                <element signature="e#15984#16658#0#PHP" />
-                <element signature="e#16410#16651#0#PHP" />
-                <element signature="e#16436#16650#0#PHP" />
-                <element signature="e#16664#16689#0#PHP" />
-                <element signature="e#16694#18792#0#PHP" />
-                <element signature="e#16971#17155#0#PHP" />
-                <element signature="e#17166#17255#0#PHP" />
-                <element signature="e#17264#17365#0#PHP" />
-                <element signature="e#17374#17475#0#PHP" />
-                <element signature="e#17534#17655#0#PHP" />
-                <element signature="e#17534#17671#0#PHP" />
-                <element signature="e#17695#17814#0#PHP" />
-                <element signature="e#17695#17830#0#PHP" />
-                <element signature="e#17921#18065#0#PHP" />
-                <element signature="e#17921#18085#0#PHP" />
-                <element signature="e#17921#18113#0#PHP" />
-                <element signature="e#18142#18286#0#PHP" />
-                <element signature="e#18184#18276#0#PHP" />
-                <element signature="e#18366#18566#0#PHP" />
-                <element signature="e#18583#18785#0#PHP" />
-                <element signature="e#18604#18784#0#PHP" />
-                <element signature="e#18809#19743#0#PHP" />
-                <element signature="e#18861#19737#0#PHP" />
-                <element signature="e#19091#19573#0#PHP" />
-                <element signature="e#19198#19310#0#PHP" />
-                <element signature="e#19311#19437#0#PHP" />
-                <element signature="e#19438#19573#0#PHP" />
-                <element signature="e#19468#19558#0#PHP" />
-                <element signature="e#19618#19737#0#PHP" />
-                <element signature="e#19644#19726#0#PHP" />
-                <element signature="e#19749#19826#0#PHP" />
-                <element signature="e#20109#20232#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exchange-identity-log.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mch/views/user/exchange-identity-log.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
-              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-              <folding>
-                <element signature="e#140#161#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-4389">
+              <caret line="124" column="87" selection-start-line="124" selection-start-column="87" selection-end-line="124" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman/index.php">
+        <entry file="file://$PROJECT_DIR$/modules/mch/views/user/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1250">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserListForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mch/models/UserListForm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="347" selection-start-line="347" selection-end-line="347" />
+            <state relative-caret-position="519">
+              <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
               <folding>
-                <element signature="e#127#155#0#PHP" expanded="true" />
+                <element signature="n#nav#0;n#div#2;n#div#1;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#21124#21173#0#HTML" />
+                <element signature="e#21233#21365#0#HTML" />
+                <element signature="e#21426#22644#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php">
+      <file leaf-file-name="UserCreditLog.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/UserCreditLog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="686" column="70" selection-start-line="686" selection-start-column="40" selection-end-line="686" selection-end-column="70" />
+            <state relative-caret-position="475">
+              <caret line="37" column="50" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseObject.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/BaseObject.php">
+      <file leaf-file-name="WatermanController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mch/controllers/WatermanController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WatermanForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/WatermanForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="67" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -337,8 +93,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="4247">
+              <caret line="234" column="36" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="36" />
               <folding>
                 <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
@@ -346,11 +102,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserExchangeIdentityLog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/UserExchangeIdentityLog.php">
+      <file leaf-file-name="credit-list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mch/views/user/credit-list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="35" column="63" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="63" />
+            <state relative-caret-position="343">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#td#3;n#tr#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#td#3;n#tr#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderSendForm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/mch/models/OrderSendForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="192" column="9" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="613" column="56" selection-start-line="613" selection-start-column="45" selection-end-line="613" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -359,36 +137,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>change_type</find>
-      <find>来源平台</find>
-      <find>ExportList</find>
-      <find>订单类型</find>
-      <find>dataWaterAction</find>
-      <find>fields</find>
-      <find>getList</find>
-      <find>refund</find>
-      <find>access_token</find>
-      <find>水桶管理</find>
-      <find />
-      <find>ajax</find>
-      <find>createUrl</find>
-      <find>urlManager</find>
-      <find>$urlManager</find>
-      <find>submit</find>
-      <find>search-user-form</find>
-      <find>select-user</find>
-      <find>searchUserModal</find>
-      <find>btn-primary</find>
-      <find>btn</find>
+      <find>payment</find>
+      <find>Type是无效的</find>
+      <find>order_money</find>
+      <find>信用</find>
+      <find>信用支付</find>
+      <find>-&gt;trigger(</find>
+      <find>getMenuList</find>
+      <find>user_info</find>
+      <find>UserCenterMenu</find>
+      <find>$user_id</find>
+      <find>save-balance</find>
+      <find>rechargeMoney</find>
+      <find>save-rechange</find>
+      <find>rechange-error</find>
+      <find>credit-money</find>
+      <find>integral</find>
+      <find>credit_explain</find>
+      <find>mch/user/</find>
+      <find>attrAddModal</find>
+      <find>UserForm</find>
+      <find>584</find>
+      <find>credit_money</find>
+      <find>rechargeAddCredit</find>
+      <find>rechargeCredit</find>
+      <find>可提现佣金</find>
+      <find>user_id</find>
+      <find>水票列表</find>
+      <find>积分充值</find>
       <find>UserListForm</find>
-      <find>save(</find>
-      <find>User</find>
-      <find>save</find>
-      <find>is_offline</find>
-      <find>会员交接</find>
-      <find>UserExchangeIdentityLog</find>
-      <find>javascrt</find>
-      <find>auto-form-btn</find>
+      <find>if</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -401,24 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/mch/models/waterman/BucketForm.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/waterman/WatermanForm.php" />
-        <option value="$PROJECT_DIR$/modules/mch/models/waterman/WatermanForm.php" />
-        <option value="$PROJECT_DIR$/modules/mch/views/waterman/index.php" />
-        <option value="E:/huzhan/93/source/cp_comment.php" />
-        <option value="$PROJECT_DIR$/modules/mch/views/waterman-order/index.php" />
-        <option value="$PROJECT_DIR$/models/Waterman.php" />
-        <option value="$PROJECT_DIR$/modules/mch/views/waterman/waterman-edit.php" />
-        <option value="$PROJECT_DIR$/modules/mch/views/waterman-order/bucket.php" />
-        <option value="$PROJECT_DIR$/models/UserWaterBucket.php" />
-        <option value="$PROJECT_DIR$/modules/mch/views/waterman-order/bucket-edit.php" />
-        <option value="$PROJECT_DIR$/modules/mch/controllers/WatermanOrderController.php" />
-        <option value="$PROJECT_DIR$/models/WaterOrder.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/watervoucher/WaterVoucherListForm.php" />
-        <option value="$PROJECT_DIR$/modules/api/controllers/UservoucherController.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/GoodsForm.php" />
-        <option value="$PROJECT_DIR$/modules/api/controllers/WatervoucherController.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/WaterVoucherForm.php" />
         <option value="$PROJECT_DIR$/models/VoucherPackage.php" />
         <option value="$PROJECT_DIR$/modules/api/models/OrderConfirmForm.php" />
         <option value="$PROJECT_DIR$/modules/mch/models/PickLinkForm.php" />
@@ -430,28 +190,46 @@
         <option value="$PROJECT_DIR$/modules/mch/views/order/index.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/order/detail.php" />
         <option value="$PROJECT_DIR$/../../../../water_distribution_web/siteinfo.js" />
-        <option value="$PROJECT_DIR$/modules/mch/views/store/setting.php" />
         <option value="$PROJECT_DIR$/modules/api/models/UserVoucherForm.php" />
         <option value="$PROJECT_DIR$/modules/api/models/OrderSubmitPreviewForm.php" />
-        <option value="$PROJECT_DIR$/modules/api/controllers/OrderController.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/order/OrderForm.php" />
-        <option value="$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php" />
         <option value="$PROJECT_DIR$/modules/api/models/OrderDetailForm.php" />
         <option value="$PROJECT_DIR$/modules/mch/models/OrderListForm.php" />
         <option value="$PROJECT_DIR$/modules/mch/controllers/VoucherController.php" />
-        <option value="$PROJECT_DIR$/modules/mch/controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/voucher/index.php" />
         <option value="$PROJECT_DIR$/modules/mch/models/VoucherLogListForm.php" />
         <option value="$PROJECT_DIR$/modules/mch/models/ExportList.php" />
-        <option value="$PROJECT_DIR$/modules/api/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/waterman/waterman-add.php" />
         <option value="$PROJECT_DIR$/models/UserExchangeIdentityLog.php" />
         <option value="$PROJECT_DIR$/modules/mch/controllers/WatermanController.php" />
-        <option value="$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php" />
-        <option value="$PROJECT_DIR$/modules/mch/models/UserListForm.php" />
-        <option value="$PROJECT_DIR$/modules/mch/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/user/exchange-identity-log.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/user/exchange-identity.php" />
+        <option value="$PROJECT_DIR$/modules/api/controllers/WatervoucherController.php" />
+        <option value="$PROJECT_DIR$/web/pay-notify.php" />
+        <option value="$PROJECT_DIR$/models/VoucherOrder.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/VoucherPayDataForm.php" />
+        <option value="$PROJECT_DIR$/controllers/PayNotifyController.php" />
+        <option value="$PROJECT_DIR$/models/WechatTemplateMessage.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/wechat/template-msg.php" />
+        <option value="$PROJECT_DIR$/modules/mch/controllers/WechatController.php" />
+        <option value="$PROJECT_DIR$/models/WechatTplMsgSender.php" />
+        <option value="$PROJECT_DIR$/modules/mch/controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/store/setting.php" />
+        <option value="$PROJECT_DIR$/modules/api/controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/models/User.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/OrderPayDataForm.php" />
+        <option value="$PROJECT_DIR$/modules/api/models/order/OrderForm.php" />
+        <option value="$PROJECT_DIR$/modules/api/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/modules/api/behaviors/LoginBehavior.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/user/edit.php" />
+        <option value="$PROJECT_DIR$/modules/mch/models/UserForm.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/user/index.php" />
+        <option value="$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php" />
+        <option value="$PROJECT_DIR$/modules/mch/models/UserListForm.php" />
+        <option value="$PROJECT_DIR$/models/UserCreditLog.php" />
+        <option value="$PROJECT_DIR$/modules/mch/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/user/credit-list.php" />
+        <option value="$PROJECT_DIR$/modules/mch/models/OrderSendForm.php" />
       </list>
     </option>
   </component>
@@ -463,6 +241,12 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9001" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="www.water.com" id="79dd145c-3822-4eef-9df1-3114526a4312" name="www.water.com" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -573,11 +357,11 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1107" />
-    <option name="y" value="166" />
-    <option name="width" value="1791" />
-    <option name="height" value="1019" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-321" />
+    <option name="y" value="104" />
+    <option name="width" value="1797" />
+    <option name="height" value="881" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -600,7 +384,7 @@
               <item name="core" type="b2602c69:ProjectViewProjectNode" />
               <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserExchangeIdentityLog.php" type="88303cf5:PhpFileNode" />
+              <item name="UserCreditLog.php" type="88303cf5:PhpFileNode" />
             </path>
             <path>
               <item name="core" type="b2602c69:ProjectViewProjectNode" />
@@ -651,11 +435,6 @@
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="waterman" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -665,9 +444,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/git/lgt_cms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../YD_Demo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -693,6 +473,9 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="www.water.com" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="www.water.com" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -714,15 +497,21 @@
       <workItem from="1569547780506" duration="6845000" />
       <workItem from="1569718608348" duration="8889000" />
       <workItem from="1569807399330" duration="10493000" />
-      <workItem from="1570499950290" duration="39843000" />
+      <workItem from="1570499950290" duration="40124000" />
+      <workItem from="1570676615512" duration="1139000" />
+      <workItem from="1570686982107" duration="29502000" />
+      <workItem from="1571015744943" duration="4973000" />
+      <workItem from="1571023830476" duration="14920000" />
+      <workItem from="1571129602888" duration="21563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179141000" />
+    <option name="totallyTimeSpent" value="251519000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="624" y="174" width="1791" height="1019" extended-state="0" />
+    <frame x="-321" y="104" width="1797" height="881" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985657" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50373137" side_tool="true" weight="0.2557023" />
@@ -730,38 +519,38 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32985657" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49797022" visible="true" weight="0.22125939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49797022" visible="true" weight="0.23316061" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893618" weight="0.11162791" />
       <window_info id="Structure" order="1" sideWeight="0.50060904" side_tool="true" weight="0.14734043" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49626866" weight="0.34533897" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49626866" weight="0.07799767" />
       <window_info id="Favorites" order="2" sideWeight="0.5020298" side_tool="true" weight="0.18112798" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="12" visible="true" weight="0.32987013" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="12" visible="true" weight="0.32987013" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499391" visible="true" weight="0.18089315" />
       <window_info id="Structure" order="1" sideWeight="0.50060904" side_tool="true" weight="0.14734043" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985657" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893618" weight="0.11162791" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32985657" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50373137" side_tool="true" weight="0.2557023" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49626866" weight="0.34533897" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -778,7 +567,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php</url>
-          <line>543</line>
+          <line>550</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -796,72 +585,307 @@
           <line>94</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/modules/mch/controllers/WechatController.php</url>
+          <line>140</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/modules/mch/controllers/UserController.php</url>
+          <line>374</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/test.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/OrderForm.php">
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-908" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/UserVoucherForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+        <state relative-caret-position="256">
+          <caret line="148" column="38" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderDetailForm.php">
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/ArrayHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1688">
-          <caret line="129" column="43" lean-forward="true" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
+        <state relative-caret-position="350">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="154" column="26" lean-forward="true" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
+        <state relative-caret-position="150">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php">
+    <entry file="file://$PROJECT_DIR$/hejiang/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12191">
-          <caret line="550" column="9" lean-forward="true" selection-start-line="550" selection-start-column="9" selection-end-line="550" selection-end-column="9" />
+        <state relative-caret-position="-2791">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitPreviewForm.php">
+    <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="44" />
+        <state relative-caret-position="125">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderSubmitPreviewForm.php">
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/miaosha/GoodsForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4826">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/FxhbSetting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="534" column="34" lean-forward="true" selection-start-line="534" selection-start-column="34" selection-end-line="534" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/HjController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/HelloController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/WechatTemplateMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="35" column="96" selection-start-line="35" selection-start-column="80" selection-end-line="35" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/wechat/template-msg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="270" column="82" selection-start-line="270" selection-start-column="66" selection-end-line="270" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/WechatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3800">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/PtNoticeSender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/OrderWarn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5525">
+          <caret line="600" column="13" selection-start-line="600" selection-start-column="13" selection-end-line="600" selection-end-column="13" />
+          <folding>
+            <element signature="e#723#756#0#PHP" />
+            <element signature="e#761#894#0#PHP" />
+            <element signature="e#3644#5408#0#PHP" />
+            <element signature="e#3815#4209#0#PHP" />
+            <element signature="e#4280#4495#0#PHP" />
+            <element signature="e#4553#4835#0#PHP" />
+            <element signature="e#5129#5381#0#PHP" />
+            <element signature="e#5423#6388#0#PHP" />
+            <element signature="e#5600#5994#0#PHP" />
+            <element signature="e#6064#6281#0#PHP" />
+            <element signature="e#6403#8155#0#PHP" />
+            <element signature="e#6580#6974#0#PHP" />
+            <element signature="e#7132#7348#0#PHP" />
+            <element signature="e#7228#7308#0#PHP" />
+            <element signature="e#7309#7348#0#PHP" />
+            <element signature="e#7376#8047#0#PHP" />
+            <element signature="e#7439#7528#0#PHP" />
+            <element signature="e#7439#7589#0#PHP" />
+            <element signature="e#7439#7660#0#PHP" />
+            <element signature="e#7698#7889#0#PHP" />
+            <element signature="e#8170#8633#0#PHP" />
+            <element signature="e#8639#8666#0#PHP" />
+            <element signature="e#8671#11930#0#PHP" />
+            <element signature="e#8739#11448#0#PHP" />
+            <element signature="e#8768#9357#0#PHP" />
+            <element signature="e#8801#8965#0#PHP" />
+            <element signature="e#8801#9048#0#PHP" />
+            <element signature="e#8801#9125#0#PHP" />
+            <element signature="e#8801#9212#0#PHP" />
+            <element signature="e#8801#9294#0#PHP" />
+            <element signature="e#9370#9880#0#PHP" />
+            <element signature="e#9403#9574#0#PHP" />
+            <element signature="e#9403#9657#0#PHP" />
+            <element signature="e#9403#9734#0#PHP" />
+            <element signature="e#9403#9817#0#PHP" />
+            <element signature="e#9893#10785#0#PHP" />
+            <element signature="e#9926#10091#0#PHP" />
+            <element signature="e#9926#10174#0#PHP" />
+            <element signature="e#9926#10251#0#PHP" />
+            <element signature="e#9926#10334#0#PHP" />
+            <element signature="e#10401#10608#0#PHP" />
+            <element signature="e#10401#10671#0#PHP" />
+            <element signature="e#10798#11393#0#PHP" />
+            <element signature="e#10831#10997#0#PHP" />
+            <element signature="e#10831#11080#0#PHP" />
+            <element signature="e#10831#11157#0#PHP" />
+            <element signature="e#10831#11246#0#PHP" />
+            <element signature="e#10831#11330#0#PHP" />
+            <element signature="e#11406#11438#0#PHP" />
+            <element signature="e#11936#11963#0#PHP" />
+            <element signature="e#11968#12167#0#PHP" />
+            <element signature="e#12173#12242#0#PHP" />
+            <element signature="e#12247#13777#0#PHP" />
+            <element signature="e#12419#12476#0#PHP" />
+            <element signature="e#12587#12653#0#PHP" />
+            <element signature="e#12662#13202#0#PHP" />
+            <element signature="e#12915#13202#0#PHP" />
+            <element signature="e#13166#13202#0#PHP" />
+            <element signature="e#13212#13283#0#PHP" />
+            <element signature="e#13292#13554#0#PHP" />
+            <element signature="e#13783#13813#0#PHP" />
+            <element signature="e#13818#15328#0#PHP" />
+            <element signature="e#13983#14052#0#PHP" />
+            <element signature="e#14163#14229#0#PHP" />
+            <element signature="e#14382#14457#0#PHP" />
+            <element signature="e#14492#14742#0#PHP" />
+            <element signature="e#14544#14732#0#PHP" />
+            <element signature="e#14590#14718#0#PHP" />
+            <element signature="e#14752#15322#0#PHP" />
+            <element signature="e#14777#15067#0#PHP" />
+            <element signature="e#15334#15360#0#PHP" />
+            <element signature="e#15365#15605#0#PHP" />
+            <element signature="e#15631#17752#0#PHP" />
+            <element signature="e#15714#17746#0#PHP" />
+            <element signature="e#15783#16895#0#PHP" />
+            <element signature="e#15954#16250#0#PHP" />
+            <element signature="e#16251#16547#0#PHP" />
+            <element signature="e#16548#16844#0#PHP" />
+            <element signature="e#16845#16895#0#PHP" />
+            <element signature="e#16991#17093#0#PHP" />
+            <element signature="e#17106#17246#0#PHP" />
+            <element signature="e#17712#17746#0#PHP" />
+            <element signature="e#17758#17790#0#PHP" />
+            <element signature="e#21458#23675#0#PHP" />
+            <element signature="e#21565#21676#0#PHP" />
+            <element signature="e#21711#23275#0#PHP" />
+            <element signature="e#21752#22116#0#PHP" />
+            <element signature="e#21790#21843#0#PHP" />
+            <element signature="e#21790#21887#0#PHP" />
+            <element signature="e#21790#21967#0#PHP" />
+            <element signature="e#21790#22053#0#PHP" />
+            <element signature="e#22129#23221#0#PHP" />
+            <element signature="e#23234#23265#0#PHP" />
+            <element signature="e#23284#23425#0#PHP" />
+            <element signature="e#23434#23668#0#PHP" />
+            <element signature="e#23483#23667#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderConfirmForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="81" column="83" selection-start-line="81" selection-start-column="83" selection-end-line="81" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/WechatTplMsgSender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7025">
+          <caret line="289" column="45" selection-start-line="289" selection-start-column="45" selection-end-line="289" selection-end-column="45" />
+          <folding>
+            <element signature="e#116#148#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="171" column="5" lean-forward="true" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/PayNotifyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
-          <caret line="96" column="63" selection-start-line="96" selection-start-column="63" selection-end-line="96" selection-end-column="63" />
+          <caret line="205" column="30" selection-start-line="205" selection-start-column="30" selection-end-line="205" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/Connection.php">
+    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/StoreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="699" column="20" selection-start-line="699" selection-start-column="20" selection-end-line="699" selection-end-column="20" />
+        <state relative-caret-position="25">
+          <caret line="313" column="5" selection-start-line="313" selection-start-column="5" selection-end-line="313" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Option.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/StoreSettingForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4325">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/MchModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#128#149#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="196" column="55" lean-forward="true" selection-start-line="196" selection-start-column="55" selection-end-line="196" selection-end-column="55" />
+        <state relative-caret-position="1425">
+          <caret line="213" column="26" lean-forward="true" selection-start-line="213" selection-start-column="26" selection-end-line="213" selection-end-column="26" />
           <folding>
             <element signature="e#6#168#0#PHP" expanded="true" />
             <element signature="e#212#240#0#PHP" expanded="true" />
@@ -869,321 +893,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/layouts/order-search/order-search.php">
+    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitPreviewForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="64" column="98" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="98" />
-          <folding>
-            <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="429">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/voucher/uservoucherlist.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/voucher/voucherlist.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/order/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="128" column="10" lean-forward="true" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/events/goods/BaseAddGoodsEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#213#237#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/extensions/Export.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="509" column="27" selection-start-line="509" selection-start-column="27" selection-end-line="509" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/OrderListForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-730">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="18" />
-          <folding>
-            <element signature="e#128#180#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/OrderRefundListForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="185" column="27" selection-start-line="185" selection-start-column="27" selection-end-line="185" selection-end-column="27" />
-          <folding>
-            <element signature="e#134#188#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3525">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hejiang/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1688">
-          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1580">
-          <caret line="385" column="25" selection-start-line="385" selection-start-column="25" selection-end-line="385" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-          <folding>
-            <element signature="e#133#161#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="271" column="37" selection-start-line="271" selection-start-column="32" selection-end-line="271" selection-end-column="37" />
-          <folding>
-            <element signature="e#172#180#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="584" selection-start-line="584" selection-end-line="584" />
-          <folding>
-            <element signature="e#1401#1597#0#PHP" />
-            <element signature="e#1450#1590#0#PHP" />
-            <element signature="e#1483#1589#0#PHP" />
-            <element signature="e#1508#1578#1#PHP" />
-            <element signature="e#1614#5775#0#PHP" />
-            <element signature="e#2238#3080#0#PHP" />
-            <element signature="e#3104#3238#0#PHP" />
-            <element signature="e#3104#3289#0#PHP" />
-            <element signature="e#3505#3578#0#PHP" />
-            <element signature="e#4244#4604#0#PHP" />
-            <element signature="e#4640#5767#1#PHP" />
-            <element signature="e#4721#5756#1#PHP" />
-            <element signature="e#5485#5628#1#PHP" />
-            <element signature="e#5659#5742#1#PHP" />
-            <element signature="e#5801#6213#0#PHP" />
-            <element signature="e#5930#6207#0#PHP" />
-            <element signature="e#5992#6064#1#PHP" />
-            <element signature="e#6077#6207#0#PHP" />
-            <element signature="e#6123#6195#1#PHP" />
-            <element signature="e#6235#6573#0#PHP" />
-            <element signature="e#6594#6874#0#PHP" />
-            <element signature="e#6895#7190#0#PHP" />
-            <element signature="e#7209#7933#0#PHP" />
-            <element signature="e#7267#7522#0#PHP" />
-            <element signature="e#7389#7521#1#PHP" />
-            <element signature="e#7267#7563#0#PHP" />
-            <element signature="e#7591#7741#0#PHP" />
-            <element signature="e#7785#7925#0#PHP" />
-            <element signature="e#7866#7914#1#PHP" />
-            <element signature="e#7939#7962#0#PHP" />
-            <element signature="e#7967#8256#0#PHP" />
-            <element signature="e#8275#9692#0#PHP" />
-            <element signature="e#8338#8645#0#PHP" />
-            <element signature="e#8460#8644#1#PHP" />
-            <element signature="e#8662#8810#0#PHP" />
-            <element signature="e#8718#8798#1#PHP" />
-            <element signature="e#8854#9684#0#PHP" />
-            <element signature="e#8935#9673#1#PHP" />
-            <element signature="e#9101#9612#1#PHP" />
-            <element signature="e#9137#9269#1#PHP" />
-            <element signature="e#9301#9425#1#PHP" />
-            <element signature="e#9461#9593#1#PHP" />
-            <element signature="e#9711#9996#0#PHP" />
-            <element signature="e#10017#10313#0#PHP" />
-            <element signature="e#10332#10620#0#PHP" />
-            <element signature="e#10646#11279#0#PHP" />
-            <element signature="e#10695#11238#0#PHP" />
-            <element signature="e#10741#11057#0#PHP" />
-            <element signature="e#10759#11056#1#PHP" />
-            <element signature="e#11071#11227#0#PHP" />
-            <element signature="e#11094#11226#1#PHP" />
-            <element signature="e#11301#11586#0#PHP" />
-            <element signature="e#11605#11896#0#PHP" />
-            <element signature="e#11916#12160#0#PHP" />
-            <element signature="e#12189#12390#0#PHP" />
-            <element signature="e#12412#12707#0#PHP" />
-            <element signature="e#12729#13017#0#PHP" />
-            <element signature="e#13036#13334#0#PHP" />
-            <element signature="e#13351#16072#0#PHP" />
-            <element signature="e#13510#13738#0#PHP" />
-            <element signature="e#13510#13760#0#PHP" />
-            <element signature="e#13921#14158#0#PHP" />
-            <element signature="e#14102#14158#0#PHP" />
-            <element signature="e#14181#14476#0#PHP" />
-            <element signature="e#14619#14753#0#PHP" />
-            <element signature="e#14619#14782#0#PHP" />
-            <element signature="e#14619#14833#0#PHP" />
-            <element signature="e#14876#15052#0#PHP" />
-            <element signature="e#14876#15098#0#PHP" />
-            <element signature="e#14876#15156#0#PHP" />
-            <element signature="e#15107#15155#1#PHP" />
-            <element signature="e#15278#15515#0#PHP" />
-            <element signature="e#15309#15435#0#PHP" />
-            <element signature="e#15594#16064#1#PHP" />
-            <element signature="e#15675#16053#1#PHP" />
-            <element signature="e#16078#16101#0#PHP" />
-            <element signature="e#16106#16392#0#PHP" />
-            <element signature="e#16398#16422#0#PHP" />
-            <element signature="e#16427#16939#0#PHP" />
-            <element signature="e#16657#16819#0#PHP" />
-            <element signature="e#16758#16819#0#PHP" />
-            <element signature="e#16945#16968#0#PHP" />
-            <element signature="e#16973#18539#0#PHP" />
-            <element signature="e#17087#17279#0#PHP" />
-            <element signature="e#17184#17267#1#PHP" />
-            <element signature="e#17419#17649#0#PHP" />
-            <element signature="e#17560#17637#1#PHP" />
-            <element signature="e#17702#17933#0#PHP" />
-            <element signature="e#17840#17921#1#PHP" />
-            <element signature="e#18103#18533#0#PHP" />
-            <element signature="e#18239#18315#1#PHP" />
-            <element signature="e#18328#18533#0#PHP" />
-            <element signature="e#18445#18521#1#PHP" />
-            <element signature="e#18545#18617#0#PHP" />
-            <element signature="e#18622#18934#0#PHP" />
-            <element signature="e#18940#19633#0#PHP" />
-            <element signature="e#18998#19108#0#PHP" />
-            <element signature="e#19021#19107#1#PHP" />
-            <element signature="e#19118#19267#0#PHP" />
-            <element signature="e#19168#19255#1#PHP" />
-            <element signature="e#19276#19435#0#PHP" />
-            <element signature="e#19339#19423#1#PHP" />
-            <element signature="e#19560#19625#1#PHP" />
-            <element signature="e#19639#19667#0#PHP" />
-            <element signature="e#19672#19847#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/controllers/WatervoucherController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman/waterman-add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="37" column="56" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/UserExchangeIdentityLog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="35" column="63" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/voucher/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="147" column="57" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/BaseObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="11675">
+          <caret line="500" column="13" selection-start-line="500" selection-start-column="13" selection-end-line="500" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
+        <state relative-caret-position="337">
           <caret line="639" column="20" selection-start-line="639" selection-start-column="20" selection-end-line="639" selection-end-column="20" />
           <folding>
             <element signature="e#24612#24705#0#PHP" />
@@ -1191,89 +917,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/VoucherLogListForm.php">
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/store/setting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="145" column="11" lean-forward="true" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
+        <state relative-caret-position="729">
+          <caret line="334" column="22" selection-start-line="334" selection-start-column="22" selection-end-line="334" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/ExportList.php">
+    <entry file="file://$PROJECT_DIR$/modules/mch/behaviors/PermissionBehavior.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="378" column="20" selection-start-line="378" selection-start-column="20" selection-end-line="378" selection-end-column="20" />
+        <state relative-caret-position="525">
+          <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/behaviors/LoginBehavior.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/OrderPayDataForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="199" column="69" selection-start-line="199" selection-start-column="69" selection-end-line="199" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/BaseObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="14" column="117" lean-forward="true" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
           <folding>
-            <element signature="e#636#10797#0#PHP" />
+            <element signature="e#133#161#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/VoucherController.php">
+    <entry file="file://$PROJECT_DIR$/models/UserCenterMenu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding>
-            <element signature="e#138#184#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/WatermanAddForm.php">
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/UserForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-460">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        <state relative-caret-position="330">
+          <caret line="63" column="55" lean-forward="true" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/user/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4389">
+          <caret line="124" column="87" selection-start-line="124" selection-start-column="87" selection-end-line="124" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="613" column="56" selection-start-line="613" selection-start-column="45" selection-end-line="613" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="71" column="44" lean-forward="true" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
+          <folding>
+            <element signature="e#133#161#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mch/controllers/WatermanController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/models/UserListForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="347" selection-start-line="347" selection-end-line="347" />
-          <folding>
-            <element signature="e#127#155#0#PHP" expanded="true" />
-          </folding>
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mch/models/waterman/WatermanForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="67" column="10" lean-forward="true" selection-start-line="62" selection-start-column="8" selection-end-line="67" selection-end-column="10" />
+        <state relative-caret-position="362">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="67" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/user/exchange-identity-log.php">
+    <entry file="file://$PROJECT_DIR$/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="4247">
+          <caret line="234" column="36" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="36" />
           <folding>
-            <element signature="e#140#161#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="686" column="70" selection-start-line="686" selection-start-column="40" selection-end-line="686" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mch/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="687" column="51" selection-start-line="687" selection-start-column="51" selection-end-line="687" selection-end-column="51" />
+        <state relative-caret-position="265">
+          <caret line="397" column="79" lean-forward="true" selection-start-line="397" selection-start-column="79" selection-end-line="397" selection-end-column="79" />
           <folding>
             <element signature="e#133#160#0#PHP" expanded="true" />
             <element signature="e#1190#1322#0#PHP" />
+            <element signature="e#1357#1638#0#PHP" />
             <element signature="e#1380#1637#0#PHP" />
             <element signature="e#1651#1814#0#PHP" />
             <element signature="e#1819#3082#0#PHP" />
@@ -1352,99 +1117,60 @@
             <element signature="e#9945#10059#0#PHP" />
             <element signature="e#9971#10048#0#PHP" />
             <element signature="e#10071#10094#0#PHP" />
-            <element signature="e#10099#10949#0#PHP" />
-            <element signature="e#10230#10345#0#PHP" />
-            <element signature="e#10354#10610#0#PHP" />
-            <element signature="e#10719#10831#0#PHP" />
-            <element signature="e#10848#10942#0#PHP" />
-            <element signature="e#10870#10941#0#PHP" />
-            <element signature="e#10955#11010#0#PHP" />
-            <element signature="e#11015#13897#0#PHP" />
-            <element signature="e#11687#11862#0#PHP" />
-            <element signature="e#11776#11862#0#PHP" />
-            <element signature="e#11898#12025#0#PHP" />
-            <element signature="e#11931#12014#0#PHP" />
-            <element signature="e#12034#12168#0#PHP" />
-            <element signature="e#12077#12157#0#PHP" />
-            <element signature="e#12177#12415#0#PHP" />
-            <element signature="e#12257#12341#0#PHP" />
-            <element signature="e#12342#12415#0#PHP" />
-            <element signature="e#12424#12814#0#PHP" />
-            <element signature="e#12464#12630#0#PHP" />
-            <element signature="e#12522#12615#0#PHP" />
-            <element signature="e#12683#12814#0#PHP" />
-            <element signature="e#12823#12956#0#PHP" />
-            <element signature="e#12864#12945#0#PHP" />
-            <element signature="e#12965#13296#0#PHP" />
-            <element signature="e#13129#13296#0#PHP" />
-            <element signature="e#13641#13891#0#PHP" />
-            <element signature="e#13688#13765#0#PHP" />
-            <element signature="e#13777#13891#0#PHP" />
-            <element signature="e#13803#13880#0#PHP" />
-            <element signature="e#13903#13979#0#PHP" />
-            <element signature="e#13984#14365#0#PHP" />
-            <element signature="e#14232#14358#0#PHP" />
-            <element signature="e#14262#14357#0#PHP" />
-            <element signature="e#14371#14418#0#PHP" />
-            <element signature="e#14423#14947#0#PHP" />
-            <element signature="e#14732#14940#0#PHP" />
-            <element signature="e#14772#14939#0#PHP" />
-            <element signature="e#14953#14976#0#PHP" />
-            <element signature="e#14981#15948#0#PHP" />
-            <element signature="e#15659#15941#0#PHP" />
-            <element signature="e#15681#15940#0#PHP" />
-            <element signature="e#15954#15979#0#PHP" />
-            <element signature="e#15984#16658#0#PHP" />
-            <element signature="e#16410#16651#0#PHP" />
-            <element signature="e#16436#16650#0#PHP" />
-            <element signature="e#16664#16689#0#PHP" />
-            <element signature="e#16694#18792#0#PHP" />
-            <element signature="e#16971#17155#0#PHP" />
-            <element signature="e#17166#17255#0#PHP" />
-            <element signature="e#17264#17365#0#PHP" />
-            <element signature="e#17374#17475#0#PHP" />
-            <element signature="e#17534#17655#0#PHP" />
-            <element signature="e#17534#17671#0#PHP" />
-            <element signature="e#17695#17814#0#PHP" />
-            <element signature="e#17695#17830#0#PHP" />
-            <element signature="e#17921#18065#0#PHP" />
-            <element signature="e#17921#18085#0#PHP" />
-            <element signature="e#17921#18113#0#PHP" />
-            <element signature="e#18142#18286#0#PHP" />
-            <element signature="e#18184#18276#0#PHP" />
-            <element signature="e#18366#18566#0#PHP" />
-            <element signature="e#18583#18785#0#PHP" />
-            <element signature="e#18604#18784#0#PHP" />
-            <element signature="e#18809#19743#0#PHP" />
-            <element signature="e#18861#19737#0#PHP" />
-            <element signature="e#19091#19573#0#PHP" />
-            <element signature="e#19198#19310#0#PHP" />
-            <element signature="e#19311#19437#0#PHP" />
-            <element signature="e#19438#19573#0#PHP" />
-            <element signature="e#19468#19558#0#PHP" />
-            <element signature="e#19618#19737#0#PHP" />
-            <element signature="e#19644#19726#0#PHP" />
-            <element signature="e#19749#19826#0#PHP" />
-            <element signature="e#20109#20232#0#PHP" />
+            <element signature="e#10099#10950#0#PHP" />
+            <element signature="e#13985#14366#0#PHP" />
+            <element signature="e#14424#14948#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/waterman/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/user/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1250">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/user/exchange-identity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="81" column="78" selection-start-line="81" selection-start-column="74" selection-end-line="81" selection-end-column="78" />
+        <state relative-caret-position="519">
+          <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
           <folding>
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#nav#0;n#div#2;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#21124#21173#0#HTML" />
+            <element signature="e#21233#21365#0#HTML" />
+            <element signature="e#21426#22644#0#HTML" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/UserCreditLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/UserListForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/user/credit-list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#3;n#tr#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#3;n#tr#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/models/OrderSendForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="192" column="9" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
         </state>
       </provider>
     </entry>

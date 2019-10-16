@@ -22,13 +22,14 @@ class UserForm extends MchModel
     public $price;
     public $blacklist;
     public $limit_voucher;
+    public $credit_line;
 
     public function rules()
     {
         return [
             [['level','parent_id', 'blacklist','limit_voucher'],'integer'],
             [['contact_way','comments'], 'string', 'max' => 255],
-            [['price'],'number', 'min'=>0, 'max'=>99999999.99],
+            [['price','credit_line'],'number', 'min'=>0, 'max'=>99999999.99],
             [['price'],'default','value'=>0]
         ];
     }
@@ -41,6 +42,7 @@ class UserForm extends MchModel
             'comments'=>'备注',
             'parent_id'=>'上级',
             'price'=>'可提现佣金',
+            'credit_line'=>'账期额度',
         ];
     }
 
@@ -59,6 +61,7 @@ class UserForm extends MchModel
         $this->user->price =  $this->price;
         $this->user->blacklist =  $this->blacklist;
         $this->user->limit_voucher =  $this->limit_voucher;
+        $this->user->credit_line =  $this->credit_line;
 
         if ($this->user->save()) {
             return [

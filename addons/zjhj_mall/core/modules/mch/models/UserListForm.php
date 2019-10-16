@@ -13,6 +13,7 @@ use app\models\IntegralOrder;
 use app\models\Level;
 use app\models\MsOrder;
 use app\models\Order;
+use app\models\UserCreditLog;
 use app\models\UserExchangeIdentityLog;
 use app\models\PtOrder;
 use app\models\Share;
@@ -326,12 +327,13 @@ class UserListForm extends MchModel
                 'code' => 0,
                 'msg' => '互换成功',
             ];
+        }else{
+            $t->rollBack();
+            return [
+                'code' => 1,
+                'msg' => '失败',
+            ];
         }
-        return [
-            'code' => 1,
-            'msg' => '失败',
-        ];
-
     }
 
     public function exchangeIdentityLog(){
@@ -354,6 +356,38 @@ class UserListForm extends MchModel
         ];
 
     }
+
+
+    //用户账期记录
+    public  function creditList(){
+        $query=UserCreditLog::find()
+            ->alias('ucl')
+            ->leftJoin(['u'=>User::tableName()],'u.id=ucl.user_id')
+            ->where(['ucl.store_id'=>$this->store_id]);
+
+
+        if ($this->keyword) {
+            $query->andWhere(['LIKE', 'u.nickname', $this->keyword]);
+            $query->orWhere(['LIKE', 'wm.real_name', $this->keyword]);
+            $query->orWhere(['LIKE', 'wm.mobile', $this->keyword]);
+        }
+        $count = $query->count();
+        $pagination = new Pagination(['totalCount' => $count, 'page' => $this->page - 1]);
+        $list =$query->select(['ucl.*', 'u.avatar_url','u.nickname'])
+            ->limit($pagination->limit)
+            ->offset($pagination->offset)
+            ->orderBy('ucl.id DESC')
+            ->asArray()->all();
+        return [
+            'row_count' => $count,
+            'page_count' => $pagination->pageCount,
+            'pagination' => $pagination,
+            'list' => $list,
+        ];
+
+    }
+
+
 
 
 }

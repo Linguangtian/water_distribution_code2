@@ -149,6 +149,10 @@ class OrderSubmitForm extends OrderForm
                 $order->pay_type = 3;
                 $order->is_pay = 0;
             }
+            if ($this->payment == 4) {
+                $order->pay_type = 4;
+                $order->is_pay = 0;
+            }
             if ($mch['offline'] == 0) {
                 $order->address = $address->province . $address->city . $address->district . $address->detail;
                 $order->mobile = $address->mobile;

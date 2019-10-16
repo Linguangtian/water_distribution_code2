@@ -608,6 +608,11 @@ class Menu
                         'is_menu' => true,
                         'route' => 'mch/user/integral-rechange-list',
                     ],
+                    [
+                        'name' => '账期记录',
+                        'is_menu' => true,
+                        'route' => 'mch/user/credit-list',
+                    ],
                 ],
             ],
             [

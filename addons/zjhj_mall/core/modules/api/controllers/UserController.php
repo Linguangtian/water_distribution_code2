@@ -46,7 +46,7 @@ use app\utils\Sms;
 
 class UserController extends Controller
 {
-    public function behaviors()
+  public function behaviors()
     {
         return array_merge(parent::behaviors(), [
             'login' => [
@@ -58,62 +58,80 @@ class UserController extends Controller
     //个人中心
     public function actionIndex()
     {
-        $order_count = OrderListForm::getCountData($this->store->id, \Yii::$app->user->id);
-        $share_setting = Setting::find()->where(['store_id' => $this->store->id])->asArray()->one();
-        $parent = User::findOne(\Yii::$app->user->identity->parent_id);
-        $share = Share::findOne(['user_id' => \Yii::$app->user->identity->parent_id]);
-
-        $user = User::findOne(['id' => \Yii::$app->user->identity->id]);
-        $level = $user->level;
 
 
-        $now_level = Level::findOne(['store_id' => $this->store->id, 'level' => $level, 'is_delete' => 0]);
-        $user_info = [
-            'nickname' => \Yii::$app->user->identity->nickname,
-            'binding' => $user->binding,
-            'avatar_url' => \Yii::$app->user->identity->avatar_url,
-            'is_distributor' => \Yii::$app->user->identity->is_distributor,
+        if(empty(\Yii::$app->user->id)){
+
+            $order_count='';
+            $share_setting = Setting::find()->where(['store_id' => $this->store->id])->asArray()->one();
+            $parent='';
+            $share='';
+            $user='';
+            $level='';
+            $now_level='';
+            $user_info='';
+
+        }else{
+
+            $order_count = OrderListForm::getCountData($this->store->id, \Yii::$app->user->id);
+            $share_setting = Setting::find()->where(['store_id' => $this->store->id])->asArray()->one();
+            $parent = User::findOne(\Yii::$app->user->identity->parent_id);
+            $share = Share::findOne(['user_id' => \Yii::$app->user->identity->parent_id]);
+
+            $user = User::findOne(['id' => \Yii::$app->user->identity->id]);
+            $level = $user->level;
+
+
+            $now_level = Level::findOne(['store_id' => $this->store->id, 'level' => $level, 'is_delete' => 0]);
+            $user_info = [
+                'nickname' => \Yii::$app->user->identity->nickname,
+                'binding' => $user->binding,
+                'avatar_url' => \Yii::$app->user->identity->avatar_url,
+                'is_distributor' => \Yii::$app->user->identity->is_distributor,
 //            'parent' => $share ? $share->name : ($parent ? $parent->nickname : '总店'),
-            'parent' => $share ? ($share->name ? $share->name : $parent->nickname) : "总店",
-            'id' => \Yii::$app->user->identity->id,
-            'is_clerk' => \Yii::$app->user->identity->is_clerk,
-            'level' => $level,
-            'level_name' => $now_level ? $now_level->name : "普通用户",
-            'integral' => \Yii::$app->user->identity->integral,
-            'money' => \Yii::$app->user->identity->money,
-            'blacklist' => \Yii::$app->user->identity->blacklist,
-        ];
-        $next_level = Level::find()->where(['store_id' => $this->store->id, 'is_delete' => 0, 'status' => 1])
-            ->andWhere(['>', 'level', $level])->orderBy(['level' => SORT_ASC, 'id' => SORT_DESC])->asArray()->one();
-
-        //余额功能配置
-        $balance = Option::get('re_setting', $this->store->id, 'app');
-        $balance = json_decode($balance, true);
-        //我的钱包 选项
-        $wallet['integral'] = 1;
-        if ($balance) {
-            $wallet['re'] = $balance['status'];
+                'parent' => $share ? ($share->name ? $share->name : $parent->nickname) : "总店",
+                'id' => \Yii::$app->user->identity->id,
+                'is_clerk' => \Yii::$app->user->identity->is_clerk,
+                'level' => $level,
+                'level_name' => $now_level ? $now_level->name : "普通用户",
+                'integral' => \Yii::$app->user->identity->integral,
+                'money' => \Yii::$app->user->identity->money,
+                'blacklist' => \Yii::$app->user->identity->blacklist,
+            ];
+            $next_level = Level::find()->where(['store_id' => $this->store->id, 'is_delete' => 0, 'status' => 1])
+                ->andWhere(['>', 'level', $level])->orderBy(['level' => SORT_ASC, 'id' => SORT_DESC])->asArray()->one();
         }
+            //余额功能配置
+            $balance = Option::get('re_setting', $this->store->id, 'app');
+            $balance = json_decode($balance, true);
+            //我的钱包 选项
+            $wallet['integral'] = 1;
+            if ($balance) {
+                $wallet['re'] = $balance['status'];
+            }
 
-        /* 旧版的菜单列表先保留以兼容旧版，后期去掉 */
-        $user_center_menu = new UserCenterMenu();
-        $user_center_menu->store_id = $this->store->id;
-        $user_center_menu->user_id = $user->id;
+            /* 旧版的菜单列表先保留以兼容旧版，后期去掉 */
+            $user_center_menu = new UserCenterMenu();
+            $user_center_menu->store_id = $this->store->id;
 
-        $user_center_form = new UserCenterForm();
-        $user_center_form->store_id = $this->store->id;
-        $user_center_form->user_id = $user->id;
-        $user_center_form->_platform =\Yii::$app->request->get('_platform');
-        $user_center_data = $user_center_form->getData();
-        $user_center_data = $user_center_data['data'];
-        $wallet['is_wallet'] = $user_center_data['is_wallet'];
-        $wallet['is_menu'] = $user_center_data['is_menu'];
-        if($user_center_data['copyright']['open_type'] == 'wxapp'){
-            $url = $user_center_data['copyright']['url'];
-            preg_match('/^[^\?+]\?([\w|\W]+)=([\w|\W]*?)&([\w|\W]+)=([\w|\W]*?)$/', $url, $res);
-            $user_center_data['copyright']['appId'] = $res[2];
-            $user_center_data['copyright']['path'] = urldecode($res[4]);
-        }
+
+            $user_center_form = new UserCenterForm();
+            $user_center_form->store_id = $this->store->id;
+            $user_center_form->user_id = $user->id;
+            $user_center_form->_platform =\Yii::$app->request->get('_platform');
+            $user_center_data = $user_center_form->getData();
+            $user_center_data = $user_center_data['data'];
+            $wallet['is_wallet'] = $user_center_data['is_wallet'];
+            $wallet['is_menu'] = $user_center_data['is_menu'];
+            if($user_center_data['copyright']['open_type'] == 'wxapp'){
+                $url = $user_center_data['copyright']['url'];
+                preg_match('/^[^\?+]\?([\w|\W]+)=([\w|\W]*?)&([\w|\W]+)=([\w|\W]*?)$/', $url, $res);
+                $user_center_data['copyright']['appId'] = $res[2];
+                $user_center_data['copyright']['path'] = urldecode($res[4]);
+            }
+
+
+
         return new BaseApiResponse([
             'code' => 0,
             'msg' => 'success',

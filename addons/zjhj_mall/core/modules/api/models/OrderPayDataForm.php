@@ -44,7 +44,7 @@ class OrderPayDataForm extends ApiModel
     {
         return [
             [['pay_type'], 'required'],
-            [['pay_type'], 'in', 'range' => ['ALIPAY', 'WECHAT_PAY', 'HUODAO_PAY', 'BALANCE_PAY']],
+            [['pay_type'], 'in', 'range' => ['ALIPAY', 'WECHAT_PAY', 'HUODAO_PAY', 'BALANCE_PAY','CREDIT_PAY']],
             [['form_id', 'order_id_list'], 'string'],
             [['order_id','parent_user_id','condition'], 'integer'],
         ];
@@ -171,8 +171,9 @@ class OrderPayDataForm extends ApiModel
                     'body' => $goods_names,
                 ];
             }
+
             //货到付款和余额支付数据处理
-            if ($this->pay_type == 'HUODAO_PAY' || $this->pay_type == 'BALANCE_PAY') {
+            if ($this->pay_type == 'HUODAO_PAY' || $this->pay_type == 'BALANCE_PAY' || $this->pay_type == 'CREDIT_PAY') {
                 $order = $this->order;
                 //余额支付  用户余额变动
                 if ($this->pay_type == 'BALANCE_PAY') {
@@ -190,6 +191,33 @@ class OrderPayDataForm extends ApiModel
                     $order->pay_time = time();
                     $order->save();
                 }
+
+
+
+                //赊账支付
+                if ($this->pay_type == 'CREDIT_PAY') {
+
+                    $user = User::findOne(['id' => $order->user_id]);
+
+                    if ($user->getCreditCurrent() < $order->pay_price||getCreditCurrent()<0) {
+                        return [
+                            'code' => 1,
+                            'msg' => '支付失败，信用额不足',
+                        ];
+                    }
+                    $user->credit_cost += floatval($order->pay_price);
+                    $user->save();
+                    $order->is_pay = 1;
+                    $order->pay_type = 4;
+                    $order->pay_time = time();
+                    $order->save();
+                }
+
+
+
+
+
+
                 //支付完成后，相关操作
                 $form = new OrderWarn();
                 $form->order_id = $order->id;

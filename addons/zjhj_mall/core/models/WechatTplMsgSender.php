@@ -202,6 +202,8 @@ class WechatTplMsgSender
             if (!$this->wechat_template_message->send_tpl) {
                 return;
             }
+
+
             // $this->form_id = FormId::find()->where(['order_no' => $this->order->order_no, 'type' => 'form_id'])->orderBy('id DESC')->one();
             $goods_list = OrderDetail::find()
                 ->select('g.name,od.num')
@@ -216,6 +218,7 @@ class WechatTplMsgSender
             } else {
                 $form_id = $this->form_id->form_id;
             }
+            echo $form_id;exit;
             $data = [
                 'touser' => $this->user->wechat_open_id,
                 'template_id' => $this->wechat_template_message->send_tpl,
@@ -245,6 +248,66 @@ class WechatTplMsgSender
             \Yii::warning($e->getMessage());
         }
     }
+
+
+
+
+
+
+    /**
+     * 发货送水员提示
+     */
+    public function sendWaterTpl()
+    {
+        try {
+            if (!$this->wechat_template_message->send_tpl) {
+                return;
+            }
+            // $this->form_id = FormId::find()->where(['order_no' => $this->order->order_no, 'type' => 'form_id'])->orderBy('id DESC')->one();
+            $order_info = Order::find()->alias('o')->leftJoin(['wo' => WaterOrder::tableName()], 'wo.order_id=o.id')
+                ->leftJoin(['wm'=>Waterman::tableName()],'wm.user_id=wo.waterman_user_id')
+                ->leftJoin(['u'=>User::tableName()],'u.id=wo.waterman_user_id')
+                ->select(['o.order_no,wm.real_name,u.wechat_open_id'])
+                ->where(['o.id' => $this->order->id, 'od.is_delete' => 0])->asArray()->all();
+
+            if ($this->is_alipay) {
+                $form_id = $this->form_id_alipay->form_id;
+            } else {
+                $form_id = $this->form_id->form_id;
+            }
+            $data = [
+                'touser' => $order_info['wechat_open_id'],
+                'template_id' => $this->wechat_template_message->water_feeder_tpl,
+                'form_id' => $form_id,
+                'page' => 'pages/waterman/index',
+                'data' => [
+                    'keyword1' => [
+                        'value' => '配送员-'.$order_info['real_name'],
+                        'color' => '#333333',
+                    ],
+                    'keyword2' => [
+                        'value' => date('Y-m-d H:i:s',time()),
+                        'color' => '#333333',
+                    ],
+                    'keyword3' => [
+                        'value' => $order_info['order_no'],
+                        'color' => '#333333',
+                    ],
+                ],
+            ];
+            $this->sendTplMsg($data);
+        } catch (\Exception $e) {
+            \Yii::warning($e->getMessage());
+        }
+    }
+
+
+
+
+
+
+
+
 
     /**
      * 发送退款模板消息

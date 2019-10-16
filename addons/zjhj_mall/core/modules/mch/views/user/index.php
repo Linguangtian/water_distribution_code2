@@ -131,6 +131,8 @@ $urlPlatform = Yii::$app->controller->route;
                 <th>水票数量</th>
                 <th>当前积分</th>
                 <th>当前余额</th>
+                <th>账期额度</th>
+                <th>账期欠款</th>
                 <th>操作</th>
 
             </tr>
@@ -194,6 +196,16 @@ $urlPlatform = Yii::$app->controller->route;
                         <a class="btn btn-sm btn-link"
                            href="<?= $urlManager->createUrl(['mch/user/recharge-money-log', 'user_id' => $u['id']]) ?>"><?= $u['money'] ?></a>
                     </td>
+
+                    <td>
+                        <a class="btn btn-sm btn-link"><?= $u['credit_line'] ?></a>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-sm btn-link"><?= $u['credit_cost'] ?></a>
+                    </td>
+
+
                     <td>
                         <a class="btn btn-sm btn-primary"
                            href="<?= $urlManager->createUrl(['mch/user/edit', 'id' => $u['id']]) ?>">编辑</a>
@@ -207,6 +219,12 @@ $urlPlatform = Yii::$app->controller->route;
                            href="javascript:;"
                            data-money="<?= $u['money'] ?>"
                            data-id="<?= $u['id'] ?>">充值余额</a>
+
+                        <a class="btn btn-sm btn-success rechargeCredit"
+                           data-toggle="modal" data-target="#rechargeAddCredit"
+                           href="javascript:;"
+                           data-money="<?= $u['credit_cost'] ?>"
+                           data-id="<?= $u['id'] ?>">账期还款</a>
                     </td>
                     <!--
                 <td>
@@ -271,9 +289,9 @@ $urlPlatform = Yii::$app->controller->route;
                     </div>
 
                     <input class="form-control" id="integral" placeholder="请填写充值积分" value="0">
-                    <input  id="user_id" value="">
-                    <div class="form-error text-danger mt-3 rechange-error" style="display: none">ddd</div>
-                    <div class="form-success text-success mt-3" style="display: none">sss</div>
+                    <input  id="user_id" value="" hidden>
+                    <div class="form-error text-danger mt-3 rechange-error" style="display: none"></div>
+                    <div class="form-success text-success mt-3" style="display: none"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
@@ -365,6 +383,51 @@ $urlPlatform = Yii::$app->controller->route;
             </div>
         </div>
     </div>
+
+
+    <!-- 账期还款 -->
+    <div class="modal fade" id="rechargeAddCredit" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">账期还款</h5>
+                    <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row">
+                        <div class="form-group-label col-3 text-right">
+                            <label class="col-form-label">还款金额</label>
+                        </div>
+                        <div class="col-9">
+                            <input class="form-control credit-money" type="number" placeholder="请填写金额" value="0"
+                                   v-model="credit">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="form-group-label col-3 text-right">
+                            <label class="col-form-label">说明</label>
+                        </div>
+                        <div class="col-9">
+                            <input class="form-control" name="credit_explain">
+                        </div>
+                    </div>
+                    <div class="form-error text-danger mt-3 credit-error" style="display: none"></div>
+                    <div class="form-success  mt-3  credit-success"  style="display: none"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary save-credit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
 
 <?= $this->render('/layouts/ss', [
@@ -456,6 +519,45 @@ $urlPlatform = Yii::$app->controller->route;
         });
     });
 
+
+    //账期还款
+    $(document).on('click', '.save-credit', function () {
+        var user_id = $('#user_id').val();
+        var credit_money = $('.credit-money').val();
+        var credit_explain = $("input[name=credit_explain]").val();
+        var btn = $(this);
+
+        if (!credit_money || credit_money <= 0) {
+            $('.credit-error').css('display', 'block');
+            $('.credit-error').text('请填写金额');
+            return;
+        }
+        $.ajax({
+            url: "<?= Yii::$app->urlManager->createUrl(['mch/user/credit-repayment']) ?>",
+            type: 'post',
+            dataType: 'json',
+            data: {user_id: user_id, credit_money: credit_money,_csrf: _csrf,credit_explain: credit_explain},
+            success: function (res) {
+                if (res.code == 0) {
+                    $("#rechargeAddCredit").modal('hide');
+                    $.myAlert({
+                        content: res.msg,
+                        confirm: function (res) {
+                            window.location.reload();
+                        }
+                    });
+                } else {
+                    $('.credit-error').css('display', 'block');
+                    $('.credit-error').text(res.msg);
+                }
+            }
+        });
+    });
+
+
+
+
+
     var app = new Vue({
         el: '#app',
         data: {
@@ -471,6 +573,15 @@ $urlPlatform = Yii::$app->controller->route;
         app.type = 1;
         app.user_id = $(this).data('id');
     });
+
+
+    $(document).on('click', '.rechargeCredit', function () {
+       var user_id= $(this).data('id');
+       $('#user_id').val(user_id);
+
+    });
+
+
 
     $(document).on('change', "input[name='rechargeType']", function () {
         app.rechargeType = $(this).val();

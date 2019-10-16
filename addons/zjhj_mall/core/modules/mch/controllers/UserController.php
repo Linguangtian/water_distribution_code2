@@ -17,6 +17,7 @@ use app\models\Register;
 use app\models\Shop;
 use app\models\Store;
 use app\models\User;
+use app\models\UserCreditLog;
 use app\models\UserCoupon;
 use app\modules\mch\models\ExportList;
 use app\modules\mch\models\LevelForm;
@@ -354,6 +355,7 @@ class UserController extends Controller
             $form->store_id = $this->store->id;
             $form->user = $user;
             $form->attributes = \Yii::$app->request->post();
+
             return $form->save();
         }
         $level = Level::findAll(['store_id' => $this->store->id, 'status' => 1, 'is_delete' => 0]);
@@ -366,6 +368,65 @@ class UserController extends Controller
             'level' => $level,
         ]);
     }
+
+
+
+    //账期还款
+    public function actionCreditRepayment(){
+        $credit_money =floatval(\Yii::$app->request->post('credit_money'));
+        $user_id =floatval(\Yii::$app->request->post('user_id'));
+        if(empty($credit_money)||empty($user_id)){
+                return [
+                    'code' => 1,
+                    'msg' => '参数不正确',
+                ];
+        }
+
+        $user = User::findOne(['id' => $user_id, 'store_id' => $this->store->id]);
+        $user->credit_cost-=$credit_money;
+        $user->credit_cost=$user->credit_cost<0?0:$user->credit_cost;
+        if($user->save()){
+            //插入还款记录
+              $credit_log=new UserCreditLog;
+              $credit_log->user_id=$user_id;
+              $credit_log->store_id=$this->store->id;
+              $credit_log->change_type=CREDI_REPAY;
+              $credit_log->type=CREDI_TYPE_REPAY;
+              $credit_log->credit_money=$credit_money;
+              $credit_log->current_credit_cost= $user->credit_cost;
+              $credit_log->create_time=time();
+              $credit_log->explain=\Yii::$app->request->post('credit_explain');
+             $credit_log->insert();
+
+            return [
+                'code' => 0,
+                'msg' => '操作成功',
+            ];
+        }
+
+        return [
+            'code' => 1,
+            'msg' => '失败',
+        ];
+
+    }
+
+    public function actionCreditList(){
+
+        $form = new UserListForm();
+        $form->attributes=\Yii::$app->request->get();
+        $form->store_id = $this->store->id;
+        $data = $form->creditList();
+
+
+
+        return $this->render('credit-list', [
+            'row_count' => $data['row_count'],
+            'pagination' => $data['pagination'],
+            'list' => $data['list'],
+        ]);
+    }
+
 
     /**
      * @return mixed|string

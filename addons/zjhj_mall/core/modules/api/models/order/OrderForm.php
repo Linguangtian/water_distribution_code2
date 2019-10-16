@@ -492,6 +492,13 @@ class OrderForm extends ApiModel
                     'icon' => \Yii::$app->request->hostInfo . \Yii::$app->request->baseUrl . '/statics/images/recharge/icon-huodao.png'
                 ];
             }
+            if ($index == 'credit' && $value == 1 && $ok) {
+                $new_list[] = [
+                    'name' => '账期支付',
+                    'payment' => 4,
+                    'icon' => \Yii::$app->request->hostInfo . \Yii::$app->request->baseUrl . '/statics/images/recharge/icon-huodao.png'
+                ];
+            }
             if ($index == 'balance' && $value == 1) {
                 $balance = Option::get('re_setting', $this->store_id, 'app');
                 $balance = json_decode($balance, true);

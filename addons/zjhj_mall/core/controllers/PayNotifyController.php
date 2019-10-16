@@ -11,6 +11,9 @@ namespace app\controllers;
 use app\models\CardSendForm;
 use app\models\FormId;
 use app\models\Goods;
+use app\models\VoucherOrder;
+use app\models\UserVoucher;
+use app\models\VoucherUsedLog;
 use app\models\MiaoshaGoods;
 use app\models\MsGoods;
 use app\models\MsOrder;
@@ -42,11 +45,13 @@ class PayNotifyController extends Controller
 
     public function actionIndex()
     {
+
         $xml = file_get_contents("php://input");
         if (\Yii::$app->fromAlipayApp()) {
             $this->alipayNotify();
         } else {
             $res = DataTransform::xmlToArray($xml);
+
             if ($res && !empty($res['out_trade_no'])) { //微信支付回调
                 $this->wechatPayNotify($res);
             }
@@ -133,7 +138,7 @@ class PayNotifyController extends Controller
 
     private function wechatPayNotify($res)
     {
-        if ($res['result_code'] != 'SUCCESS' && $res['return_code'] != 'SUCCESS') {
+      if ($res['result_code'] != 'SUCCESS' && $res['return_code'] != 'SUCCESS') {
             return;
         }
 
@@ -147,6 +152,10 @@ class PayNotifyController extends Controller
             case 'M':
                 // 秒杀订单回掉
                 return $this->MsOrderNotify($res);
+                break;
+            case 'V':
+                // 水票订单回掉
+                return $this->VsOrderNotify($res);
                 break;
             case 'U':
                 //合并支付的订单
@@ -274,6 +283,108 @@ class PayNotifyController extends Controller
         $cache = \Yii::$app->cache;
         $cache->set($key, $new, 300);
     }
+
+
+
+    /**
+     * @param $res
+     * 优惠卷订单回掉
+     */
+    private function VsOrderNotify($res='')
+    {
+
+
+        $order = VoucherOrder::findOne([
+            'order_no' => $res['out_trade_no'],
+        ]);
+        if (!$order) {
+            return;
+        }
+        $store = Store::findOne($order->store_id);
+        if (!$store) {
+            return;
+        }
+
+
+
+        $wechat_app = WechatApp::findOne($store->wechat_app_id);
+        if (!$wechat_app) {
+            return;
+        }
+
+    $wechat = new Wechat([
+            'appId' => $wechat_app->app_id,
+            'appSecret' => $wechat_app->app_secret,
+            'mchId' => $wechat_app->mch_id,
+            'apiKey' => $wechat_app->key,
+            'cachePath' => \Yii::$app->runtimePath . '/cache',
+        ]);
+        \Yii::$app->controller->wechat = $wechat;
+        $new_sign = $wechat->pay->makeSign($res);
+        if ($new_sign != $res['sign']) {
+            echo "Sign 错误";
+            return;
+        }
+        if ($order->pay_status == 2) {
+            echo "订单已支付";
+            return;
+        }
+        $order->pay_status = 2;
+
+        if ($order->save()) {
+
+           //付款成功后 增加抵用券
+              $my_voucher=UserVoucher::findOne(['store_id'=>$order->store_id,'goods_id'=>$order->goods_id,$order->user_id]);
+              if($my_voucher){
+                  $my_voucher->num+=$order->voucher_num;
+                  $my_voucher->total_number+=$order->voucher_num;
+              }else{
+                  $my_voucher=new UserVoucher();
+                  $my_voucher->user_id=$order->user_id;
+                  $my_voucher->store_id=$order->store_id;
+                  $my_voucher->goods_id=intval($order->goods_id);
+                  $my_voucher->total_number=$order->voucher_num;
+                  $my_voucher->num=$order->voucher_num;
+              }
+              $voucher_save=$my_voucher->save();
+            if($voucher_save){
+                $voucher_user_log= new VoucherUsedLog();
+                $voucher_user_log->user_id=$order->user_id;
+                $voucher_user_log->goods_id=intval($order->goods_id);
+                $voucher_user_log->store_id=$order->store_id;
+                $voucher_user_log->change_num=$order->voucher_num;
+                $voucher_user_log->change_type=voucherAdd;
+                $voucher_user_log->type=voucherbuy;
+                $voucher_user_log->create_time=time();
+                $voucher_user_log->detail='水票购买';
+                $voucher_user_log->current_total=$my_voucher->num;
+                $voucher_user_log->voucher_order=$order->id;
+                $voucher_user_log->insert();
+            }
+
+
+
+
+
+
+            echo '<xml><return_code><![CDATA[SUCCESS]]></return_code><return_msg><![CDATA[OK]]></return_msg></xml>';
+            return;
+        } else {
+            echo "支付失败";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * @param $res

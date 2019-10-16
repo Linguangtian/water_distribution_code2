@@ -78,7 +78,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             [['type', 'addtime', 'is_delete', 'store_id', 'is_distributor', 'parent_id', 'time', 'is_clerk', 'we7_uid', 'shop_id', 'level', 'integral', 'total_integral'], 'integer'],
             [['username', 'password', 'auth_key', 'access_token', 'avatar_url'], 'required'],
             [['avatar_url', 'binding'], 'string'],
-            [['total_price', 'price', 'money', 'order_money'], 'number'],
+            [['total_price', 'price', 'money', 'order_money','credit_line','credit_cost'], 'number'],
             [['username', 'password', 'auth_key', 'access_token', 'wechat_open_id', 'wechat_union_id', 'nickname', 'contact_way', 'comments'], 'string', 'max' => 255],
             [['platform','limit_voucher'], 'integer',],
         ];
@@ -231,4 +231,11 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(Shop::className(), ['id' => 'shop_id']);
     }
+
+    public function getCreditCurrent(){
+
+        return $this->credit_line - $this->credit_cost;
+
+    }
+
 }

@@ -2,17 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab4a77ee-987f-4d2c-b6df-526af4565f61" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/controllers/PayNotifyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/controllers/PayNotifyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/controllers/test.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/models/WechatTemplateMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/models/WechatTemplateMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/models/WechatTplMsgSender.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/models/WechatTplMsgSender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/OrderPayDataForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/OrderPayDataForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/VoucherPayDataForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/VoucherPayDataForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/order/OrderForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/order/OrderForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/order/OrderSubmitForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/api/models/order/OrderSubmitForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/GoodsForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/GoodsForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/OrderDetailForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/OrderDetailForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/order/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/order/detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/controllers/WechatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/controllers/WechatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/OrderSendForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/OrderSendForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/UserListForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/models/UserListForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/store/setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/store/setting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/user/exchange-identity.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/user/exchange-identity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/wechat/template-msg.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/modules/mch/views/wechat/template-msg.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/runtime/cache/14/14bc1b9ae804586ff14f8c8797bf7364.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/runtime/cache/14/14bc1b9ae804586ff14f8c8797bf7364.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/runtime/cache/82/82bf00ab6b74cc5e96ad52b3de72ab3f.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/runtime/cache/82/82bf00ab6b74cc5e96ad52b3de72ab3f.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/runtime/cache/8f/8fc1823d62975123107524b273ab2252.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/runtime/cache/8f/8fc1823d62975123107524b273ab2252.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/web/statics/wxapp/images/yougoods.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/zjhj_mall/core/web/pay-notify.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/zjhj_mall/core/web/pay-notify.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +35,8 @@
       <file leaf-file-name="display.ctrl.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/source/wxapp/display.ctrl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="400">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -64,8 +73,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-23" />
-    <option name="y" value="164" />
+    <option name="x" value="-92" />
+    <option name="y" value="256" />
     <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
@@ -75,6 +84,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,26 +95,17 @@
             <path>
               <item name="water_system_code" type="b2602c69:ProjectViewProjectNode" />
               <item name="water_system_code" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="addons" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="water_system_code" type="b2602c69:ProjectViewProjectNode" />
               <item name="water_system_code" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="water_system_code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="water_system_code" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wxapp" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,17 +138,18 @@
       <updated>1569831113909</updated>
       <workItem from="1569831119806" duration="1284000" />
       <workItem from="1570499913468" duration="32000" />
+      <workItem from="1571129523337" duration="82000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1316000" />
+    <option name="totallyTimeSpent" value="1398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-23" y="164" width="1932" height="1056" extended-state="0" />
+    <frame x="-92" y="256" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499391" visible="true" weight="0.17521368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499391" visible="true" weight="0.17681624" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985657" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50373137" side_tool="true" weight="0.23666666" />
@@ -161,11 +163,11 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49626866" weight="0.34533897" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893618" weight="0.11162791" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893618" weight="0.11162791" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,14 +180,21 @@
     <entry file="file://$PROJECT_DIR$/web/source/wxapp/display.ctrl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/source/wxapp/display.ctrl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/source/wxapp/display.ctrl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>

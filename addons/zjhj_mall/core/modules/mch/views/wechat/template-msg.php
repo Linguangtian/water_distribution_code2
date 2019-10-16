@@ -262,6 +262,41 @@ $this->title = '模版消息';
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <div class="form-group-label col-sm-3 text-right">
+                        <label class="col-form-label">送水配送通知(模板编号: AT2326 )</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="water_feeder_tpl" placeholder="请输入模版 ID ..."
+                               value="<?= isset($tplMsg['store']['water_feeder_tpl']) ? $tplMsg['store']['water_feeder_tpl'] : '' ?>">
+                        <div class="text-muted fs-sm">送水配送通知，<a data-toggle="modal" data-target="#tip_mch_tpl_3"
+                                                                href="javascript:">查看模板消息格式</a></div>
+                    </div>
+                </div>
+                <div class="modal fade" id="tip_mch_tpl_3">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">模板消息格式：</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img style="max-width: 100%"
+                                     src="<?= Yii::$app->request->baseUrl ?>/statics/images/tplmsg/mch-tpl-3.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
             </fieldset>
 
             <fieldset style="margin: 8px; border: 1px solid silver; padding: 8px; border-radius: 4px;<?= $tplMsg['share']['is_show'] ? '' : 'display: none' ?>">

@@ -303,12 +303,23 @@ $this->params['active_nav_group'] = 1;
                             <span class="label-icon"></span>
                             <span class="label-text">3、余额支付</span>
                         </label>
-                        <div class="fs-sm text-danger">默认支持线上支付；若三个都不勾选，则视为勾选线上支付</div>
+
+                        <label class="checkbox-label">
+                            <input <?= $option['payment']['credit'] == 1 ? 'checked' : null ?>
+                                    value="1"
+                                    name="payment[credit]" type="checkbox" class="custom-control-input">
+                            <span class="label-icon"></span>
+                            <span class="label-text">4、账期支付</span>
+                        </label>
+
+                        <div class="fs-sm text-danger">默认支持线上支付；若四个都不勾选，则视为勾选线上支付</div>
                         <div class="fs-sm">可在“<a target="_blank"
                                                  href="<?= $urlManager->createUrl(['mch/recharge/setting']) ?>">营销管理=>充值=>设置</a>”中开启余额功能
                         </div>
                     </div>
                 </div>
+
+
 
                 <div class="form-group row">
                     <div class="form-group-label col-sm-2 text-right">

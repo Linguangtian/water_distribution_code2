@@ -117,6 +117,32 @@ $this->params['active_nav_group'] = 4;
 
 
 
+                    <div class="form-group row">
+                        <div class="form-group-label col-2 text-right">
+                            <label class="col-form-label">账期额度</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" class="form-control" name="credit_line"
+                                   style="width:250px;"
+                                   value="<?= $user->credit_line ? $user->credit_line : ''; ?>">
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <div class="form-group-label col-2 text-right">
+                            <label class="col-form-label">账期欠款</label>
+                        </div>
+                        <div class="col-5">
+                            <label class="col-form-label"><?= $user->credit_cost ?></label>
+                        </div>
+                    </div>
+
+
+
+
                     <?php if ($user->is_distributor == 1): ?>
                         <div class="form-group row">
                             <div class="form-group-label col-2 text-right">

@@ -39,6 +39,8 @@ class WechatController extends Controller
      */
     public function actionTemplateMsg()
     {
+
+
         if (\Yii::$app->request->isPost) {
             $data = \Yii::$app->request->post();
             try {
@@ -49,6 +51,7 @@ class WechatController extends Controller
                     $store = new WechatTemplateMessage();
                 }
                 $store->store_id = $this->store->id;
+
                 $store->attributes = $data;
                 $store->save();
 
@@ -66,10 +69,11 @@ class WechatController extends Controller
                         'name' => 'apply_tpl',
                         'value' => $data['apply_tpl'],
                     ],
+
                 ], $this->store->id, 'share');
 
                 // 活动通用
-                Option::setList([
+              Option::setList([
                     [
                         'name' => 'success_tpl',
                         'value' => $data['activity_success_tpl'],
@@ -77,6 +81,10 @@ class WechatController extends Controller
                     [
                         'name' => 'refund_tpl',
                         'value' => $data['activity_refund_tpl'],
+                    ],
+                    [
+                        'name' => 'water_feeder',
+                        'value' => $data['water_feeder'],
                     ],
                 ], $this->store->id, 'activity');
 
@@ -131,6 +139,7 @@ class WechatController extends Controller
 
         } else {
             $storeTplMsg = WechatTemplateMessage::find()->where(['store_id' => $this->store->id])->asArray()->one();
+
             $shareTplMsg = Option::getList('cash_success_tpl,cash_fail_tpl,apply_tpl', $this->store->id, 'share', '');
             $activityTplMsg = Option::getList('success_tpl,refund_tpl', $this->store->id, 'activity', '');
 
@@ -145,9 +154,13 @@ class WechatController extends Controller
 
             // 当前用户插件权限
             $userAuth = $this->getUserAuth();
+
+
+
             $storeTplMsg['activity_success_tpl'] = $activityTplMsg['success_tpl'];
             $storeTplMsg['activity_refund_tpl'] = $activityTplMsg['refund_tpl'];
             $storeTplMsg['apply'] = $mchTplMsg['apply'];
+
             $storeTplMsg['account_change_tpl'] = $fxhbTplMsg['tpl_msg_id'];
 
             $tplMsg = [

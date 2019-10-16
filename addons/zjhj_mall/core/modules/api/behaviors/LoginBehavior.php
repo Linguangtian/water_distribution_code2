@@ -20,15 +20,11 @@ class LoginBehavior extends ActionFilter
         if (!$access_token) {
             $access_token = \Yii::$app->request->post('access_token');
         }
-        if (!$access_token) {
-            \Yii::$app->response->data = new ApiResponse(-1, 'access_token 不能为空');
-            return false;
+        if ($access_token) {
+            if (\Yii::$app->user->loginByAccessToken($access_token)) {
+                return true;
+            }
         }
-        if (\Yii::$app->user->loginByAccessToken($access_token)) {
-            return true;
-        } else {
-            \Yii::$app->response->data = new ApiResponse(-1, '登录失败,');
-            return false;
-        }
+        return true;
     }
 }
