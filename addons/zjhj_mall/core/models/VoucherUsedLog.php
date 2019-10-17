@@ -24,8 +24,10 @@ define('voucherAdd',1);
 define('voucherRed',2);
 
 define('voucherbuy',1);
-define('voucherExchange',2);  define('exchangeDetail','购水抵用');//兑换
-define('orderCancel',4);//兑换
+define('voucherExchange',2);
+define('exchangeDetail','购水抵用');//兑换
+define('orderCancel',4);//退款
+define('VOUCHER_RETURN_GOODS',5);//退货退款
 define('cancelDetail','订单取消');//兑换
 
 class VoucherUsedLog extends \yii\db\ActiveRecord

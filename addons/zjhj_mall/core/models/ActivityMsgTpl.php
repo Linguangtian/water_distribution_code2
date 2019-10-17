@@ -195,6 +195,7 @@ class ActivityMsgTpl
             ];
 
             $this->sendTplMsg($data);
+
         } catch (\Exception $e) {
             \Yii::warning($e->getMessage());
         }

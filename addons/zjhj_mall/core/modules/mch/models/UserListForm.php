@@ -368,8 +368,9 @@ class UserListForm extends MchModel
 
         if ($this->keyword) {
             $query->andWhere(['LIKE', 'u.nickname', $this->keyword]);
-            $query->orWhere(['LIKE', 'wm.real_name', $this->keyword]);
-            $query->orWhere(['LIKE', 'wm.mobile', $this->keyword]);
+        }
+        if ($this->user_id) {
+            $query->andWhere(['=', 'u.id', $this->user_id]);
         }
         $count = $query->count();
         $pagination = new Pagination(['totalCount' => $count, 'page' => $this->page - 1]);

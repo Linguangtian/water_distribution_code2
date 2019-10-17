@@ -135,6 +135,10 @@ $this->params['active_nav_group'] = 4;
                            购买水票
                         <?php elseif ($v['type']==2) :?>
                             水票使用
+                        <?php elseif ($v['type']==4) :?>
+                            退款
+                        <?php elseif ($v['type']==5) :?>
+                            退货退款
                         <?php else :?>
                         其他
                         <?php endif; ?>

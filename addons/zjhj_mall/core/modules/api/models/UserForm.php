@@ -8,9 +8,12 @@
 
 namespace app\modules\api\models;
 
+use app\models\Order;
 use app\models\User;
+use app\models\UserCreditLog;
 use app\modules\api\models\wxbdc\WXBizDataCrypt;
 use Curl\Curl;
+use yii\data\Pagination;
 
 class UserForm extends ApiModel
 {
@@ -25,12 +28,14 @@ class UserForm extends ApiModel
     public $phone_code;
     public $bind_type;
     public $binding;
+    public $page;
+    public $limit;
 
     public function rules()
     {
         return [
             [['user_id',], 'required'],
-            [['binding', 'phone_code', 'bind_type'], 'integer'],
+            [['binding', 'phone_code', 'bind_type','page','limit'], 'integer'],
             [['appId', 'code', 'encryptedData', 'iv', 'wechat_app','phone'], 'trim'],
             [['appId', 'code', 'encryptedData', 'iv', 'wechat_app','phone'], 'string'],
             [['phone'],'match','pattern' =>\app\models\Model::MOBILE_PATTERN , 'message'=>'手机号错误']
@@ -121,6 +126,33 @@ class UserForm extends ApiModel
                 'data'=>$errCode
             ];
         }
+    }
+
+    public function creditLog(){
+
+        $query=UserCreditLog::find()->alias('ucl')
+            ->leftJoin(['o'=>Order::tableName()],'o.id=ucl.order_id')
+            ->where(['ucl.user_id'=>$this->user_id]);
+        $count = $query->count();
+        $pagination = new Pagination(['totalCount' => $count, 'page' => $this->page - 1, 'pageSize' => $this->limit]);
+        $list = $query->select(['ucl.*','o.order_no'])->limit($pagination->limit)->offset($pagination->offset)->orderBy('ucl.id desc')->asArray()->all();
+
+        foreach ($list as &$li){
+            $li['create_time']=date('Y-m-d H:i:s',$li['create_time']);
+
+        }
+
+        return [
+            'code' => 0,
+            'msg' => 'success',
+            'data' => [
+                'row_count' => $count,
+                'page_count' => $pagination->pageCount,
+                'list' => $list,
+            ],
+        ];
+
+
     }
 
     private function getOpenid($code)

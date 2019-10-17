@@ -43,6 +43,8 @@ use app\modules\api\models\OrderMemberForm;
 use app\models\SmsSetting;
 use app\modules\api\models\UserForm;
 use app\utils\Sms;
+use app\models\RechargeModule;
+
 
 class UserController extends Controller
 {
@@ -97,6 +99,7 @@ class UserController extends Controller
                 'integral' => \Yii::$app->user->identity->integral,
                 'money' => \Yii::$app->user->identity->money,
                 'blacklist' => \Yii::$app->user->identity->blacklist,
+                'credit_current' => $user->getCreditCurrent(),
             ];
             $next_level = Level::find()->where(['store_id' => $this->store->id, 'is_delete' => 0, 'status' => 1])
                 ->andWhere(['>', 'level', $level])->orderBy(['level' => SORT_ASC, 'id' => SORT_DESC])->asArray()->one();
@@ -160,7 +163,27 @@ class UserController extends Controller
         ]);
     }
 
+    public function actionCreditInfo(){
 
+
+        $form = new UserForm();
+        $form->attributes = \Yii::$app->request->get();
+        $form->store_id = $this->store->id;
+        $form->user_id = \Yii::$app->user->id;
+        $list=$form->creditLog();
+        $user_info=User::find()->where(['id'=>\Yii::$app->user->id])->asArray()->one();
+        $user_info['credit_current']=$user_info['credit_line'] -$user_info['credit_cost'] ;
+
+        $form2 = new RechargeModule();
+        $form2->store_id = $this->store->id;
+        $setting = $form2->search_recharge();
+        $res=[
+            'list'=>$list,
+            'user_info'=>$user_info,
+            'setting'=>$setting
+        ];
+        return new BaseApiResponse($res);
+    }
     //    短信验证是否开启
     public function actionSmsSetting()
     {

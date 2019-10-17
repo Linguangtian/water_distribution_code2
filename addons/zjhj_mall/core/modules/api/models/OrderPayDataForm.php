@@ -13,6 +13,7 @@ use app\hejiang\ApiResponse;
 use app\models\common\api\CommonOrder;
 use app\models\FormId;
 use app\models\Goods;
+use app\models\UserCreditLog;
 use app\models\Order;
 use app\models\OrderDetail;
 use app\models\OrderUnion;
@@ -20,6 +21,7 @@ use app\models\OrderWarn;
 use app\models\Setting;
 use app\models\User;
 use luweiss\wechat\Wechat;
+
 
 /**
  * @property User $user
@@ -177,6 +179,7 @@ class OrderPayDataForm extends ApiModel
                 $order = $this->order;
                 //余额支付  用户余额变动
                 if ($this->pay_type == 'BALANCE_PAY') {
+
                     $user = User::findOne(['id' => $order->user_id]);
                     if ($user->money < $order->pay_price) {
                         return [
@@ -194,28 +197,37 @@ class OrderPayDataForm extends ApiModel
 
 
 
-                //赊账支付
+                //账期支付
                 if ($this->pay_type == 'CREDIT_PAY') {
-
                     $user = User::findOne(['id' => $order->user_id]);
-
-                    if ($user->getCreditCurrent() < $order->pay_price||getCreditCurrent()<0) {
+                    if ($user->getCreditCurrent() < $order->pay_price||$user->getCreditCurrent()<0) {
                         return [
                             'code' => 1,
-                            'msg' => '支付失败，信用额不足',
+                            'msg' => '支付失败，账期额度不足',
                         ];
                     }
                     $user->credit_cost += floatval($order->pay_price);
-                    $user->save();
-                    $order->is_pay = 1;
-                    $order->pay_type = 4;
-                    $order->pay_time = time();
-                    $order->save();
+                    if($user->save()){
+                        $order->is_pay = 1;
+                        $order->pay_type = 4;
+                        $order->pay_time = time();
+                        $order->save();
+
+                        //增加账期消费记录
+                        $user_credit_log=new  UserCreditLog;
+                        $user_credit_log->user_id=$order->user_id;
+                        $user_credit_log->store_id=$order->store_id;
+                        $user_credit_log->change_type=CREDI_COST;
+                        $user_credit_log->type=CREDI_TYPE_COST;
+                        $user_credit_log->create_time=time();
+                        $user_credit_log->order_id=trim($order->id);
+                        $user_credit_log->explain='账期结算订单'.$order->order_no;
+                        $user_credit_log->current_credit_cost= $user->credit_cost;
+                        $user_credit_log->credit_money= floatval($order->pay_price);
+                        $user_credit_log->save();
+                    }
+
                 }
-
-
-
-
 
 
                 //支付完成后，相关操作
@@ -294,38 +306,83 @@ class OrderPayDataForm extends ApiModel
                     'body' => $res['body'],
                 ];
             }
+
+
+
             //货到付款和余额支付数据处理
-            if ($this->pay_type == 'HUODAO_PAY' || $this->pay_type == 'BALANCE_PAY') {
-                //余额支付  用户余额变动
-                if ($this->pay_type == 'BALANCE_PAY') {
-                    if ($this->user->money < $total_pay_price) {
+           //账期处理
+           if ($this->pay_type == 'HUODAO_PAY' || $this->pay_type == 'BALANCE_PAY'||$this->pay_type == 'CREDIT_PAY') {
+                        //余额支付  用户余额变动
+                        if ($this->pay_type == 'BALANCE_PAY') {
+                            if ($this->user->money < $total_pay_price) {
+                                return [
+                                    'code' => 1,
+                                    'msg' => '支付失败，余额不足',
+                                ];
+                            }
+                            $this->user->money = $this->user->money - $total_pay_price;
+                            $this->user->save();
+                            foreach ($order_list as $order) {
+                                $order->is_pay = 1;
+                                $order->pay_type = 3;
+                                $order->pay_time = time();
+                                $order->save();
+                            }
+                        }
+                        //账期
+                        if ($this->pay_type == 'CREDIT_PAY') {
+                            if ($this->user->getCreditCurrent() < $total_pay_price||$this->user->getCreditCurrent()<0) {
+                                return [
+                                    'code' => 1,
+                                    'msg' => '支付失败，账期额度不足',
+                                ];
+                            }
+                            $this->user->credit_cost = $this->user->credit_cost + $total_pay_price;
+                            $this->user->save();
+                            $arr_order=array();
+                            foreach ($order_list as $order) {
+                                $order->is_pay = 1;
+                                $order->pay_type = 4;
+                                $order->pay_time = time();
+                                $order->save();
+                                $arr_order[]=$order->id;
+                            }
+
+                            $order_str=implode(',',$arr_order);
+
+                            //增加账期消费记录
+                            $user_credit_log=new  UserCreditLog;
+                            $user_credit_log->user_id=$this->user->id;
+                            $user_credit_log->store_id= $this->store_id;
+                            $user_credit_log->change_type=CREDI_COST;
+                            $user_credit_log->type=CREDI_TYPE_COST;
+                            $user_credit_log->create_time=time();
+                            $user_credit_log->order_id=$order_str;
+                            $user_credit_log->explain='账期结算-多订单合并付款';
+                            $user_credit_log->current_credit_cost= $this->user->credit_cost;
+                            $user_credit_log->credit_money= $total_pay_price;
+                            $user_credit_log->save();
+
+                        }
+                        foreach ($order_list as $order) {
+                            //支付完成后，相关操作
+                            $form = new OrderWarn();
+                            $form->order_id = $order->id;
+                            $form->order_type = 0;
+                            $form->notify();
+                        }
                         return [
-                            'code' => 1,
-                            'msg' => '支付失败，余额不足',
+                            'code' => 0,
+                            'msg' => 'success',
+                            'data' => '',
                         ];
                     }
-                    $this->user->money = $this->user->money - $total_pay_price;
-                    $this->user->save();
-                    foreach ($order_list as $order) {
-                        $order->is_pay = 1;
-                        $order->pay_type = 3;
-                        $order->pay_time = time();
-                        $order->save();
-                    }
-                }
-                foreach ($order_list as $order) {
-                    //支付完成后，相关操作
-                    $form = new OrderWarn();
-                    $form->order_id = $order->id;
-                    $form->order_type = 0;
-                    $form->notify();
-                }
-                return [
-                    'code' => 0,
-                    'msg' => 'success',
-                    'data' => '',
-                ];
-            }
+
+
+
+
+
+
         }
     }
 

@@ -38,6 +38,7 @@ class ShareMoneyForm extends ApiModel
 
     public function setData()
     {
+
         $setting = Setting::findOne(['store_id' => $this->order->store_id]);
         if (!$setting || $setting->level == 0) {
             return false;
@@ -173,8 +174,10 @@ class ShareMoneyForm extends ApiModel
         // 发送佣金模板消息
         if ($cParent1 > 0 && $share_commission_money_first >= 0.01) {
             $tplMsg = new ActivityMsgTpl($cParent1, 'SHARE');
+
             $tplMsg->accountChangeMsg('有用户下单，预计可得佣金' . sprintf('%.2f', $share_commission_money_first), '分销佣金');
         }
+
         if ($cParent2 > 0 && $share_commission_money_second >= 0.01) {
             $tplMsg = new ActivityMsgTpl($cParent2, 'SHARE');
             $tplMsg->accountChangeMsg('有用户下单，预计可得佣金' . sprintf('%.2f', $share_commission_money_second), '分销佣金');

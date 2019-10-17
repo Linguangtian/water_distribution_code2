@@ -3,8 +3,16 @@
 namespace app\models;
 
 use Yii;
-define('CREDI_REPAY','1');
-define('CREDI_TYPE_REPAY','1');
+define('CREDI_REPAY','1');//-
+define('CREDI_COST','2');//+
+
+
+define('CREDI_TYPE_REPAY','1');//还款
+define('CREDI_TYPE_COST','2');//消费
+define('CREDI_TYPE_RETURN','3');//订单退款
+define('CREDI_TYPE_RETURNGOODS','4');//退货退款
+
+
 
 /**
  * This is the model class for table "{{%hjmall_user_credit_log}}".
@@ -34,9 +42,9 @@ class UserCreditLog extends \yii\db\ActiveRecord
     {
         return [
             [['user_id', 'store_id', 'change_type', 'create_time'], 'required'],
-            [['user_id', 'store_id', 'change_type', 'order_id','create_time','type'], 'integer'],
+            [['user_id', 'store_id', 'change_type', 'create_time','type','order_type'], 'integer'],
             [['credit_money', 'current_credit_cost'], 'number'],
-            [['explain'], 'string', 'max' => 255],
+            [['order_id','explain'], 'string', 'max' => 255],
         ];
     }
 
@@ -56,6 +64,7 @@ class UserCreditLog extends \yii\db\ActiveRecord
             'type' => '类型',
             'credit_money' => 'credit_money',
             'current_credit_cost' => 'current_credit_cost',
+            'order_type' => 'order_type',
         ];
     }
 }

@@ -69,7 +69,11 @@ $this->params['active_nav_group'] = 4;
                     <td>
                         <a href="<?= $v['avatar_url'] ?>" target="_blank"> <img src="<?= $v['avatar_url'] ?>" style="max-width:50px;max-height:50px;"></a>  [ <?= $v['nickname'] ?>]
                     </td>
-                    <td>       <?php if($v['type']==1) :?>  还款 <?php else: ?>  消费 <?php endif; ?> </td>
+                    <td>
+                        <?php if($v['type']==1) :?>  还款
+                        <?php elseif($v['type']==2): ?> 消费
+                        <?php elseif($v['type']==3): ?> 退款
+                        <?php else: ?>  消费 <?php endif; ?> </td>
 
 
                     <td>   <?php if($v['change_type']==1) :?> <a style="color: green"> - </a> <?php else: ?> <a style="color: red"> + </a>   <?php endif; ?>  <?= $v['credit_money'] ?>  </td>

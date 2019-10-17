@@ -13,6 +13,7 @@ use app\models\MiaoshaGoods;
 use app\models\Model;
 use app\models\MsGoods;
 use app\models\MsOrder;
+use app\models\UserCreditLog;
 use app\models\MsOrderRefund;
 use app\models\MsWechatTplMsgSender;
 use app\models\Order;
@@ -28,6 +29,7 @@ use app\models\UserAccountLog;
 use app\models\WechatTplMsgSender;
 use app\models\Register;
 use app\utils\Refund;
+use app\modules\api\models\WaterVoucherForm;
 
 /**
  * 售后订单结果处理
@@ -282,7 +284,7 @@ class OrderRefundForm extends MchModel
 
                 // ==================退款操作==================
 
-                if ($order_refund->refund_price > 0 && $order->pay_type == 3) {
+                if ($order_refund->refund_price > 0 &&$order->pay_type == 3) {
                     $user->money += floatval($order_refund->refund_price);
                     $log = new UserAccountLog();
                     $log->user_id = $user->id;
@@ -318,6 +320,67 @@ class OrderRefundForm extends MchModel
                         return $this->getErrorResponse($user);
                     }
                 }
+
+                //恢复水票
+                if($order->is_water_voucher==1){
+                    $watervouche= new WaterVoucherForm();
+                    $watervouche->user_id=$user->id;
+                    $watervouche->store_id=$this->store_id;
+                    $watervouche->orderCancel($order->id,5);
+                }
+
+
+
+                //账期退款
+                if ($order_refund->refund_price > 0 && $order->pay_type == 4) {
+                    $user->credit_cost  -= floatval($order_refund->refund_price);
+                    $user_credit_log=new  UserCreditLog;
+                    $user_credit_log->user_id= $user->id;
+                    $user_credit_log->store_id=$this->store_id;
+                    $user_credit_log->change_type=CREDI_REPAY;
+                    $user_credit_log->type=CREDI_TYPE_RETURNGOODS;
+                    $user_credit_log->create_time=time();
+                    $user_credit_log->order_id=trim($order->id);
+                    $user_credit_log->current_credit_cost= $user->credit_cost;
+                    $user_credit_log->credit_money= floatval($order_refund->refund_price);
+                    if ($this->orderType === self::MS) {
+                        // 秒杀退款
+                        $user_credit_log->explain= "秒杀售后订单退款：退款订单号（{$order_refund->order_refund_no}）";
+                        $user_credit_log->order_type = 5;
+
+                    } else if ($this->orderType === self::PT) {
+                        // 拼团退款
+                        $user_credit_log->explain = "拼团售后订单退款：退款订单号（{$order_refund->order_refund_no}）}";
+                        $user_credit_log->order_type = 6;
+
+                    } else if ($this->orderType === self::STORE) {
+                        // 商城退款
+                        $user_credit_log->explain = " 商城售后订单退款：退款订单号（{$order_refund->order_refund_no}）";
+                        $user_credit_log->order_type = 4;
+
+                    } else {
+                        return [
+                            'code' => 1,
+                            'msg' => 'orderType为空或值非预期'
+                        ];
+                    }
+
+                 $user_credit_log->save();
+
+                    if (!$user->save()) {
+                        return $this->getErrorResponse($user);
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
 
                 // 退款成功发送模版消息
                 if ($order_refund->save()) {

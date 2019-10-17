@@ -14,6 +14,7 @@ use app\utils\SendMail;
 use app\utils\Sms;
 use app\models\Goods;
 use app\models\Order;
+use app\models\UserCreditLog;
 use app\models\OrderDetail;
 use app\models\Register;
 use app\models\User;
@@ -38,6 +39,7 @@ class OrderRevokeForm extends ApiModel
 
     public function save()
     {
+
         if (!$this->validate()) {
             return $this->errorResponse;
         }
@@ -121,6 +123,35 @@ class OrderRevokeForm extends ApiModel
             $log->order_type = 4;
             $log->save();
         }
+        //账期支付 退换账期
+        if ($order->is_pay == 1 && $order->pay_type == 4) {
+            $user->credit_cost -= floatval($order->pay_price);
+            $log = new UserAccountLog();
+            $log->user_id = $user->id;
+            $log->type = 1;
+            $log->price = $order->pay_price;
+            $log->desc = "商城订单退款,订单号（{$order->order_no}）";
+            $log->addtime = time();
+            $log->order_id = $order->id;
+            $log->order_type = 4;
+            $log->save();
+
+            //增加账期记录
+            $user_credit_log=new  UserCreditLog;
+            $user_credit_log->user_id=$user->id;
+            $user_credit_log->store_id= $this->store_id;
+            $user_credit_log->change_type=CREDI_REPAY;
+            $user_credit_log->type=CREDI_TYPE_RETURN;
+            $user_credit_log->create_time=time();
+            $user_credit_log->order_id=trim($order->id);
+            $user_credit_log->explain='订单退款'.$order->order_no;
+            $user_credit_log->current_credit_cost=  $user->credit_cost;
+            $user_credit_log->credit_money= $order->pay_price;
+            $user_credit_log->save();
+
+        }
+
+
         if (!$user->save()) {
             $register = new Register();
             $register->store_id = $this->store_id;

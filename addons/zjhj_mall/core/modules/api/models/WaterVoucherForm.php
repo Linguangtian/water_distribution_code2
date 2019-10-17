@@ -52,12 +52,12 @@ class WaterVoucherForm  extends ApiModel
     }
 
     //订单取消退还水票
-    public function orderCancel($order_id){
+    public function orderCancel($order_id,$type=orderCancel){
 
        $log=VoucherUsedLog::findOne(['order_id'=>$order_id,'user_id'=>$this->user_id]);
        if(empty($log))return false;
        $arr=array('order_id'=>$log->order_id,'exchangeDetail'=>cancelDetail);
-       $this->ChangeWaterVoucher($log->goods_id,orderCancel,$log->change_num,$arr);
+       $this->ChangeWaterVoucher($log->goods_id,$type,$log->change_num,$arr);
 
     }
 
