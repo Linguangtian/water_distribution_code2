@@ -52,12 +52,14 @@ class WaterVoucherForm  extends ApiModel
     }
 
     //订单取消退还水票
-    public function orderCancel($order_id,$type=orderCancel){
+    public function orderCancel($order_id,$type='4'){
 
-       $log=VoucherUsedLog::findOne(['order_id'=>$order_id,'user_id'=>$this->user_id]);
+       $log=VoucherUsedLog::find()->where(['order_id'=>$order_id,'user_id'=>$this->user_id])->asArray()->all();
        if(empty($log))return false;
-       $arr=array('order_id'=>$log->order_id,'exchangeDetail'=>cancelDetail);
-       $this->ChangeWaterVoucher($log->goods_id,$type,$log->change_num,$arr);
+        foreach ($log as $li){
+            $arr=array('order_id'=>$li['order_id'],'exchangeDetail'=>cancelDetail.'['.$order_id.']');
+            $this->ChangeWaterVoucher($li['goods_id'],$type,$li['change_num'],$arr);
+        }
 
     }
 
@@ -84,13 +86,13 @@ class WaterVoucherForm  extends ApiModel
         $voucher_log= new VoucherUsedLog();
         $voucher_log->user_id=$this->user_id;
         $voucher_log->store_id=$this->store_id;
-        $voucher_log->goods_id=$goods_id;
+        $voucher_log->goods_id=intval($goods_id);
         $voucher_log->change_num= $change_num;
         $voucher_log->change_type=$change_type;
-        $voucher_log->type=$type;
+        $voucher_log->type=intval($type);
         $voucher_log->create_time=time();
         $voucher_log->order_id=$arr['order_id'];
-        $voucher_log->voucher_order=$arr['voucher_order'];
+        $voucher_log->voucher_order=isset($arr['voucher_order'])?$arr['voucher_order']:0;
         $voucher_log->detail=$arr['exchangeDetail'];
         $voucher_log->current_total=$user_voucher->num;
         $voucher_log->insert();
