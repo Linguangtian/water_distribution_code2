@@ -334,20 +334,21 @@ class PayNotifyController extends Controller
         if ($order->save()) {
 
            //付款成功后 增加抵用券
-              $my_voucher=UserVoucher::findOne(['store_id'=>$order->store_id,'goods_id'=>$order->goods_id,$order->user_id]);
+              $my_voucher=UserVoucher::find()->where(['store_id'=>$order->store_id,'goods_id'=>$order->goods_id,'user_id'=>$order->user_id])->one();
               if($my_voucher){
                   $my_voucher->num+=$order->voucher_num;
                   $my_voucher->total_number+=$order->voucher_num;
               }else{
+
                   $my_voucher=new UserVoucher();
                   $my_voucher->user_id=$order->user_id;
                   $my_voucher->store_id=$order->store_id;
-                  $my_voucher->goods_id=intval($order->goods_id);
+                  $my_voucher->goods_id=$order->goods_id;
                   $my_voucher->total_number=$order->voucher_num;
                   $my_voucher->num=$order->voucher_num;
               }
-              $voucher_save=$my_voucher->save();
-            if($voucher_save){
+
+            if($my_voucher->save()){
                 $voucher_user_log= new VoucherUsedLog();
                 $voucher_user_log->user_id=$order->user_id;
                 $voucher_user_log->goods_id=intval($order->goods_id);

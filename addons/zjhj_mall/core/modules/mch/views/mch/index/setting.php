@@ -127,54 +127,8 @@ $url_manager = Yii::$app->urlManager;
             </div>
 			
 			
-	<div class="panel-header">
-        <span>商家入住缴费项目——对应商品ID</span>
-    </div>
-			
-			<div class="form-group row" style="padding-top: 15px">
-                <div class="form-group-label col-sm-2 text-right">
-                    <label class="col-form-label">安装认证:</label>
-                </div>
-                <div class="col-sm-6">
-                    <input type="number" min="1" placeholder='输入商品ID' name="bond_install" value="<?= $model['bond_install'] ?>">
-                </div>
-            </div>
+	
 
-			
-			
-			<div class="form-group row">
-                <div class="form-group-label col-sm-2 text-right">
-                    <label class="col-form-label">稳定认证:</label>
-                </div>
-                <div class="col-sm-6">
-                    <input type="number" min="1" placeholder='输入商品ID' name="bond_stable" value="<?= $model['bond_stable'] ?>">
-                </div>
-            </div>
-			<div class="form-group row">
-                <div class="form-group-label col-sm-2 text-right">
-                    <label class="col-form-label">售后认证:</label>
-                </div>
-                <div class="col-sm-6">
-                    <input type="number" min="1" placeholder='输入商品ID' name="bond_service" value="<?= $model['bond_service'] ?>">
-                </div>
-            </div>
-			<div class="form-group row">
-                <div class="form-group-label col-sm-2 text-right">
-                    <label class="col-form-label">原创认证:</label>
-                </div>
-                <div class="col-sm-6">
-                    <input type="number" min="1" placeholder='输入商品ID' name="bond_original" value="<?= $model['bond_original'] ?>">
-                </div>
-            </div>
-			
-			<div class="form-group row">
-                <div class="form-group-label col-sm-2 text-right">
-                    <label class="col-form-label">安全认证:</label>
-                </div>
-                <div class="col-sm-6">
-                    <input type="number" min="1" placeholder='输入商品ID' name="bond_security" value="<?= $model['bond_security'] ?>">
-                </div>
-            </div>
 			
 
             <div class="form-group row">

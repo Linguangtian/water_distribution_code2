@@ -108,7 +108,7 @@ class WaterVoucherForm  extends ApiModel
      $query=VoucherPackage::find()->alias('vp')
             ->leftJoin(['g'=>Goods::tableName()],'g.id=vp.goods_id')
             ->leftJoin(['uv'=>UserVoucher::tableName()],'uv.goods_id=vp.goods_id and uv.user_id='.$this->user->id)
-            ->where(['g.is_delete'=>0])
+            ->where(['g.is_delete'=>0,'g.status'=>1])
             ->groupBy('vp.goods_id');
 
     $count = $query->count();
