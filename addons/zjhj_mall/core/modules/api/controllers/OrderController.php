@@ -71,11 +71,19 @@ class OrderController extends Controller
     //新-订单提交前的预览页面
     public function actionNewSubmitPreview()
     {
+        if(empty( \Yii::$app->user->id)){
+            return new BaseApiResponse(   [
+                'code' => 1,
+                'msg' => '请先授权登录',
+            ]);
+        }
+
         $form = new \app\modules\api\models\order\OrderSubmitPreviewForm();
         $form->attributes = \Yii::$app->request->post();
         $form->store_id = $this->store->id;
         $form->store = $this->store;
         $form->user_id = \Yii::$app->user->id;
+
         return new BaseApiResponse($form->search());
     }
 
