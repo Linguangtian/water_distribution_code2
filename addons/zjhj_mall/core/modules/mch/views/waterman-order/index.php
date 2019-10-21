@@ -33,7 +33,7 @@ $this->params['active_nav_group'] = 4;
                     <div>
                         <div class="input-group">
                             <input class="form-control"
-                                   placeholder="昵称/电话"
+                                   placeholder="配送员姓名"
                                    name="keyword"
                                    autocomplete="off"
                                    value="<?= isset($_GET['keyword']) ? trim($_GET['keyword']) : null ?>">

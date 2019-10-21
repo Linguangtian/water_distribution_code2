@@ -110,6 +110,9 @@ class OrderSubmitForm extends OrderForm
 
             }
 
+
+
+
             $payPrice = $this->getPayPrice($mch);
             $order = new Order();
             $order->store_id = $this->store_id;

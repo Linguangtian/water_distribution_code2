@@ -106,9 +106,6 @@ class ApplySubmitForm extends ApiModel
             $mail = new SendMail($this->store_id,0,0,$this->user_id);
             $mail->SendMailApply();
 
-            //发送短信通知
-            Sms::sendSmsApply($this->store_id,$this->user_id);
-
 
 
             AdminTplMsgSender::sendMchApply($this->store_id, [

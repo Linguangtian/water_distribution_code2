@@ -303,7 +303,7 @@ $this->params['active_nav_group'] = 1;
             </div>
 
 
-
+<!--
             <div  style="color: red;">发送商家入驻提示</div>
             <div class="text-muted fs-sm">例如：模板内容:商户入驻提醒,有商户或许申请入驻，请及时进入商城处理</div>
             <div class="form-group row">
@@ -312,9 +312,9 @@ $this->params['active_nav_group'] = 1;
                 </div>
                 <div class="col-sm-6">
                     <input autocomplete="off" class="form-control" type="text" name="apply[name]"
-                           value="<?= $apply['name'] ?>">
+                           value="<?/*= $apply['name'] */?>">
                 </div>
-            </div>
+            </div>-->
 
             <div class="form-group row">
                 <div class="form-group-label col-sm-2 text-right">

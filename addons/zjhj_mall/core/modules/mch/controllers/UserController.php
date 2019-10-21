@@ -395,7 +395,7 @@ class UserController extends Controller
               $credit_log->credit_money=$credit_money;
               $credit_log->current_credit_cost= $user->credit_cost;
               $credit_log->create_time=time();
-              $credit_log->explain=\Yii::$app->request->post('credit_explain');
+              $credit_log->explain='账期还款：'.\Yii::$app->request->post('credit_explain');
              $credit_log->insert();
 
             return [

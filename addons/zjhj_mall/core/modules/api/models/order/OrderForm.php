@@ -131,10 +131,6 @@ class OrderForm extends ApiModel
                     $mch['is_shop'] = '';
                 }
 
-
-
-
-
             } else {
                 $_mch = Mch::findOne([
                     'store_id' => $this->store_id,
@@ -156,7 +152,11 @@ class OrderForm extends ApiModel
           //  var_dump($mch['goods_list'][0]);exit;
 
             //获取自营店用户选择商品的用户水票数量
-            if(!empty($mch['goods_list']))  $mch['water_voucher']=$this->getWacherVoucherList($mch['goods_list']);
+            if(!empty($mch['goods_list']))  {
+              if(!isset($this->mch_list['1'])) {
+                    $mch['water_voucher']=$this->getWacherVoucherList($mch['goods_list']);
+                }
+            }
 
             if (empty($mch['goods_list'])) {
                 throw new \Exception('商品不存在', 1);

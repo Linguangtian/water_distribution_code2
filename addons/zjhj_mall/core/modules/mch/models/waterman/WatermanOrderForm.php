@@ -56,7 +56,7 @@ class WatermanOrderForm   extends MchModel
             ->where(['u.store_id'=>$this->store_id]);
 
         if ($this->keyword) {
-            $query->andWhere(['LIKE', 'o.order_no', $this->keyword]);
+            $query->andWhere(['LIKE', 'wm.real_name', $this->keyword]);
         }
 
         if ($this->order_id) {
