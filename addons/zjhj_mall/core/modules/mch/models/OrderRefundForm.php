@@ -54,7 +54,7 @@ class OrderRefundForm extends MchModel
         return [
             [['store_id', 'order_refund_id', 'type', 'action', 'orderType'], 'required'],
             [['refund'], 'safe'],
-            [['refund_price',], 'number', 'min' => 0.01,],
+            [['refund_price',], 'number', 'min' => 0.00,],
             [['address_id'], 'integer'],
         ];
     }
@@ -125,6 +125,10 @@ class OrderRefundForm extends MchModel
      */
     private function submit1($order_refund)
     {
+
+
+
+
         //区分插件订单
         if ($this->orderType === self::MS) {
             $order = MsOrder::findOne($order_refund->order_id);
@@ -146,6 +150,8 @@ class OrderRefundForm extends MchModel
             if ($this->refund != 1) {
                 //仅同意，还未退款
                 if ($this->refund_price) {
+
+
                     if ($this->refund_price > $order_refund->refund_price) {
                         return [
                             'code' => 1,

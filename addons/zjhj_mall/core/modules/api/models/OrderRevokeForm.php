@@ -107,7 +107,7 @@ class OrderRevokeForm extends ApiModel
            $watervouche= new WaterVoucherForm();
            $watervouche->user_id=$this->user_id;
            $watervouche->store_id=$this->store_id;
-           $watervouche->orderCancel($order->id);
+           $watervouche->orderCancel($order->id,4);
         }
 
         //余额支付 退换余额

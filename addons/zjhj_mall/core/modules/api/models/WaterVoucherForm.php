@@ -54,9 +54,10 @@ class WaterVoucherForm  extends ApiModel
     //订单取消退还水票
     public function orderCancel($order_id,$type='4'){
 
-       $log=VoucherUsedLog::find()->where(['order_id'=>$order_id,'user_id'=>$this->user_id])->asArray()->all();
-       if(empty($log))return false;
-        foreach ($log as $li){
+       $order=VoucherUsedLog::find()->where(['order_id'=>$order_id,'user_id'=>$this->user_id,'store_id'=>$this->store_id])->asArray()->all();
+
+       if(empty($order))return false;
+        foreach ($order as $li){
             $arr=array('order_id'=>$li['order_id'],'exchangeDetail'=>cancelDetail.'['.$order_id.']');
             $this->ChangeWaterVoucher($li['goods_id'],$type,$li['change_num'],$arr);
         }
@@ -72,22 +73,25 @@ class WaterVoucherForm  extends ApiModel
 
         $type_arr=[voucherExchange];
         if(is_array($type,$type_arr)){
+            $change_used_number=$change_num;
             $change_num=-1*$change_num;
-            $change_type=2;
+            $change_type=voucherRed;
         }else{
-            $change_type=1;
+            $change_used_number=-1*$change_num;
+            $change_type=voucherAdd;
         }
 
-        $user_voucher=UserVoucher::findone(['store_id'=>$this->store_id,'user_id'=>$this->user_id]);
+        $user_voucher=UserVoucher::find()->where(['store_id'=>$this->store_id,'user_id'=>$this->user_id,'goods_id'=>$goods_id])->one();
+
         $user_voucher->num+=$change_num;
-        $user_voucher->used_number+=$change_num;
+        $user_voucher->used_number+=$change_used_number;
         $user_voucher->save();
 
         $voucher_log= new VoucherUsedLog();
         $voucher_log->user_id=$this->user_id;
         $voucher_log->store_id=$this->store_id;
         $voucher_log->goods_id=intval($goods_id);
-        $voucher_log->change_num= $change_num;
+        $voucher_log->change_num=abs($change_num);
         $voucher_log->change_type=$change_type;
         $voucher_log->type=intval($type);
         $voucher_log->create_time=time();
@@ -95,8 +99,7 @@ class WaterVoucherForm  extends ApiModel
         $voucher_log->voucher_order=isset($arr['voucher_order'])?$arr['voucher_order']:0;
         $voucher_log->detail=$arr['exchangeDetail'];
         $voucher_log->current_total=$user_voucher->num;
-        $voucher_log->insert();
-
+        $voucher_log->save();
     }
 
 
