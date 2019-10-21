@@ -100,7 +100,9 @@ class OrderSubmitForm extends OrderForm
                                     $this->water_deduction_money=0;
                                     return '无法使用水票';
                                 }else{
-                                    $single_price=$li['is_level']?$li['level_price']:$li['single_price'];
+
+
+                                    $single_price=$li['is_level']?($li['level_price']/$li['num']):$li['single_price'];
                                     $this->water_deduction_money+=$picker_water_voucher['use_num']*$single_price;
                                     $this->is_water_voucher=1;
                                 }
@@ -109,7 +111,6 @@ class OrderSubmitForm extends OrderForm
                        }
 
             }
-
 
 
 
@@ -244,6 +245,7 @@ class OrderSubmitForm extends OrderForm
             $payPrice-= $this->water_deduction_money;
             $payPrice=$payPrice<0?0:$payPrice;
         }
+
 
 
         if (isset($mch['picker_coupon'])) {

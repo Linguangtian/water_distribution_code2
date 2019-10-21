@@ -58,6 +58,7 @@ class UserCenterForm extends Model
             $data = $default_data;
         } else {
             $data = json_decode($data, true);
+
             $data = $this->checkData($data, $default_data);
         }
 
@@ -73,7 +74,7 @@ class UserCenterForm extends Model
             }
 
 
-            if($menu['id'] == 'waterman'){
+            if($menu['id'] == 'waterman'&&!empty($this->user_id)){
                 if(!$this->isWarterman()){
                     unset($data['menus'][$i]);
                 }
@@ -171,7 +172,7 @@ class UserCenterForm extends Model
 
                     'id' => 'user-watervoucher',
                     'name' => '我的水票',
-                    'icon' => \Yii::$app->request->hostInfo . \Yii::$app->request->baseUrl . '/statics/images/user-center/icon-user-pt.png',
+                    'icon' => \Yii::$app->request->hostInfo . \Yii::$app->request->baseUrl . '/statics/images/user-center/icon-user-card.png',
                     'open_type' => 'navigator',
                     'url' => '/pages/user-watervoucher/order',
                     'tel' => '',
@@ -179,7 +180,6 @@ class UserCenterForm extends Model
 
 
                 [
-
                     'id' => 'waterman',
                     'name' => '送水员',
                     'icon' => \Yii::$app->request->hostInfo . \Yii::$app->request->baseUrl . '/statics/images/user-center/icon-user-pt.png',
@@ -187,7 +187,6 @@ class UserCenterForm extends Model
                     'url' => '/pages/waterman/index',
                     'tel' => '',
                 ],
-
 
 
                 [
@@ -199,6 +198,10 @@ class UserCenterForm extends Model
                     'url' => '/pages/book/order/order',
                     'tel' => '',
                 ],
+
+
+
+
                 [
                     'sign' => 'share',
                     'id' => 'fenxiao',

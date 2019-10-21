@@ -1589,12 +1589,14 @@ class StoreController extends Controller
         $form->store_id = $this->store->id;
         if (\Yii::$app->request->isPost) {
             $form->attributes = \Yii::$app->request->post();
+
             return $form->saveData();
         } else {
             if (\Yii::$app->request->isAjax) {
                 $data = $form->getData();
                 return $data;
             } else {
+
                 return $this->render('user-center');
             }
         }
