@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+            <state relative-caret-position="374">
+              <caret line="96" column="46" lean-forward="true" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
               <folding>
                 <element signature="e#133#161#0#PHP" expanded="true" />
               </folding>
@@ -37,8 +37,8 @@
       <file leaf-file-name="OrderPayDataForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/api/models/OrderPayDataForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-65">
-              <caret line="183" column="29" selection-start-line="183" selection-start-column="24" selection-end-line="183" selection-end-column="29" />
+            <state relative-caret-position="235">
+              <caret line="216" column="60" lean-forward="true" selection-start-line="216" selection-start-column="60" selection-end-line="216" selection-end-column="60" />
               <folding>
                 <element signature="e#128#160#0#PHP" expanded="true" />
               </folding>
@@ -46,14 +46,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderSubmitForm.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderSubmitForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="251">
+              <caret line="178" column="40" lean-forward="true" selection-start-line="178" selection-start-column="40" selection-end-line="178" selection-end-column="40" />
               <folding>
                 <element signature="e#6#168#0#PHP" expanded="true" />
                 <element signature="e#212#240#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mch/views/user/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="662">
+              <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>用户ID不能为空</find>
-      <find>用户i</find>
       <find>用户id不能为空。</find>
       <find>账期</find>
       <find>OrderRevokeForm</find>
@@ -93,6 +103,8 @@
       <find>menus</find>
       <find>九宫格形式</find>
       <find>water_deduction_money</find>
+      <find>账期欠款</find>
+      <find>discount</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -123,7 +135,6 @@
         <option value="$PROJECT_DIR$/modules/api/behaviors/LoginBehavior.php" />
         <option value="$PROJECT_DIR$/modules/mch/views/user/edit.php" />
         <option value="$PROJECT_DIR$/modules/mch/models/UserForm.php" />
-        <option value="$PROJECT_DIR$/modules/mch/views/user/index.php" />
         <option value="$PROJECT_DIR$/modules/mch/controllers/permission/Menu.php" />
         <option value="$PROJECT_DIR$/modules/mch/models/OrderSendForm.php" />
         <option value="$PROJECT_DIR$/models/User.php" />
@@ -155,6 +166,7 @@
         <option value="$PROJECT_DIR$/models/UserCenterMenu.php" />
         <option value="$PROJECT_DIR$/modules/mch/controllers/StoreController.php" />
         <option value="$PROJECT_DIR$/models/UserCenterForm.php" />
+        <option value="$PROJECT_DIR$/modules/mch/views/user/index.php" />
         <option value="$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php" />
       </list>
     </option>
@@ -283,11 +295,11 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="188" />
-    <option name="y" value="39" />
-    <option name="width" value="1932" />
-    <option name="height" value="994" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="526" />
+    <option name="y" value="18" />
+    <option name="width" value="1313" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -389,15 +401,15 @@
       <workItem from="1571129602888" duration="22827000" />
       <workItem from="1571275136943" duration="21031000" />
       <workItem from="1571365593923" duration="5690000" />
-      <workItem from="1571620440423" duration="13231000" />
+      <workItem from="1571620440423" duration="16488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292735000" />
+    <option name="totallyTimeSpent" value="295992000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="188" y="39" width="1932" height="994" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985657" />
@@ -406,7 +418,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32985657" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32985657" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49797022" visible="true" weight="0.22435898" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49797022" visible="true" weight="0.2238806" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49893618" weight="0.11162791" />
@@ -505,13 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15225">
           <caret line="613" column="56" selection-start-line="613" selection-start-column="45" selection-end-line="613" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mch/views/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5200">
-          <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -990,10 +995,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mch/views/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="178" column="40" lean-forward="true" selection-start-line="178" selection-start-column="40" selection-end-line="178" selection-end-column="40" />
+          <folding>
+            <element signature="e#6#168#0#PHP" expanded="true" />
+            <element signature="e#212#240#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/api/models/OrderPayDataForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="183" column="29" selection-start-line="183" selection-start-column="24" selection-end-line="183" selection-end-column="29" />
+        <state relative-caret-position="235">
+          <caret line="216" column="60" lean-forward="true" selection-start-line="216" selection-start-column="60" selection-end-line="216" selection-end-column="60" />
           <folding>
             <element signature="e#128#160#0#PHP" expanded="true" />
           </folding>
@@ -1002,21 +1028,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/api/controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+        <state relative-caret-position="374">
+          <caret line="96" column="46" lean-forward="true" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
           <folding>
             <element signature="e#133#161#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/api/models/order/OrderSubmitForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="e#6#168#0#PHP" expanded="true" />
-            <element signature="e#212#240#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

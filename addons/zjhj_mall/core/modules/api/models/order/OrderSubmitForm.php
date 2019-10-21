@@ -183,7 +183,6 @@ class OrderSubmitForm extends OrderForm
             }
 
 
-
             if ($order->save()) {
 
                 // 处理订单生成之后其他相关数据

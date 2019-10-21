@@ -194,7 +194,7 @@ $urlPlatform = Yii::$app->controller->route;
                     </td>
                     <td>
                         <a class="btn btn-sm btn-link"
-                           href="<?= $urlManager->createUrl(['mch/user/recharge-money-log', 'user_id' => $u['id']]) ?>"><?= $u['money'] ?></a>
+                          ><?= $u['money'] ?></a>
                     </td>
 
                     <td>
@@ -202,7 +202,7 @@ $urlPlatform = Yii::$app->controller->route;
                     </td>
 
                     <td>
-                        <a class="btn btn-sm btn-link"><?= $u['credit_cost'] ?></a>
+                        <a class="btn btn-sm btn-link"  href="<?= $urlManager->createUrl(['mch/user/credit-list', 'user_id' => $u['id']]) ?>"><?= $u['credit_cost'] ?>  </a>
                     </td>
 
 
