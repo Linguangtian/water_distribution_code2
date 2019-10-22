@@ -190,17 +190,15 @@ class OrderSendForm extends MchModel
                 $wateroder->real_bucket=$bucket_num['bucket_num'];
                 $wateroder->status=produce_water_order;
                 $wateroder->message=$this->water_words;
-
-
                   if( !$wateroder->insert()){
-                      //配水员提醒
-                      $wechat_tpl_meg_sender = new WechatTplMsgSender($this->store_id, $order->id, $this->getWechat());
-                      $wechat_tpl_meg_sender->sendWaterTpl();
-                   return [
-                       'code'=>1,
-                       'msg'=>'无法设置订水订单'
-                   ];
-               }
+                       return [
+                           'code'=>1,
+                           'msg'=>'无法设置订水订单'
+                       ];
+                  }
+            //配水员提醒
+            $wechat_tpl_meg_sender = new WechatTplMsgSender($this->store_id, $order->id, $this->getWechat());
+            $wechat_tpl_meg_sender->sendWaterTpl();
         }
 
         $order->express = $this->express;
@@ -209,9 +207,6 @@ class OrderSendForm extends MchModel
         $order->is_send = 1;
         $order->send_time = time();
         if ($order->save()) {
-
-
-
             try {
                 $wechat_tpl_meg_sender = new WechatTplMsgSender($this->store_id, $order->id, $this->getWechat());
                 $wechat_tpl_meg_sender->sendMsg();

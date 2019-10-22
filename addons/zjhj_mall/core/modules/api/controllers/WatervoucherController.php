@@ -11,12 +11,29 @@ use app\hejiang\ApiResponse;
 use app\hejiang\BaseApiResponse;
 use app\models\Order;
 use app\models\UserWaterBucket;
+
 use app\modules\api\models\VoucherPayDataForm;
 use app\modules\api\models\UserVoucherForm;
 use app\modules\api\models\WaterVoucherList;
 use app\modules\api\models\WaterVoucherForm;
 use app\modules\api\models\watervoucher\WaterVoucherListForm;
-class WatervoucherController   extends Controller{
+use app\modules\api\behaviors\UseridBehavior;
+
+
+class WatervoucherController extends Controller{
+
+
+    public function behaviors()
+    {
+       return array_merge(parent::behaviors(), [
+            'Userid' => [
+                'class' => UseridBehavior::className(),
+            ],
+        ]);
+    }
+
+
+
 
     //购买水票支付
     public function  actionVoucherPay(){
@@ -32,6 +49,8 @@ class WatervoucherController   extends Controller{
 
     //水票商品列表信息
     public function  actionGoodsListInfo(){
+
+
         $form = new WaterVoucherForm();
         $form->attributes = \Yii::$app->request->get();
         $form->store_id = $this->store->id;
