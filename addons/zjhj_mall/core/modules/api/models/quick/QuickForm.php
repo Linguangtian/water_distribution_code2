@@ -22,12 +22,15 @@ class QuickForm extends ApiModel
 {
     public $user_id;
     public $store_id;
+    public $cat_id;
+    public $key;
 
     public function goods()
     {
+
         // 查分类
         $list = Cat::find()
-            ->select(['id', 'parent_id', 'name'])
+            ->select(['id', 'parent_id', 'name','pic_url'])
             ->where([
                 'store_id' => $this->store_id,
                 'is_delete' => Model::IS_DELETE_FALSE,
@@ -35,6 +38,8 @@ class QuickForm extends ApiModel
                 'parent_id' => 0,
             ])->orderBy('sort ASC')
             ->asArray()->all();
+
+
         // 二级分类
         foreach ($list as $key => &$value) {
             $twolist = Cat::find()
@@ -144,14 +149,16 @@ class QuickForm extends ApiModel
             unset($value3['goodss']);
             unset($value3['goodsss']);
         }
-        foreach ($list as &$cat) {
+        foreach ($list as $key=>&$cat) {
             if (is_array($cat['goods'])) {
                 foreach ($cat['goods'] as &$goods) {
                     $goods['detail'] = '';
                 }
             }
-        }
 
+
+        }
+        $key=0;
         foreach ($list as $k => $item) {
             if (isset($item['goods']) && count($item['goods']) > 0) {
                 foreach ($item['goods'] as $k2 => $i) {
@@ -166,11 +173,20 @@ class QuickForm extends ApiModel
 
                     $list[$k]['goods'][$k2]['virtual_sales'] += $numCount;
                 }
+
+                if($cat['id']==$this->cat_id){
+                    $cat['cat_checked']=1;
+                    $this->key=$key;
+                }
+                $key++;
             }
         }
 
+
         return [
             'code' => 0,
+            'cat_id' => $this->cat_id,
+            'key' =>$this->key,
             'data' => [
                 'list' => $list,
             ],

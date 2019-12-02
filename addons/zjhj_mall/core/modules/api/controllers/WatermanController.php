@@ -51,10 +51,10 @@ class WatermanController   extends Controller{
             ])->select(['wo.*','o.id','o.order_no','wo.receive_user_id','o.name as addname','o.mobile as addmobile','o.address','o.total_price'])
             ->asArray()->one();
         if(empty($query)){
-            return [
+            return new BaseApiResponse( [
                 'code' => 1,
-                'msg' => '订单不存在',
-            ];
+                'msg' => '订单已完成',
+            ]);
         }
         $query['goods_list']=WaterOrder::getOrderGoodsList($query['order_id']);
 

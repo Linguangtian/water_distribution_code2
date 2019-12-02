@@ -369,7 +369,14 @@ class PickLinkForm
                 'name' => "快速购买",
                 'link' => "/pages/quick-purchase/index/index",
                 'open_type' => "navigate",
-                'params' => []
+                'params' => [
+                    [
+                        'key' => "cat_id",
+                        'value' => "",
+                        'desc' => "cat_id请填写在商品分类中相关分类的ID"
+                    ]
+
+                ]
             ],
             [
                 'sign' => 'fxhb',
@@ -652,7 +659,11 @@ class PickLinkForm
             [
                 'name' => '快速购买',
                 'url' => '/pages/quick-purchase/index/index',
-                'params' => []
+                'params' => [
+                    'key' => "cat_id",
+                    'value' => "",
+                    'desc' => "cat_id请填写在商品分类中相关分类的ID"
+                ]
             ],
             [
                 'name' => '一键拨号',
