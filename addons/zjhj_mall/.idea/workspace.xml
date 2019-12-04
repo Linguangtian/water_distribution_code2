@@ -27,7 +27,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/modules/mch/views/order/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10125">
+            <state>
               <caret line="405" column="148" selection-start-line="405" selection-start-column="140" selection-end-line="405" selection-end-column="148" />
             </state>
           </provider>
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WatervoucherController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WatervoucherController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/WatervoucherController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="57" column="35" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="35" />
+            <state relative-caret-position="337">
+              <caret line="58" column="81" selection-start-line="58" selection-start-column="81" selection-end-line="58" selection-end-column="81" />
               <folding>
                 <element signature="e#139#167#0#PHP" expanded="true" />
               </folding>
@@ -60,26 +60,17 @@
       <file leaf-file-name="WaterVoucherForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/modules/api/models/WaterVoucherForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
+            <state relative-caret-position="3225">
               <caret line="142" column="22" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoucherPackage.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VoucherPackage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/models/VoucherPackage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="504">
               <caret line="56" column="34" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseObject.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/vendor/yiisoft/yii2/base/BaseObject.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -127,7 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>like</find>
       <find>WatermanableName</find>
       <find>轮播图</find>
       <find>type</find>
@@ -155,6 +145,7 @@
       <find>else</find>
       <find>水票管理</find>
       <find>配送员编号</find>
+      <find>salesvolume</find>
       <find>WaterVoucherForm</find>
       <find>sales</find>
     </findStrings>
@@ -258,11 +249,11 @@
       <path value="$PROJECT_DIR$/vendor/comodojo/exceptions" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="316" />
-    <option name="y" value="267" />
-    <option name="width" value="1940" />
-    <option name="height" value="972" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="300" />
+    <option name="y" value="78" />
+    <option name="width" value="1829" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -280,77 +271,6 @@
               <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
               <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="waterman" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="waterman" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="waterman-order" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -476,18 +396,18 @@
       <workItem from="1567490545057" duration="80409000" />
       <workItem from="1567836854529" duration="95674000" />
       <workItem from="1568451086344" duration="128000" />
-      <workItem from="1575427656233" duration="1205000" />
+      <workItem from="1575427656233" duration="2525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345175000" />
+    <option name="totallyTimeSpent" value="346495000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="300" y="78" width="1829" height="1100" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8790233" visible="true" weight="0.26545843" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8793651" visible="true" weight="0.28151497" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -495,7 +415,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info id="Structure" order="1" sideWeight="0.120976694" side_tool="true" visible="true" weight="0.26545843" />
+      <window_info id="Structure" order="1" sideWeight="0.12063492" side_tool="true" visible="true" weight="0.28151497" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.18095239" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -849,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/order/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10125">
-          <caret line="405" column="148" selection-start-line="405" selection-start-column="140" selection-end-line="405" selection-end-column="148" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/mch/views/waterman/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
@@ -887,6 +800,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/models/VoucherPackage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/order/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="405" column="148" selection-start-line="405" selection-start-column="140" selection-end-line="405" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/mch/models/waterman/WatermanOrderForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-58">
@@ -897,27 +824,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/WatervoucherController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="57" column="35" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="35" />
-          <folding>
-            <element signature="e#139#167#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/api/models/WaterVoucherForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="3225">
           <caret line="142" column="22" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/VoucherPackage.php">
+    <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/WatervoucherController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="56" column="34" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="34" />
+        <state relative-caret-position="337">
+          <caret line="58" column="81" selection-start-line="58" selection-start-column="81" selection-end-line="58" selection-end-column="81" />
+          <folding>
+            <element signature="e#139#167#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
