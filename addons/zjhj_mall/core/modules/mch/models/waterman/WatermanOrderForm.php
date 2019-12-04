@@ -53,6 +53,7 @@ class WatermanOrderForm   extends MchModel
             ->leftJoin(['u'=>User::tableName()],'u.id=wo.receive_user_id')
             ->leftJoin(['o'=>Order::tableName()],'o.id=wo.order_id')
             ->leftJoin(['wm'=>Waterman::tableName()],'wm.user_id=wo.waterman_user_id')
+            ->orderBy('wo.id desc')
             ->where(['u.store_id'=>$this->store_id]);
 
         if ($this->keyword) {
