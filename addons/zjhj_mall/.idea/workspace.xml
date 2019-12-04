@@ -259,8 +259,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="264" />
-    <option name="y" value="161" />
+    <option name="x" value="-239" />
+    <option name="y" value="316" />
     <option name="width" value="1829" />
     <option name="height" value="1100" />
   </component>
@@ -281,27 +281,6 @@
               <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
               <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zjhj_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zjhj_mall" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mch" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -427,16 +406,15 @@
       <workItem from="1567836854529" duration="95674000" />
       <workItem from="1568451086344" duration="128000" />
       <workItem from="1575427656233" duration="2525000" />
-      <workItem from="1575439304683" duration="385000" />
+      <workItem from="1575439304683" duration="857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346880000" />
+    <option name="totallyTimeSpent" value="347352000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="264" y="161" width="1829" height="1100" extended-state="0" />
-    <editor active="true" />
+    <frame x="-239" y="316" width="1829" height="1100" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87830687" visible="true" weight="0.28490672" />
       <window_info anchor="bottom" id="TODO" order="6" />
