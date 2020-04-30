@@ -140,6 +140,7 @@ class Store extends \yii\db\ActiveRecord
             'is_comment' => '商城评价开关：0.关闭 1.开启',
             'is_sales' => '商城商品销量开关：0.关闭 1.开启',
             'buy_member' => '购买会员',
+
         ];
     }
     public function beforeSave($insert)

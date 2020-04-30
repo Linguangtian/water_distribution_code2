@@ -10,6 +10,7 @@ namespace app\modules\api\models;
 
 
 use app\models\OrderDetail;
+use app\models\GoodsCat;
 use app\models\WaterOrder;
 use app\utils\GetInfo;
 use app\hejiang\ApiResponse;
@@ -37,14 +38,14 @@ use app\models\User;
 use app\models\UserCoupon;
 use app\models\YyGoods;
 use yii\helpers\VarDumper;
-
+use app\models\Setting;
 class IndexForm extends ApiModel
 {
     public $store_id;
     public $_platform;
 
     public function search()
-    {
+    { $user_id = \Yii::$app->user->identity->id;
         $store = $this->store;
         if (!$store)
             return new ApiResponse(1, 'Store不存在');
@@ -84,10 +85,19 @@ class IndexForm extends ApiModel
                 unset($nav_icon_list[$k]);
             }
             if ($value['name'] == '一键叫水') {
-               $last_order= WaterOrder::find()->where(['receive_user_id'=>$user_id = \Yii::$app->user->identity->id])->orderBy('id')->one();
-                if(!empty($last_order->orderDetail->order_id)&&$last_order->orderDetail->is_delete==0){
 
-                     $nav_icon_list[$k]['url']= "/pages/goods/goods?id=".$last_order->orderDetail->goods_id;
+                $last_order= WaterOrder::find()->alias('wo')
+                    ->leftJoin(['od' => OrderDetail::tableName()], 'od.order_id=wo.order_id')
+                    ->leftJoin(['g' => Goods::tableName()], 'g.id=od.goods_id')
+                    ->leftJoin(['gc' => GoodsCat::tableName()], 'gc.goods_id=od.goods_id')
+                    ->where(['wo.receive_user_id'=>$user_id,'gc.cat_id'=>$store->purchase_cat_id,'g.status'=>'1'])
+                    ->orderBy('wo.id')
+                    ->select(['g.id'])
+
+                    ->one();
+
+                if(!empty($last_order->id) && $store->purchase_cat_id){
+                    $nav_icon_list[$k]['url']= "/pages/goods/goods?id=".$last_order->id;
                 }
             }
 
@@ -373,7 +383,7 @@ class IndexForm extends ApiModel
                 ->orderBy('mg.open_date asc,mg.start_time asc')
                 ->limit(10)
                 ->asArray()
-                ->all(); 
+                ->all();
 
         }
 
@@ -408,7 +418,7 @@ class IndexForm extends ApiModel
         }else{
             $name = $ms_next?'预告':'';
             return [
-    //            'name' => intval(date('H')) . '点场',
+                //            'name' => intval(date('H')) . '点场',
                 'name' => $startTime . '点场'.$name,
                 'ms_next' => $ms_next,
                 'date' => $openDate,

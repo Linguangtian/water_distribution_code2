@@ -323,6 +323,22 @@ $this->params['active_nav_group'] = 1;
 
                 <div class="form-group row">
                     <div class="form-group-label col-sm-2 text-right">
+                        <label class="col-form-label">一键购买分类ID</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <select name="purchase_cat_id"  class="form-control">
+                                <?php foreach ($cat_list as $index => $cat) : ?>
+                                <option value="<?= $cat['id'] ?>"     <?= ($store->purchase_cat_id == $cat['id']) ? "selected" : "" ?>  ><?= $cat['name'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="form-group-label col-sm-2 text-right">
                         <label class="col-form-label">会员积分</label>
                     </div>
                     <div class="col-sm-6">

@@ -347,10 +347,13 @@ class StoreController extends Controller
                     $option['payment']['wechat'] = 1;
                 }
             }
+            $cat_list = Cat::find()->where(['store_id' => $this->store->id, 'is_delete' => 0, 'parent_id' => 0])->orderBy('sort,addtime DESC')->asArray()->all();
+
 
             return $this->render('setting', [
                 'store' => $store,
                 'option' => $option,
+                'cat_list' => $cat_list,
             ]);
         }
     }
@@ -1618,6 +1621,7 @@ class StoreController extends Controller
     public function actionForm()
     {
         $form_list = Form::find()->where(['is_delete' => 0, 'store_id' => $this->store->id])->orderBy(['sort' => SORT_ASC])->asArray()->all();
+
         if (\Yii::$app->request->isPost) {
             $post = \Yii::$app->request->post();
             $form = new SubmitFormForm();
@@ -1629,6 +1633,7 @@ class StoreController extends Controller
             'form_list' => \Yii::$app->serializer->encode($form_list),
             'is_form' => Option::get('is_form', $this->store->id, 'admin', 0),
             'form_name' => Option::get('form_name', $this->store->id, 'admin', '表单名称'),
+
         ]);
     }
 

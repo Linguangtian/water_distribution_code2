@@ -46,7 +46,7 @@ class Cart extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'store_id' => 'Store ID',
-            'user_id' => '用户id',
+            'user_id' => '请先授权登录 ，当前未登录状态',
             'goods_id' => '商品id',
             'num' => '商品数量',
             'addtime' => 'Addtime',

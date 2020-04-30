@@ -97,7 +97,9 @@ class WaterOrder extends \yii\db\ActiveRecord
 
     public function getOrderDetail(){
         return $this->hasOne(OrderDetail::className(), ['order_id' => 'order_id'])->alias('od')
-            ->leftJoin(['g' => Goods::tableName()], 'g.id=od.goods_id')->select(['od.*', 'g.name' , 'g.attr goods_attr','g.is_delete']);
+            ->leftJoin(['g' => Goods::tableName()], 'g.id=od.goods_id')->select(['od.*', 'g.name' , 'g.attr goods_attr','g.is_delete','g.cat_id']);
     }
+
+
 
 }

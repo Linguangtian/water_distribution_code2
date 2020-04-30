@@ -76,6 +76,7 @@ class StoreSettingForm extends MchModel
     public $logo;
     public $quick_map;
     public $is_official_account;
+    public $purchase_cat_id;
 
     public function rules()
     {
@@ -83,7 +84,7 @@ class StoreSettingForm extends MchModel
             [['name', 'app_id', 'app_secret', 'mch_id', 'key', 'order_send_tpl', 'contact_tel', 'copyright', 'copyright_pic_url', 'copyright_url', 'kdniao_mch_id', 'kdniao_api_key', 'address', 'cert_pem', 'key_pem', 'dial_pic', 'web_service', 'web_service_url', 'payment', 'wxapp', 'quick_navigation', 'good_negotiable', 'quick_map'], 'trim'],
             [['name', 'cat_goods_cols', 'integral',], 'required'],
             [['order_send_tpl', 'contact_tel', 'kdniao_mch_id', 'kdniao_api_key', 'address', 'service', 'integration', 'notice', 'web_service', 'web_service_url', 'logo'], 'string'],
-            [['show_customer_service', 'cat_style', 'cut_thread', 'purchase_frame', 'is_recommend', 'cat_goods_cols', 'is_offline', 'is_coupon', 'cat_goods_count', 'send_type', 'nav_count', 'dial', 'is_comment', 'is_sales', 'phone_auth', 'buy_member'], 'integer', 'max'=>99999999],
+            [['show_customer_service', 'cat_style', 'cut_thread', 'purchase_frame', 'is_recommend', 'cat_goods_cols', 'is_offline', 'is_coupon', 'cat_goods_count', 'send_type', 'nav_count', 'dial', 'is_comment', 'is_sales', 'phone_auth', 'buy_member','purchase_cat_id'], 'integer', 'max'=>99999999],
             ['cat_goods_count', 'default', 'value' => 6],
             [['cat_goods_count', 'recommend_count', 'is_share_price', 'is_member_price', 'is_official_account'], 'integer', 'min' => 0, 'max' => 100],
             [['cert_pem', 'key_pem'], 'default', 'value' => '0'],
@@ -143,7 +144,8 @@ class StoreSettingForm extends MchModel
             'good_negotiable' => '商品面议方式',
             'buy_member' => '是否购买会员',
             'logo'  => '商城logo',
-            'is_official_account' => '关联公众号组件'
+            'is_official_account' => '关联公众号组件',
+           'purchase_cat_id' => '一键购买分类ID',
         ];
     }
 
@@ -188,6 +190,7 @@ class StoreSettingForm extends MchModel
         $store->buy_member = $this->buy_member;
         $store->logo = $this->logo;
         $store->is_official_account = $this->is_official_account;
+        $store->purchase_cat_id = $this->purchase_cat_id;
         $store->save();
 
 //        Option::set('service', $this->service, $this->store_id, 'admin');

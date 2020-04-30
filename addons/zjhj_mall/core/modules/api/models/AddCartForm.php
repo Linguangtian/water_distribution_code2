@@ -33,6 +33,7 @@ class AddCartForm extends ApiModel
         if (!$this->validate()) {
             return $this->errorResponse;
         }
+
         $goods = Goods::findOne([
             'id' => $this->goods_id,
             'store_id' => $this->store_id,
@@ -79,6 +80,7 @@ class AddCartForm extends ApiModel
                 'msg' => '添加购物车成功',
             ];
         } else {
+
             return $this->getErrorResponse($cart);
         }
     }
